@@ -16,6 +16,7 @@ func _initialize() -> void:
 	main.queue_free()
 	_bs = BattleScreen.new()
 	_bs.auto_play = true
+	_bs.format = "doubles" if OS.get_environment("UI_SMOKE_DOUBLES") == "1" else "singles"
 	_bs.seed_value = 12345
 	_bs.player_team = TeamStore.default_team()
 	_bs.battle_finished.connect(func(w): _done = true; print("battle finished, winner=", w, " turns=", _bs.battle.turn))

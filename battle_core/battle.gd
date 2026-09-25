@@ -401,6 +401,10 @@ func _build_request(side, kind: String) -> Dictionary:
 			if p == null or p.fainted or p.switch_flag:
 				if side.has_alive_bench():
 					slots.append(i)
+		# cannot fill more slots than there are healthy bench monsters
+		var bench_n: int = side.bench().size()
+		while slots.size() > bench_n:
+			slots.pop_back()
 		if slots.is_empty():
 			return {"type": "wait"}
 		return {"type": "switch", "slots": slots, "bench": _bench_info(side)}

@@ -74,7 +74,7 @@ if mode == "1v1":
         P(f"| {JA.get(x,x)} | " + " | ".join(row) + " |")
 else:
     avg_turns = M["turns_sum"] / max(1, M["battles"])
-    P(f"AI: heuristic vs heuristic, team size {3 if mode=='3v3' else 6}, avg turns {avg_turns:.1f}, ties {M['ties']}")
+    P(f"AI: heuristic vs heuristic, mode {mode}, team size {6 if mode=='6v6' else (4 if mode=='doubles' else 3)}, avg turns {avg_turns:.1f}, ties {M['ties']}")
     P("")
     P("## Per-species (team-inclusion win rate)")
     P("| species | 種族 | games | team win% | avg dmg/game | KOs/game | faint% | first-move% | avg turns | long-game% | status |")

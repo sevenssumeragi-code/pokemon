@@ -26,7 +26,7 @@ func _swap(node: Control) -> void:
 func show_title() -> void:
 	var t := TitleScreen.new()
 	t.start_team_builder.connect(show_team_builder)
-	t.quick_battle.connect(func(): start_battle(TeamStore.default_team()))
+	t.quick_battle.connect(func(): start_battle(TeamStore.default_team(), "singles"))
 	t.new_game.connect(start_new_game)
 	t.continue_game.connect(continue_game)
 	t.quit_game.connect(func(): get_tree().quit())
@@ -61,8 +61,9 @@ func show_team_builder() -> void:
 	tb.back_requested.connect(show_title)
 	_swap(tb)
 
-func start_battle(team: Array) -> void:
+func start_battle(team: Array, format: String = "singles") -> void:
 	var bs := BattleScreen.new()
+	bs.format = format
 	bs.player_team = team
 	bs.back_to_title.connect(show_title)
 	_swap(bs)

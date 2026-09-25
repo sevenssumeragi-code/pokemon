@@ -2,7 +2,7 @@ class_name TeamBuilder
 extends Control
 ## Six-slot team editor: species / ability / item / nature / moves / EVs. Emits battle_requested(team).
 
-signal battle_requested(team: Array)
+signal battle_requested(team: Array, format: String)
 signal back_requested
 
 var team: Array = []  # Array[PokemonSet]
@@ -21,6 +21,7 @@ var _stats_label: Label
 var _error_label: Label
 var _set_opt: OptionButton
 var _updating := false
+var _doubles_check: CheckBox
 
 func _ready() -> void:
 	UITheme.fill_parent(self)
@@ -64,6 +65,9 @@ func _build() -> void:
 		left.add_child(b)
 		_slot_buttons.append(b)
 	left.add_child(Control.new())
+	_doubles_check = CheckBox.new()
+	_doubles_check.text = "ダブルバトル"
+	left.add_child(_doubles_check)
 	var start := UITheme.make_button("この6体で たいせん！", 17, Vector2(220, 44))
 	start.pressed.connect(_on_start)
 	left.add_child(start)
@@ -255,4 +259,4 @@ func _on_start() -> void:
 		_error_label.text = "\n".join(problems)
 		return
 	TeamStore.save_team("player", team)
-	battle_requested.emit(team)
+	battle_requested.emit(team, "doubles" if _doubles_check.button_pressed else "singles")

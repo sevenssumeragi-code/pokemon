@@ -86,7 +86,7 @@ func _acc(d: Dictionary, key: String, field: String, v) -> void:
 
 # ------------------------------------------------------------
 func run_team(mode: String, battles: int, seed: int, ai_kind: String) -> Dictionary:
-	var team_size := 6 if mode == "6v6" else 3
+	var team_size := 6 if mode == "6v6" else (4 if mode == "doubles" else 3)
 	var sets := sets_data()
 	var ids: Array = sets.keys()
 	ids.sort()
@@ -115,7 +115,7 @@ func run_team(mode: String, battles: int, seed: int, ai_kind: String) -> Diction
 				teams[side].append(set_to_pokemon(sp, sdef))
 				used_species[side].append(sp)
 				set_names[side].append("%s/%s" % [sp, sdef["name"]])
-		var bt := Battle.new({"seed": rng.next(1 << 30), "teams": teams, "log": false, "max_turns": 300})
+		var bt := Battle.new({"seed": rng.next(1 << 30), "teams": teams, "log": false, "max_turns": 300, "format": "doubles" if mode == "doubles" else "singles"})
 		BattleRunner.run(bt, make_ai(ai_kind, rng.next(1 << 30)), make_ai(ai_kind, rng.next(1 << 30)))
 		total_turns += bt.turn
 		turns_hist[str(mini(bt.turn, 150))] = int(turns_hist.get(str(mini(bt.turn, 150)), 0)) + 1

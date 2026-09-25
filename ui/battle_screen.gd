@@ -49,6 +49,11 @@ var _enemy_team_icons: HBoxContainer
 var _bag_note: Label
 var _bag_panel: VBoxContainer
 var _bag_item_pending: String = ""
+var _slot_choices: Array = []      # doubles: choices gathered for each active slot this turn
+var _slot_index: int = 0           # doubles: which active slot is choosing now
+var _target_panel: VBoxContainer
+var _pending_move: String = ""
+var format: String = "singles"
 var _rpg_finish_pending: bool = false
 
 func _ready() -> void:
@@ -66,7 +71,7 @@ func start_battle() -> void:
 	else:
 		if cpu_team.is_empty():
 			cpu_team = TeamStore.random_team(6, rng)
-		battle = Battle.new({"seed": rng.randi(), "teams": [player_team, cpu_team], "names": ["あなた", "CPU"], "log": true})
+		battle = Battle.new({"seed": rng.randi(), "teams": [player_team, cpu_team], "names": ["あなた", "CPU"], "log": true, "format": format})
 	cpu_ai = HeuristicAI.new(rng.randi())
 	cpu_ai.known_moves_only = true
 	auto_ai = HeuristicAI.new(rng.randi())
@@ -248,6 +253,10 @@ func _build_ui() -> void:
 	var sback := UITheme.make_button("もどる", 14, Vector2(100, 30))
 	sback.pressed.connect(_show_commands)
 	_switch_panel.add_child(sback)
+	# target panel (doubles)
+	_target_panel = VBoxContainer.new()
+	_target_panel.set_anchors_preset(Control.PRESET_FULL_RECT)
+	stack.add_child(_target_panel)
 	# bag panel
 	_bag_panel = VBoxContainer.new()
 	_bag_panel.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -264,6 +273,7 @@ func _build_ui() -> void:
 	_hide_panels()
 
 func _hide_panels() -> void:
+	_target_panel.visible = false
 	_bag_panel.visible = false
 	_cmd_panel.visible = false
 	_move_panel.visible = false
@@ -275,10 +285,25 @@ func _hide_panels() -> void:
 # ------------------------------------------------------------------
 func _active(side: int) -> BattlePokemon:
 	var s = battle.sides[side]
+	if side == 0 and battle.slots_per_side > 1 and _state in ["command", "switch"]:
+		var req: Dictionary = battle.sides[0].request
+		if req.get("type") == "move" and _slot_index < req["active"].size():
+			var p = s.active[int(req["active"][_slot_index]["slot"])]
+			if p != null:
+				return p
+	for p in s.active:
+		if p != null and not p.fainted:
+			return p
 	for p in s.active:
 		if p != null:
 			return p
 	return null
+
+func _current_req_slot() -> Dictionary:
+	var req: Dictionary = battle.sides[0].request
+	if req.get("type") != "move":
+		return {}
+	return req["active"][mini(_slot_index, req["active"].size() - 1)]
 
 func _sync_all(instant: bool) -> void:
 	_sync_side(0, instant)
@@ -475,10 +500,7 @@ func _after_playback() -> void:
 		_cpu_decide()
 		_begin_playback()
 		return
-	if req["type"] == "switch":
-		_show_switch(true)
-	else:
-		_show_commands()
+	_begin_decision()
 
 func _cpu_decide() -> void:
 	var req: Dictionary = battle.sides[1].request
@@ -496,6 +518,39 @@ func _show_commands() -> void:
 	_hide_panels()
 	_bag_note.text = ""
 	_cmd_panel.visible = true
+	if battle.slots_per_side > 1:
+		var rs := _current_req_slot()
+		if not rs.is_empty():
+			_bag_note.text = "%s の こうどう" % GameData.name_of("species", str(rs["pokemon"]))
+		_sync_side(0, true)
+
+func _begin_decision() -> void:
+	_slot_choices.clear()
+	_slot_index = 0
+	var req: Dictionary = battle.sides[0].request
+	if req["type"] == "switch":
+		_show_switch(true)
+	else:
+		_show_commands()
+
+## Doubles: store this slot's choice; submit when every active slot has chosen.
+func _commit_slot_choice(choice: Dictionary) -> void:
+	var req: Dictionary = battle.sides[0].request
+	var n: int = req["active"].size()
+	_slot_choices.append(choice)
+	if _slot_choices.size() < n:
+		_slot_index += 1
+		_show_commands()
+		return
+	var err := battle.choose(0, _slot_choices.duplicate())
+	_slot_choices.clear()
+	_slot_index = 0
+	if err != "":
+		_message.append_text("[color=salmon]%s[/color]\n" % err)
+		_show_commands()
+		return
+	_cpu_decide()
+	_begin_playback()
 
 func _show_moves() -> void:
 	var req: Dictionary = battle.sides[0].request
@@ -503,7 +558,7 @@ func _show_moves() -> void:
 		return
 	_hide_panels()
 	_move_panel.visible = true
-	var moves: Array = req["active"][0]["moves"]
+	var moves: Array = _current_req_slot()["moves"]
 	for i in range(4):
 		var b: Button = _move_buttons[i]
 		if i < moves.size():
@@ -521,14 +576,18 @@ func _show_switch(forced: bool) -> void:
 	_switch_panel.visible = true
 	_switch_panel.get_child(1).visible = not forced
 	var req: Dictionary = battle.sides[0].request
-	var trapped: bool = req.get("type") == "move" and req["active"][0]["trapped"]
+	var trapped: bool = req.get("type") == "move" and _current_req_slot().get("trapped", false)
 	for i in range(6):
 		var b: Button = _switch_buttons[i]
 		if i < battle.sides[0].team.size():
 			var p = battle.sides[0].team[i]
 			b.visible = true
 			b.text = "%s  %d/%d %s" % [GameData.name_of("species", p.species_id), p.hp, p.max_hp, GameData.name_of("status", p.status) if p.status != "" else ""]
-			b.disabled = p.fainted or p.active or trapped
+			var already := false
+			for c in _slot_choices:
+				if c.get("type") == "switch" and int(c.get("index", -1)) == i:
+					already = true
+			b.disabled = p.fainted or p.active or trapped or already
 		else:
 			b.visible = false
 	if trapped:
@@ -538,26 +597,66 @@ func _choose_move(i: int) -> void:
 	var req: Dictionary = battle.sides[0].request
 	if req.get("type") != "move":
 		return
-	var moves: Array = req["active"][0]["moves"]
+	var moves: Array = _current_req_slot()["moves"]
 	if i >= moves.size():
 		return
-	var err := battle.choose(0, [{"type": "move", "move": moves[i]["id"]}])
-	if err != "":
-		_message.append_text("[color=salmon]%s[/color]\n" % err)
+	var mid: String = moves[i]["id"]
+	if battle.slots_per_side > 1 and str(GameData.get_move(mid).get("target", "normal")) in ["normal", "any", "adjacentAlly", "adjacentAllyOrSelf"]:
+		_pending_move = mid
+		_show_targets(mid)
 		return
-	_cpu_decide()
-	_begin_playback()
+	_commit_slot_choice({"type": "move", "move": mid})
+
+func _show_targets(mid: String) -> void:
+	_hide_panels()
+	_target_panel.visible = true
+	for c in _target_panel.get_children():
+		c.queue_free()
+	var tt := str(GameData.get_move(mid).get("target", "normal"))
+	_target_panel.add_child(UITheme.make_label("だれに？", 15))
+	if tt != "adjacentAlly" and tt != "adjacentAllyOrSelf":
+		for i in range(battle.sides[1].active.size()):
+			var f = battle.sides[1].active[i]
+			if f == null or f.fainted:
+				continue
+			var loc := i + 1
+			var b := UITheme.make_button("あいての %s" % GameData.name_of("species", f.species_id), 14, Vector2(170, 36))
+			b.pressed.connect(func(): _commit_slot_choice({"type": "move", "move": mid, "target": loc}))
+			_target_panel.add_child(b)
+	if tt in ["any", "adjacentAlly", "adjacentAllyOrSelf"]:
+		var me := _active(0)
+		for i in range(battle.sides[0].active.size()):
+			var a = battle.sides[0].active[i]
+			if a == null or a.fainted or (a == me and tt != "adjacentAllyOrSelf"):
+				continue
+			var loc := -(i + 1)
+			var b := UITheme.make_button("みかたの %s" % GameData.name_of("species", a.species_id), 14, Vector2(170, 36))
+			b.pressed.connect(func(): _commit_slot_choice({"type": "move", "move": mid, "target": loc}))
+			_target_panel.add_child(b)
+	var back := UITheme.make_button("もどる", 14, Vector2(100, 30))
+	back.pressed.connect(_show_moves)
+	_target_panel.add_child(back)
 
 func _choose_switch(i: int) -> void:
 	if _bag_item_pending != "":
 		_choose_item(_bag_item_pending, i)
 		return
-	var err := battle.choose(0, [{"type": "switch", "index": i}])
-	if err != "":
-		_message.append_text("[color=salmon]%s[/color]\n" % err)
+	var req: Dictionary = battle.sides[0].request
+	if req.get("type") == "switch":
+		_slot_choices.append({"type": "switch", "index": i})
+		if _slot_choices.size() < req["slots"].size():
+			_show_switch(true)
+			return
+		var err := battle.choose(0, _slot_choices.duplicate())
+		_slot_choices.clear()
+		if err != "":
+			_message.append_text("[color=salmon]%s[/color]\n" % err)
+			_show_switch(true)
+			return
+		_cpu_decide()
+		_begin_playback()
 		return
-	_cpu_decide()
-	_begin_playback()
+	_commit_slot_choice({"type": "switch", "index": i})
 
 func _show_bag() -> void:
 	var req: Dictionary = battle.sides[0].request
@@ -612,21 +711,13 @@ func _pick_bag_item(id: String) -> void:
 
 func _choose_item(id: String, target: int) -> void:
 	_bag_item_pending = ""
-	var err := battle.choose(0, [{"type": "item", "item": id, "target": target}])
-	if err != "":
-		_message.append_text("[color=salmon]%s[/color]\n" % err)
-		_show_commands()
-		return
-	_cpu_decide()
-	_begin_playback()
+	_commit_slot_choice({"type": "item", "item": id, "target": target})
 
 func _forfeit() -> void:
 	if battle.is_wild:
 		var req: Dictionary = battle.sides[0].request
 		if req.get("type") == "move":
-			battle.choose(0, [{"type": "run"}])
-			_cpu_decide()
-			_begin_playback()
+			_commit_slot_choice({"type": "run"})
 		return
 	_state = "ended"
 	_hide_panels()
