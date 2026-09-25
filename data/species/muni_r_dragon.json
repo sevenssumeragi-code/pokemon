@@ -6,9 +6,9 @@
   ],
   "base_stats": {
    "hp": 80,
-   "atk": 80,
-   "def": 75,
-   "spa": 60,
+   "atk": 85,
+   "def": 80,
+   "spa": 50,
    "spd": 75,
    "spe": 70
   },
@@ -117,6 +117,7 @@
     "earthquake",
     "encore",
     "endure",
+    "extreme_speed",
     "facade",
     "fire_fang",
     "fire_punch",

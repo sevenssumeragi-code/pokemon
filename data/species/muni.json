@@ -6,9 +6,9 @@
   ],
   "base_stats": {
    "hp": 75,
-   "atk": 50,
+   "atk": 40,
    "def": 70,
-   "spa": 85,
+   "spa": 95,
    "spd": 80,
    "spe": 80
   },
@@ -124,6 +124,7 @@
     "icy_wind",
     "knock_off",
     "mystical_fire",
+    "nasty_plot",
     "protect",
     "psych_up",
     "psychic",

@@ -205,6 +205,24 @@
    "role": "support"
   },
   {
+   "name": "np",
+   "moves": [
+    "nasty_plot",
+    "moonblast",
+    "draining_kiss",
+    "thunder_wave"
+   ],
+   "item": "leftovers",
+   "nature": "timid",
+   "evs": {
+    "spa": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "prankster",
+   "role": "sweeper"
+  },
+  {
    "name": "support",
    "moves": [
     "thunder_wave",
@@ -261,12 +279,12 @@
    "role": "weather"
   },
   {
-   "name": "calm_mind",
+   "name": "sub_cm",
    "moves": [
     "blizzard",
     "calm_mind",
     "freeze_dry",
-    "recover"
+    "substitute"
    ],
    "item": "leftovers",
    "nature": "timid",
@@ -445,6 +463,24 @@
    },
    "ability": "sacred_light",
    "role": "support"
+  },
+  {
+   "name": "np",
+   "moves": [
+    "nasty_plot",
+    "hurricane",
+    "roost",
+    "moonblast"
+   ],
+   "item": "leftovers",
+   "nature": "modest",
+   "evs": {
+    "hp": 252,
+    "spa": 252,
+    "spe": 4
+   },
+   "ability": "sacred_light",
+   "role": "bulky_attacker"
   }
  ],
  "namazuo": [
@@ -732,9 +768,9 @@
    "name": "dd",
    "moves": [
     "dragon_dance",
-    "dragon_claw",
-    "roost",
-    "earthquake"
+    "outrage",
+    "extreme_speed",
+    "roost"
    ],
    "item": "leftovers",
    "nature": "jolly",
@@ -790,7 +826,7 @@
     "quiver_dance",
     "bug_buzz",
     "sleep_powder",
-    "air_slash"
+    "hurricane"
    ],
    "item": "leftovers",
    "nature": "timid",
@@ -821,12 +857,12 @@
    "role": "support"
   },
   {
-   "name": "quiver_sub",
+   "name": "quiver_cov",
    "moves": [
     "quiver_dance",
     "bug_buzz",
-    "substitute",
-    "giga_drain"
+    "hurricane",
+    "focus_blast"
    ],
    "item": "leftovers",
    "nature": "timid",
@@ -877,12 +913,12 @@
    "role": "stall"
   },
   {
-   "name": "support",
+   "name": "espeed",
    "moves": [
-    "yawn",
-    "wish",
-    "encore",
-    "body_slam"
+    "extreme_speed",
+    "body_slam",
+    "soft_boiled",
+    "yawn"
    ],
    "item": "leftovers",
    "nature": "impish",
@@ -892,7 +928,7 @@
     "spd": 4
    },
    "ability": "minimal_body",
-   "role": "support"
+   "role": "bulky_attacker"
   }
  ],
  "gel_r_poison": [

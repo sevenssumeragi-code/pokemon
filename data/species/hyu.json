@@ -5,10 +5,10 @@
    "ghost"
   ],
   "base_stats": {
-   "hp": 70,
+   "hp": 75,
    "atk": 50,
-   "def": 65,
-   "spa": 120,
+   "def": 70,
+   "spa": 110,
    "spd": 80,
    "spe": 115
   },
