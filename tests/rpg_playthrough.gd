@@ -13,6 +13,7 @@ var path: Array = []  # pending tile moves for the current goto
 var log_lines: Array = []
 var boss_attempts := 0
 var last_map := ""
+var postgame := false
 
 func _initialize() -> void:
 	GameData.ensure_loaded()
@@ -74,11 +75,41 @@ func _process(_d: float) -> bool:
 		return _fail("frame limit")
 	if not (main._current is RPGController):
 		if gstate.flag("game_cleared", false):
-			print("PLAYTHROUGH_OK frames=%d party=%s money=%d dex_caught=%d" % [frames, _party_desc(), gstate.money, gstate.dex_caught.size()])
+			if OS.get_environment("POSTGAME") == "1" and not postgame:
+				# continue from the ending save and play the post-game (route 2 -> port -> rival -> battle hall doubles)
+				postgame = true
+				main.continue_game()
+				ctrl = main._current
+				gstate = ctrl.state
+				ctrl.auto_play = true
+				ctrl.move_duration = 0.0
+				plan = [
+					{"type": "grind", "map": "route2", "level": 28},
+					{"type": "heal"},
+					{"type": "goto", "map": "port", "x": 10, "y": 7},
+					{"type": "interact", "dir": "right"},                 # rival
+					{"type": "expect_flag", "flag": "rival_beaten", "retry_from": 0},
+					{"type": "heal"},
+					{"type": "goto", "map": "hall", "x": 5, "y": 3},
+					{"type": "interact", "dir": "up"},                    # hall master (doubles)
+					{"type": "expect_flag", "flag": "hall_beaten", "retry_from": 0},
+				]
+				step_i = 0
+				boss_attempts = 0
+				_log("POSTGAME start: " + _party_desc())
+				return false
+			if postgame and not gstate.flag("hall_beaten", false):
+				return _fail("post-game ended without beating the hall master")
+			print("PLAYTHROUGH_OK frames=%d party=%s money=%d dex_caught=%d postgame=%s" % [frames, _party_desc(), gstate.money, gstate.dex_caught.size(), str(postgame)])
 			_cleanup()
 			quit(0)
 			return true
 		return _fail("left the RPG without clearing")
+	if postgame and gstate.flag("hall_beaten", false):
+		print("PLAYTHROUGH_OK frames=%d party=%s money=%d dex_caught=%d postgame=true" % [frames, _party_desc(), gstate.money, gstate.dex_caught.size()])
+		_cleanup()
+		quit(0)
+		return true
 	if ctrl.state.map_id != last_map:
 		last_map = ctrl.state.map_id
 		_log("map -> " + last_map)
@@ -125,13 +156,13 @@ func _process(_d: float) -> bool:
 				else:
 					return _fail("flag %s not set after step" % st["flag"])
 		"heal":
-			if _heal_needed() or true:
-				if _goto("town", 11, 6):
-					ctrl.state.dir = "up"
-					ctrl.renderer.player_dir = "up"
-					ctrl.interact()
-					step_i += 1
-			else:
+			var hm := "port" if postgame else "town"
+			var hx := 3 if postgame else 11
+			var hy := 6 if postgame else 6
+			if _goto(hm, hx, hy):
+				ctrl.state.dir = "up"
+				ctrl.renderer.player_dir = "up"
+				ctrl.interact()
 				step_i += 1
 		"grind":
 			if _grind(str(st["map"]), int(st["level"])):
@@ -165,21 +196,17 @@ var _grind_toggle := false
 func _grind(map_id: String, level: int) -> bool:
 	if _max_level() >= level:
 		return true
-	if _heal_needed() and ctrl.state.map_id != "town":
-		if _goto("town", 11, 6):
-			ctrl.state.dir = "up"
-			ctrl.renderer.player_dir = "up"
-			ctrl.interact()
-		return false
-	if ctrl.state.map_id == "town" and _heal_needed():
-		if _goto("town", 11, 6):
+	if _heal_needed():
+		var hm := "town"
+		var hp := Vector2i(11, 6)
+		if _goto(hm, hp.x, hp.y):
 			ctrl.state.dir = "up"
 			ctrl.renderer.player_dir = "up"
 			ctrl.interact()
 		return false
 	# walk between two encounter tiles
-	var a := Vector2i(2, 2) if map_id == "field" else Vector2i(5, 1)
-	var b := Vector2i(4, 3) if map_id == "field" else Vector2i(7, 3)
+	var a := Vector2i(2, 2) if map_id == "field" else (Vector2i(2, 2) if map_id == "route2" else Vector2i(5, 1))
+	var b := Vector2i(4, 3) if map_id == "field" else (Vector2i(5, 3) if map_id == "route2" else Vector2i(7, 3))
 	var target := b if _grind_toggle else a
 	if _goto(map_id, target.x, target.y):
 		_grind_toggle = not _grind_toggle
@@ -192,6 +219,9 @@ const ROUTES := {
 	"town>shop": [["town", 9, 10]], "shop>town": [["shop", 4, 6]],
 	"town>field": [["town", 7, 15]], "field>town": [["field", 8, 0]],
 	"field>cave": [["field", 18, 21]], "cave>field": [["cave", 1, 1]],
+	"town>route2": [["town", 19, 6]], "route2>town": [["route2", 0, 4]],
+	"route2>port": [["route2", 23, 9]], "port>route2": [["port", 0, 7]],
+	"port>hall": [["port", 7, 3]], "hall>port": [["hall", 5, 8]],
 }
 
 func _next_hop(from_map: String, to_map: String) -> Array:
@@ -200,8 +230,8 @@ func _next_hop(from_map: String, to_map: String) -> Array:
 	var key := from_map + ">" + to_map
 	if ROUTES.has(key):
 		return ROUTES[key][0]
-	# two-hop via town / field
-	for mid in ["town", "field"]:
+	# multi-hop via hubs
+	for mid in ["town", "field", "route2", "port"]:
 		if ROUTES.has(from_map + ">" + mid) and (mid == to_map or ROUTES.has(mid + ">" + to_map) or _next_hop(mid, to_map).size() > 0):
 			return ROUTES[from_map + ">" + mid][0]
 	return []
