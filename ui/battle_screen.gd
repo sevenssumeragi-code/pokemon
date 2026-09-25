@@ -24,7 +24,13 @@ var _timer: float = 0.0
 var _waiting_bar: bool = false
 var _pending_entries: Array = []
 
-# UI nodes
+# UI nodes (slot 0 of each side keeps the legacy names; slot 1 nodes live in the arrays below)
+var _slot_name: Array = [null, null, null, null]      # [p1a, p1b, p2a, p2b]
+var _slot_status: Array = [null, null, null, null]
+var _slot_boosts: Array = [null, null, null, null]
+var _slot_bar: Array = [null, null, null, null]
+var _slot_sprite: Array = [null, null, null, null]
+var _slot_panel: Array = [null, null, null, null]
 var _enemy_name: Label
 var _enemy_status: Label
 var _enemy_boosts: Label
@@ -165,6 +171,11 @@ func _build_ui() -> void:
 	_team_icons = HBoxContainer.new()
 	pv.add_child(_team_icons)
 
+	_slot_name[0] = _player_name; _slot_status[0] = _player_status; _slot_boosts[0] = _player_boosts; _slot_bar[0] = _player_bar; _slot_sprite[0] = _player_sprite; _slot_panel[0] = pp
+	_slot_name[2] = _enemy_name; _slot_status[2] = _enemy_status; _slot_boosts[2] = _enemy_boosts; _slot_bar[2] = _enemy_bar; _slot_sprite[2] = _enemy_sprite; _slot_panel[2] = ep
+	# second slots (doubles)
+	_build_second_slot(1, Vector2(0.27, 0.26), Vector2(0.36, 0.54), true)
+	_build_second_slot(3, Vector2(0.80, 0.10), Vector2(0.36, 0.09), false)
 	# field info
 	var fp := UITheme.make_panel(Color(0.05, 0.05, 0.1, 0.7))
 	fp.anchor_left = 0.35
@@ -272,6 +283,48 @@ func _build_ui() -> void:
 	_result_panel.add_child(rb)
 	_hide_panels()
 
+func _build_second_slot(idx: int, sprite_anchor: Vector2, panel_anchor: Vector2, is_player: bool) -> void:
+	var sprite := TextureRect.new()
+	var sz := 160 if is_player else 140
+	sprite.custom_minimum_size = Vector2(sz, sz)
+	sprite.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	sprite.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	sprite.anchor_left = sprite_anchor.x
+	sprite.anchor_right = sprite_anchor.x
+	sprite.anchor_top = sprite_anchor.y
+	sprite.anchor_bottom = sprite_anchor.y
+	sprite.offset_right = sz
+	sprite.offset_bottom = sz
+	add_child(sprite)
+	var panel := UITheme.make_panel(Color(0.08, 0.09, 0.14, 0.85))
+	panel.anchor_left = panel_anchor.x
+	panel.anchor_top = panel_anchor.y
+	panel.offset_right = 230
+	add_child(panel)
+	var vb := VBoxContainer.new()
+	panel.add_child(vb)
+	var nm := UITheme.make_label("", 14)
+	vb.add_child(nm)
+	var bar := HPBar.new()
+	bar.show_numbers = is_player
+	bar.custom_minimum_size = Vector2(120, 10)
+	bar.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+	vb.add_child(bar)
+	var st := UITheme.make_label("", 11, Color(1, 0.85, 0.5))
+	vb.add_child(st)
+	var bo := UITheme.make_label("", 11, Color(0.8, 0.9, 1))
+	vb.add_child(bo)
+	_slot_sprite[idx] = sprite; _slot_panel[idx] = panel; _slot_name[idx] = nm; _slot_bar[idx] = bar; _slot_status[idx] = st; _slot_boosts[idx] = bo
+	sprite.visible = false
+	panel.visible = false
+
+func _slot_idx(tag: String) -> int:
+	# "p1a:..." -> 0, "p1b" -> 1, "p2a" -> 2, "p2b" -> 3
+	var side := 0 if tag.begins_with("p1") else 2
+	var slot := 1 if tag.length() > 2 and tag[2] == "b" else 0
+	return side + slot
+
 func _hide_panels() -> void:
 	_target_panel.visible = false
 	_bag_panel.visible = false
@@ -312,12 +365,21 @@ func _sync_all(instant: bool) -> void:
 	_sync_team_icons()
 
 func _sync_side(side: int, instant: bool) -> void:
-	var p := _active(side)
-	var name_l := _player_name if side == 0 else _enemy_name
-	var bar := _player_bar if side == 0 else _enemy_bar
-	var sprite := _player_sprite if side == 0 else _enemy_sprite
-	var status_l := _player_status if side == 0 else _enemy_status
-	var boosts_l := _player_boosts if side == 0 else _enemy_boosts
+	for slot in range(battle.slots_per_side):
+		_sync_slot(side, slot, instant)
+
+func _sync_slot(side: int, slot: int, instant: bool) -> void:
+	var idx := side * 2 + slot
+	var p = battle.sides[side].active[slot] if slot < battle.sides[side].active.size() else null
+	var name_l: Label = _slot_name[idx]
+	var bar: HPBar = _slot_bar[idx]
+	var sprite: TextureRect = _slot_sprite[idx]
+	var status_l: Label = _slot_status[idx]
+	var boosts_l: Label = _slot_boosts[idx]
+	var panel: Control = _slot_panel[idx]
+	if slot == 1:
+		sprite.visible = battle.slots_per_side > 1
+		panel.visible = battle.slots_per_side > 1
 	if p == null:
 		name_l.text = ""
 		sprite.texture = null
@@ -325,7 +387,7 @@ func _sync_side(side: int, instant: bool) -> void:
 	name_l.text = "%s  Lv%d" % [GameData.name_of("species", p.species_id), p.level]
 	bar.set_hp(p.max_hp, p.hp, instant)
 	sprite.texture = SpriteLoader.get_texture(p.species_id, side == 0)
-	sprite.modulate = Color(1, 1, 1, 0.0 if p.fainted else 1.0)
+	sprite.modulate = Color(1, 1, 1, 0.15 if p.fainted else 1.0)
 	_sync_status(p, status_l, boosts_l)
 
 func _sync_status(p: BattlePokemon, status_l: Label, boosts_l: Label) -> void:
@@ -391,8 +453,9 @@ func _process(delta: float) -> void:
 		return
 	if _state == "playing":
 		if _waiting_bar:
-			if _player_bar.is_animating() or _enemy_bar.is_animating():
-				return
+			for bar in _slot_bar:
+				if bar != null and bar.is_animating():
+					return
 			_waiting_bar = false
 		_timer -= delta
 		if _timer > 0.0 and not auto_play:
@@ -429,26 +492,25 @@ func _advance_log() -> void:
 func _apply_visual(e: Array) -> bool:
 	match str(e[0]):
 		"-hp", "-damage", "-heal", "-sethp":
-			var side := 0 if str(e[1]).begins_with("p1") else 1
-			var bar := _player_bar if side == 0 else _enemy_bar
+			var bar: HPBar = _slot_bar[_slot_idx(str(e[1]))]
 			bar.set_hp(int(e[3]), int(e[2]))
 			return true
 		"switch", "drag":
-			var side := 0 if str(e[1]).begins_with("p1") else 1
-			_sync_side(side, true)
+			var idx := _slot_idx(str(e[1]))
+			_sync_slot(idx / 2, idx % 2, true)
 			_sync_team_icons()
 		"faint":
-			var side := 0 if str(e[1]).begins_with("p1") else 1
-			var sprite := _player_sprite if side == 0 else _enemy_sprite
+			var sprite: TextureRect = _slot_sprite[_slot_idx(str(e[1]))]
 			sprite.modulate = Color(1, 1, 1, 0.15)
 			_sync_team_icons()
 		"turn", "-weather", "-fieldstart", "-fieldend", "-sidestart", "-sideend":
 			_sync_field()
 		"-status", "-curestatus", "-boost", "-unboost", "-start", "-end", "-clearallboost", "-clearboost":
-			var side := 0 if str(e[1]).begins_with("p1") else 1
-			var p := _active(side)
-			if p != null:
-				_sync_status(p, _player_status if side == 0 else _enemy_status, _player_boosts if side == 0 else _enemy_boosts)
+			if e.size() > 1 and str(e[1]).begins_with("p"):
+				var idx := _slot_idx(str(e[1]))
+				var p = battle.sides[idx / 2].active[idx % 2] if (idx % 2) < battle.sides[idx / 2].active.size() else null
+				if p != null:
+					_sync_status(p, _slot_status[idx], _slot_boosts[idx])
 			_sync_team_icons()
 	return false
 
