@@ -1,0 +1,157 @@
+{
+ "namazuo": {
+  "num": 9,
+  "types": [
+   "electric",
+   "steel"
+  ],
+  "base_stats": {
+   "hp": 70,
+   "atk": 115,
+   "def": 85,
+   "spa": 60,
+   "spd": 70,
+   "spe": 110
+  },
+  "abilities": {
+   "0": "static"
+  },
+  "weight_kg": 60.0,
+  "height_m": 1.2,
+  "base_form": "namazuo",
+  "form": "",
+  "region_form": false,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "tackle"
+    },
+    {
+     "level": 1,
+     "move": "thunder_shock"
+    },
+    {
+     "level": 5,
+     "move": "metal_claw"
+    },
+    {
+     "level": 9,
+     "move": "nuzzle"
+    },
+    {
+     "level": 13,
+     "move": "spark"
+    },
+    {
+     "level": 17,
+     "move": "cut"
+    },
+    {
+     "level": 21,
+     "move": "iron_head"
+    },
+    {
+     "level": 25,
+     "move": "thunder_wave"
+    },
+    {
+     "level": 29,
+     "move": "slash"
+    },
+    {
+     "level": 33,
+     "move": "swords_dance"
+    },
+    {
+     "level": 37,
+     "move": "wild_charge"
+    },
+    {
+     "level": 41,
+     "move": "night_slash"
+    },
+    {
+     "level": 45,
+     "move": "iron_defense"
+    },
+    {
+     "level": 49,
+     "move": "x_scissor"
+    },
+    {
+     "level": 53,
+     "move": "zing_zap"
+    },
+    {
+     "level": 57,
+     "move": "smart_strike"
+    },
+    {
+     "level": 61,
+     "move": "volt_tackle"
+    }
+   ],
+   "tm": [
+    "aerial_ace",
+    "agility",
+    "air_cutter",
+    "aqua_cutter",
+    "attract",
+    "body_press",
+    "brick_break",
+    "bulk_up",
+    "ceaseless_edge",
+    "charge",
+    "crunch",
+    "double_team",
+    "earthquake",
+    "electric_terrain",
+    "electroweb",
+    "endure",
+    "facade",
+    "fire_punch",
+    "flash_cannon",
+    "gyro_ball",
+    "heavy_slam",
+    "ice_punch",
+    "knock_off",
+    "leaf_blade",
+    "magnet_rise",
+    "protect",
+    "psycho_cut",
+    "razor_shell",
+    "rest",
+    "rock_slide",
+    "sacred_sword",
+    "sleep_talk",
+    "snore",
+    "steel_beam",
+    "stone_axe",
+    "stone_edge",
+    "substitute",
+    "swagger",
+    "taunt",
+    "thunder",
+    "thunder_punch",
+    "thunderbolt",
+    "toxic",
+    "u_turn",
+    "volt_switch",
+    "x_scissor"
+   ]
+  },
+  "catch_rate": 60,
+  "base_exp": 170,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "atk": 2
+  },
+  "gender_ratio": 0.5,
+  "sprite": "namazuo",
+  "dex_key": "namazuo"
+ }
+}

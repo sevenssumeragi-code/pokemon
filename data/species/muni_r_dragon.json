@@ -1,0 +1,160 @@
+{
+ "muni_r_dragon": {
+  "num": 14,
+  "types": [
+   "dragon"
+  ],
+  "base_stats": {
+   "hp": 70,
+   "atk": 70,
+   "def": 70,
+   "spa": 70,
+   "spd": 70,
+   "spe": 70
+  },
+  "abilities": {
+   "0": "multiscale"
+  },
+  "weight_kg": 9.0,
+  "height_m": 0.5,
+  "base_form": "muni",
+  "form": "R竜",
+  "region_form": true,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "pound"
+    },
+    {
+     "level": 1,
+     "move": "leer"
+    },
+    {
+     "level": 4,
+     "move": "twister"
+    },
+    {
+     "level": 7,
+     "move": "dragon_breath"
+    },
+    {
+     "level": 10,
+     "move": "minimize"
+    },
+    {
+     "level": 13,
+     "move": "scary_face"
+    },
+    {
+     "level": 16,
+     "move": "dragon_tail"
+    },
+    {
+     "level": 19,
+     "move": "dual_chop"
+    },
+    {
+     "level": 22,
+     "move": "dragon_dance"
+    },
+    {
+     "level": 25,
+     "move": "dragon_pulse"
+    },
+    {
+     "level": 28,
+     "move": "roost"
+    },
+    {
+     "level": 31,
+     "move": "dragon_claw"
+    },
+    {
+     "level": 34,
+     "move": "breaking_swipe"
+    },
+    {
+     "level": 37,
+     "move": "scale_shot"
+    },
+    {
+     "level": 40,
+     "move": "draco_meteor"
+    },
+    {
+     "level": 43,
+     "move": "outrage"
+    },
+    {
+     "level": 46,
+     "move": "dragon_rush"
+    },
+    {
+     "level": 49,
+     "move": "haze"
+    },
+    {
+     "level": 52,
+     "move": "light_screen"
+    },
+    {
+     "level": 55,
+     "move": "reflect"
+    }
+   ],
+   "tm": [
+    "agility",
+    "aqua_tail",
+    "attract",
+    "baton_pass",
+    "body_slam",
+    "calm_mind",
+    "double_team",
+    "earthquake",
+    "encore",
+    "endure",
+    "facade",
+    "fire_fang",
+    "fire_punch",
+    "flamethrower",
+    "helping_hand",
+    "hyper_voice",
+    "ice_beam",
+    "ice_fang",
+    "iron_head",
+    "iron_tail",
+    "knock_off",
+    "play_rough",
+    "protect",
+    "psych_up",
+    "rest",
+    "sleep_talk",
+    "snore",
+    "stored_power",
+    "substitute",
+    "swagger",
+    "taunt",
+    "thunder_fang",
+    "thunder_punch",
+    "thunderbolt",
+    "toxic",
+    "u_turn",
+    "wish",
+    "work_up"
+   ]
+  },
+  "catch_rate": 120,
+  "base_exp": 100,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "hp": 1
+  },
+  "gender_ratio": 0.5,
+  "sprite": "muni_r_dragon",
+  "dex_key": "muni_r_dragon"
+ }
+}

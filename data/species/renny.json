@@ -1,0 +1,149 @@
+{
+ "renny": {
+  "num": 1,
+  "types": [
+   "water"
+  ],
+  "base_stats": {
+   "hp": 105,
+   "atk": 115,
+   "def": 80,
+   "spa": 55,
+   "spd": 75,
+   "spe": 80
+  },
+  "abilities": {
+   "0": "awakened_lion"
+  },
+  "weight_kg": 85.0,
+  "height_m": 1.4,
+  "base_form": "renny",
+  "form": "",
+  "region_form": false,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "tackle"
+    },
+    {
+     "level": 1,
+     "move": "leer"
+    },
+    {
+     "level": 4,
+     "move": "water_gun"
+    },
+    {
+     "level": 8,
+     "move": "bite"
+    },
+    {
+     "level": 12,
+     "move": "aqua_jet"
+    },
+    {
+     "level": 16,
+     "move": "scary_face"
+    },
+    {
+     "level": 20,
+     "move": "razor_shell"
+    },
+    {
+     "level": 24,
+     "move": "yawn"
+    },
+    {
+     "level": 28,
+     "move": "waterfall"
+    },
+    {
+     "level": 32,
+     "move": "rest"
+    },
+    {
+     "level": 36,
+     "move": "crunch"
+    },
+    {
+     "level": 40,
+     "move": "liquidation"
+    },
+    {
+     "level": 44,
+     "move": "aqua_cutter"
+    },
+    {
+     "level": 48,
+     "move": "body_slam"
+    },
+    {
+     "level": 52,
+     "move": "wave_crash"
+    },
+    {
+     "level": 56,
+     "move": "sleep_talk"
+    },
+    {
+     "level": 60,
+     "move": "crabhammer"
+    }
+   ],
+   "tm": [
+    "aqua_tail",
+    "attract",
+    "avalanche",
+    "body_press",
+    "brick_break",
+    "bulk_up",
+    "chilling_water",
+    "curse",
+    "double_team",
+    "dragon_tail",
+    "earthquake",
+    "endure",
+    "facade",
+    "flip_turn",
+    "heavy_slam",
+    "hydro_pump",
+    "ice_beam",
+    "ice_fang",
+    "ice_punch",
+    "iron_head",
+    "knock_off",
+    "low_kick",
+    "play_rough",
+    "protect",
+    "rain_dance",
+    "rest",
+    "roar",
+    "rock_slide",
+    "scald",
+    "sleep_talk",
+    "snore",
+    "stone_edge",
+    "substitute",
+    "superpower",
+    "surf",
+    "swagger",
+    "taunt",
+    "toxic",
+    "zen_headbutt"
+   ]
+  },
+  "catch_rate": 45,
+  "base_exp": 175,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "atk": 2
+  },
+  "gender_ratio": 0.5,
+  "sprite": "renny",
+  "dex_key": "renny"
+ }
+}

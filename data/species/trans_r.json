@@ -1,0 +1,173 @@
+{
+ "trans_r": {
+  "num": 19,
+  "types": [
+   "psychic"
+  ],
+  "base_stats": {
+   "hp": 85,
+   "atk": 115,
+   "def": 75,
+   "spa": 110,
+   "spd": 75,
+   "spe": 75
+  },
+  "abilities": {
+   "0": "competitive"
+  },
+  "weight_kg": 80.0,
+  "height_m": 1.8,
+  "base_form": "trans",
+  "form": "R",
+  "region_form": true,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "scratch"
+    },
+    {
+     "level": 1,
+     "move": "leer"
+    },
+    {
+     "level": 1,
+     "move": "confusion"
+    },
+    {
+     "level": 1,
+     "move": "cut"
+    },
+    {
+     "level": 12,
+     "move": "fury_cutter"
+    },
+    {
+     "level": 16,
+     "move": "focus_energy"
+    },
+    {
+     "level": 20,
+     "move": "slash"
+    },
+    {
+     "level": 24,
+     "move": "aerial_ace"
+    },
+    {
+     "level": 28,
+     "move": "psybeam"
+    },
+    {
+     "level": 32,
+     "move": "swords_dance"
+    },
+    {
+     "level": 34,
+     "move": "psycho_cut"
+    },
+    {
+     "level": 38,
+     "move": "night_slash"
+    },
+    {
+     "level": 42,
+     "move": "calm_mind"
+    },
+    {
+     "level": 46,
+     "move": "psychic"
+    },
+    {
+     "level": 50,
+     "move": "sacred_sword"
+    },
+    {
+     "level": 54,
+     "move": "psyblade"
+    },
+    {
+     "level": 58,
+     "move": "expanding_force"
+    },
+    {
+     "level": 62,
+     "move": "psyshock"
+    }
+   ],
+   "tm": [
+    "agility",
+    "air_cutter",
+    "aqua_cutter",
+    "attract",
+    "aura_sphere",
+    "body_press",
+    "brick_break",
+    "bulk_up",
+    "bullet_punch",
+    "ceaseless_edge",
+    "close_combat",
+    "counter",
+    "cross_poison",
+    "dazzling_gleam",
+    "detect",
+    "double_team",
+    "drain_punch",
+    "earthquake",
+    "endure",
+    "facade",
+    "fire_punch",
+    "focus_blast",
+    "ice_punch",
+    "iron_head",
+    "knock_off",
+    "leaf_blade",
+    "light_screen",
+    "low_kick",
+    "mach_punch",
+    "nasty_plot",
+    "poison_jab",
+    "protect",
+    "psychic_terrain",
+    "razor_shell",
+    "reflect",
+    "rest",
+    "reversal",
+    "rock_slide",
+    "secret_sword",
+    "shadow_ball",
+    "sleep_talk",
+    "snore",
+    "stone_axe",
+    "stone_edge",
+    "stored_power",
+    "substitute",
+    "swagger",
+    "taunt",
+    "teleport",
+    "thunder_punch",
+    "thunderbolt",
+    "toxic",
+    "trick",
+    "trick_room",
+    "u_turn",
+    "vacuum_wave",
+    "work_up",
+    "x_scissor"
+   ]
+  },
+  "catch_rate": 45,
+  "base_exp": 190,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "atk": 2,
+   "spa": 1
+  },
+  "gender_ratio": 0.5,
+  "sprite": "trans_r",
+  "dex_key": "trans_r"
+ }
+}

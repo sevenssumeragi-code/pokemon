@@ -1,0 +1,152 @@
+{
+ "honebami": {
+  "num": 10,
+  "types": [
+   "steel",
+   "flying"
+  ],
+  "base_stats": {
+   "hp": 65,
+   "atk": 115,
+   "def": 75,
+   "spa": 55,
+   "spd": 70,
+   "spe": 120
+  },
+  "abilities": {
+   "0": "unburden"
+  },
+  "weight_kg": 18.0,
+  "height_m": 1.0,
+  "base_form": "honebami",
+  "form": "",
+  "region_form": false,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "peck"
+    },
+    {
+     "level": 1,
+     "move": "leer"
+    },
+    {
+     "level": 5,
+     "move": "metal_claw"
+    },
+    {
+     "level": 9,
+     "move": "quick_attack"
+    },
+    {
+     "level": 13,
+     "move": "wing_attack"
+    },
+    {
+     "level": 17,
+     "move": "cut"
+    },
+    {
+     "level": 21,
+     "move": "steel_wing"
+    },
+    {
+     "level": 25,
+     "move": "aerial_ace"
+    },
+    {
+     "level": 29,
+     "move": "slash"
+    },
+    {
+     "level": 33,
+     "move": "swords_dance"
+    },
+    {
+     "level": 37,
+     "move": "air_cutter"
+    },
+    {
+     "level": 41,
+     "move": "iron_head"
+    },
+    {
+     "level": 45,
+     "move": "night_slash"
+    },
+    {
+     "level": 49,
+     "move": "acrobatics"
+    },
+    {
+     "level": 53,
+     "move": "brave_bird"
+    },
+    {
+     "level": 57,
+     "move": "smart_strike"
+    },
+    {
+     "level": 61,
+     "move": "kowtow_cleave"
+    }
+   ],
+   "tm": [
+    "agility",
+    "air_slash",
+    "aqua_cutter",
+    "attract",
+    "body_press",
+    "brick_break",
+    "bullet_punch",
+    "ceaseless_edge",
+    "defog",
+    "double_team",
+    "drill_peck",
+    "dual_wingbeat",
+    "endure",
+    "facade",
+    "feather_dance",
+    "flash_cannon",
+    "fly",
+    "heavy_slam",
+    "hurricane",
+    "iron_defense",
+    "knock_off",
+    "leaf_blade",
+    "low_kick",
+    "protect",
+    "psycho_cut",
+    "rest",
+    "rock_slide",
+    "roost",
+    "sacred_sword",
+    "sleep_talk",
+    "snore",
+    "steel_beam",
+    "stone_axe",
+    "stone_edge",
+    "substitute",
+    "swagger",
+    "tailwind",
+    "taunt",
+    "toxic",
+    "u_turn",
+    "x_scissor"
+   ]
+  },
+  "catch_rate": 60,
+  "base_exp": 170,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "spe": 2
+  },
+  "gender_ratio": 0.5,
+  "sprite": "honebami",
+  "dex_key": "honebami"
+ }
+}

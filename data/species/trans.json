@@ -1,0 +1,165 @@
+{
+ "trans": {
+  "num": 7,
+  "types": [
+   "fighting",
+   "ground"
+  ],
+  "base_stats": {
+   "hp": 85,
+   "atk": 120,
+   "def": 80,
+   "spa": 105,
+   "spd": 75,
+   "spe": 70
+  },
+  "abilities": {
+   "0": "sharpness",
+   "H": "steadfast"
+  },
+  "weight_kg": 95.0,
+  "height_m": 1.8,
+  "base_form": "trans",
+  "form": "",
+  "region_form": false,
+  "evolves_from": "neo",
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "scratch"
+    },
+    {
+     "level": 1,
+     "move": "leer"
+    },
+    {
+     "level": 1,
+     "move": "karate_chop"
+    },
+    {
+     "level": 1,
+     "move": "cut"
+    },
+    {
+     "level": 12,
+     "move": "fury_cutter"
+    },
+    {
+     "level": 16,
+     "move": "focus_energy"
+    },
+    {
+     "level": 20,
+     "move": "slash"
+    },
+    {
+     "level": 24,
+     "move": "aerial_ace"
+    },
+    {
+     "level": 28,
+     "move": "night_slash"
+    },
+    {
+     "level": 32,
+     "move": "swords_dance"
+    },
+    {
+     "level": 34,
+     "move": "stone_axe"
+    },
+    {
+     "level": 38,
+     "move": "x_scissor"
+    },
+    {
+     "level": 42,
+     "move": "sacred_sword"
+    },
+    {
+     "level": 46,
+     "move": "psycho_cut"
+    },
+    {
+     "level": 50,
+     "move": "earth_power"
+    },
+    {
+     "level": 54,
+     "move": "secret_sword"
+    },
+    {
+     "level": 58,
+     "move": "close_combat"
+    },
+    {
+     "level": 62,
+     "move": "high_horsepower"
+    }
+   ],
+   "tm": [
+    "air_cutter",
+    "aqua_cutter",
+    "attract",
+    "aura_sphere",
+    "body_press",
+    "brick_break",
+    "bulk_up",
+    "bulldoze",
+    "bullet_punch",
+    "ceaseless_edge",
+    "counter",
+    "cross_poison",
+    "detect",
+    "double_team",
+    "drain_punch",
+    "earthquake",
+    "endure",
+    "facade",
+    "focus_blast",
+    "headlong_rush",
+    "iron_defense",
+    "iron_head",
+    "knock_off",
+    "leaf_blade",
+    "low_kick",
+    "mach_punch",
+    "poison_jab",
+    "protect",
+    "psyblade",
+    "razor_shell",
+    "rest",
+    "reversal",
+    "rock_slide",
+    "scorching_sands",
+    "sleep_talk",
+    "snore",
+    "solar_blade",
+    "spikes",
+    "stealth_rock",
+    "stomping_tantrum",
+    "stone_edge",
+    "substitute",
+    "superpower",
+    "swagger",
+    "taunt",
+    "toxic",
+    "u_turn",
+    "vacuum_wave",
+    "work_up"
+   ]
+  },
+  "catch_rate": 45,
+  "base_exp": 190,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "atk": 3
+  },
+  "gender_ratio": 0.5,
+  "sprite": "trans",
+  "dex_key": "trans"
+ }
+}

@@ -1,0 +1,147 @@
+{
+ "neo": {
+  "num": 6,
+  "types": [
+   "fighting"
+  ],
+  "base_stats": {
+   "hp": 55,
+   "atk": 85,
+   "def": 50,
+   "spa": 80,
+   "spd": 50,
+   "spe": 80
+  },
+  "abilities": {
+   "0": "sharpness",
+   "H": "steadfast"
+  },
+  "weight_kg": 20.0,
+  "height_m": 0.9,
+  "base_form": "neo",
+  "form": "",
+  "region_form": false,
+  "evolves_from": null,
+  "evolution": {
+   "method": "level",
+   "level": 34,
+   "into": "trans"
+  },
+  "nfe": true,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "scratch"
+    },
+    {
+     "level": 1,
+     "move": "leer"
+    },
+    {
+     "level": 4,
+     "move": "karate_chop"
+    },
+    {
+     "level": 8,
+     "move": "cut"
+    },
+    {
+     "level": 12,
+     "move": "fury_cutter"
+    },
+    {
+     "level": 16,
+     "move": "focus_energy"
+    },
+    {
+     "level": 20,
+     "move": "slash"
+    },
+    {
+     "level": 24,
+     "move": "aerial_ace"
+    },
+    {
+     "level": 28,
+     "move": "night_slash"
+    },
+    {
+     "level": 32,
+     "move": "swords_dance"
+    },
+    {
+     "level": 36,
+     "move": "x_scissor"
+    },
+    {
+     "level": 40,
+     "move": "sacred_sword"
+    },
+    {
+     "level": 44,
+     "move": "psycho_cut"
+    },
+    {
+     "level": 48,
+     "move": "secret_sword"
+    },
+    {
+     "level": 52,
+     "move": "close_combat"
+    }
+   ],
+   "tm": [
+    "air_cutter",
+    "aqua_cutter",
+    "attract",
+    "aura_sphere",
+    "body_press",
+    "brick_break",
+    "bulk_up",
+    "bullet_punch",
+    "ceaseless_edge",
+    "counter",
+    "cross_poison",
+    "detect",
+    "double_team",
+    "drain_punch",
+    "earthquake",
+    "endure",
+    "facade",
+    "focus_blast",
+    "iron_head",
+    "knock_off",
+    "leaf_blade",
+    "low_kick",
+    "mach_punch",
+    "poison_jab",
+    "protect",
+    "razor_shell",
+    "rest",
+    "reversal",
+    "rock_slide",
+    "sleep_talk",
+    "snore",
+    "stone_axe",
+    "stone_edge",
+    "substitute",
+    "swagger",
+    "taunt",
+    "toxic",
+    "u_turn",
+    "vacuum_wave",
+    "work_up"
+   ]
+  },
+  "catch_rate": 120,
+  "base_exp": 80,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "atk": 1
+  },
+  "gender_ratio": 0.5,
+  "sprite": "neo",
+  "dex_key": "neo"
+ }
+}

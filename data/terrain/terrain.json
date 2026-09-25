@@ -1,0 +1,47 @@
+{
+ "electric": {
+  "duration": 5,
+  "extended_duration": 8,
+  "boost_type": "electric",
+  "blocks_status": [
+   "slp"
+  ],
+  "blocks_volatiles": [
+   "yawn"
+  ]
+ },
+ "grassy": {
+  "duration": 5,
+  "extended_duration": 8,
+  "boost_type": "grass",
+  "heal": [
+   1,
+   16
+  ],
+  "weakens_moves": [
+   "earthquake",
+   "bulldoze",
+   "magnitude"
+  ]
+ },
+ "misty": {
+  "duration": 5,
+  "extended_duration": 8,
+  "weakens_types": [
+   "dragon"
+  ],
+  "blocks_status": [
+   "all"
+  ],
+  "blocks_volatiles": [
+   "confusion",
+   "yawn"
+  ]
+ },
+ "psychic": {
+  "duration": 5,
+  "extended_duration": 8,
+  "boost_type": "psychic",
+  "blocks_priority": true
+ }
+}

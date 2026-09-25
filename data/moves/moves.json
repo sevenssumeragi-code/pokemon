@@ -1,0 +1,7538 @@
+{
+ "tackle": {
+  "type": "normal",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 35,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "scratch": {
+  "type": "normal",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 35,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "pound": {
+  "type": "normal",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 35,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "focus_energy": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 30,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "volatile_status": "focus_energy"
+ },
+ "quick_attack": {
+  "type": "normal",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "extreme_speed": {
+  "type": "normal",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 2,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "body_slam": {
+  "type": "normal",
+  "category": "physical",
+  "power": 85,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "crushes_minimized"
+  ],
+  "secondary": {
+   "chance": 30,
+   "status": "par"
+  }
+ },
+ "double_edge": {
+  "type": "normal",
+  "category": "physical",
+  "power": 120,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "recoil": [
+   33,
+   100
+  ]
+ },
+ "take_down": {
+  "type": "normal",
+  "category": "physical",
+  "power": 90,
+  "accuracy": 85,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "recoil": [
+   1,
+   4
+  ]
+ },
+ "facade": {
+  "type": "normal",
+  "category": "physical",
+  "power": 70,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "facade",
+  "ignore_burn": true
+ },
+ "hyper_voice": {
+  "type": "normal",
+  "category": "special",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "bypasssub"
+  ]
+ },
+ "boomburst": {
+  "type": "normal",
+  "category": "special",
+  "power": 140,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "bypasssub"
+  ]
+ },
+ "hyper_beam": {
+  "type": "normal",
+  "category": "special",
+  "power": 150,
+  "accuracy": 90,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "recharge"
+  ]
+ },
+ "giga_impact": {
+  "type": "normal",
+  "category": "physical",
+  "power": 150,
+  "accuracy": 90,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "recharge"
+  ]
+ },
+ "tri_attack": {
+  "type": "normal",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "effect": "tri_attack"
+ },
+ "stomp": {
+  "type": "normal",
+  "category": "physical",
+  "power": 65,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "crushes_minimized"
+  ],
+  "secondary": {
+   "chance": 30,
+   "volatile_status": "flinch"
+  }
+ },
+ "headbutt": {
+  "type": "normal",
+  "category": "physical",
+  "power": 70,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "volatile_status": "flinch"
+  }
+ },
+ "mega_kick": {
+  "type": "normal",
+  "category": "physical",
+  "power": 120,
+  "accuracy": 75,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "slash": {
+  "type": "normal",
+  "category": "physical",
+  "power": 70,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "crit_ratio": 2
+ },
+ "cut": {
+  "type": "normal",
+  "category": "physical",
+  "power": 50,
+  "accuracy": 95,
+  "pp": 30,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing"
+  ]
+ },
+ "false_swipe": {
+  "type": "normal",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 40,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "leaves_1hp": true
+ },
+ "endeavor": {
+  "type": "normal",
+  "category": "physical",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "damage_callback": "endeavor"
+ },
+ "super_fang": {
+  "type": "normal",
+  "category": "physical",
+  "power": 0,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "damage_callback": "half_hp"
+ },
+ "swift": {
+  "type": "normal",
+  "category": "special",
+  "power": 60,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror"
+  ]
+ },
+ "protect": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 4,
+  "target": "self",
+  "flags": [],
+  "volatile_status": "protect",
+  "effect": "protect",
+  "stalling": true
+ },
+ "endure": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 4,
+  "target": "self",
+  "flags": [],
+  "volatile_status": "endure",
+  "effect": "protect",
+  "stalling": true
+ },
+ "substitute": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "volatile_status": "substitute",
+  "effect": "substitute"
+ },
+ "rest": {
+  "type": "psychic",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "self",
+  "flags": [
+   "heal"
+  ],
+  "effect": "rest",
+  "sleep_turns": 3
+ },
+ "sleep_talk": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "effect": "sleep_talk",
+  "sleep_usable": true,
+  "no_sleep_talk": true,
+  "no_encore": true
+ },
+ "snore": {
+  "type": "normal",
+  "category": "special",
+  "power": 50,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "bypasssub"
+  ],
+  "sleep_usable": true,
+  "effect": "snore",
+  "secondary": {
+   "chance": 30,
+   "volatile_status": "flinch"
+  }
+ },
+ "swords_dance": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "self",
+  "flags": [
+   "dance"
+  ],
+  "boosts": {
+   "atk": 2
+  }
+ },
+ "growl": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 40,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "reflectable",
+   "bypasssub"
+  ],
+  "boosts": {
+   "atk": -1
+  }
+ },
+ "leer": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "boosts": {
+   "def": -1
+  }
+ },
+ "tail_whip": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "boosts": {
+   "def": -1
+  }
+ },
+ "screech": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": 85,
+  "pp": 40,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "reflectable",
+   "bypasssub"
+  ],
+  "boosts": {
+   "def": -2
+  }
+ },
+ "scary_face": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "boosts": {
+   "spe": -2
+  }
+ },
+ "minimize": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "volatile_status": "minimize",
+  "boosts": {
+   "evasion": 2
+  }
+ },
+ "double_team": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 15,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "evasion": 1
+  }
+ },
+ "harden": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 30,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "def": 1
+  }
+ },
+ "work_up": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 30,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "atk": 1,
+   "spa": 1
+  }
+ },
+ "howl": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 40,
+  "priority": 0,
+  "target": "self",
+  "flags": [
+   "sound"
+  ],
+  "boosts": {
+   "atk": 1
+  }
+ },
+ "belly_drum": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "effect": "belly_drum"
+ },
+ "encore": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable",
+   "bypasssub"
+  ],
+  "volatile_status": "encore",
+  "no_encore": true
+ },
+ "disable": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable",
+   "bypasssub"
+  ],
+  "volatile_status": "disable"
+ },
+ "attract": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "volatile_status": "attract"
+ },
+ "yawn": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "volatile_status": "yawn",
+  "effect": "yawn"
+ },
+ "wish": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "self",
+  "flags": [
+   "heal"
+  ],
+  "effect": "wish"
+ },
+ "heal_bell": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "allyTeam",
+  "flags": [
+   "sound",
+   "bypasssub"
+  ],
+  "effect": "heal_bell"
+ },
+ "soft_boiled": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "self",
+  "flags": [
+   "heal"
+  ],
+  "heal": [
+   1,
+   2
+  ]
+ },
+ "recover": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "self",
+  "flags": [
+   "heal"
+  ],
+  "heal": [
+   1,
+   2
+  ]
+ },
+ "slack_off": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "self",
+  "flags": [
+   "heal"
+  ],
+  "heal": [
+   1,
+   2
+  ]
+ },
+ "milk_drink": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "self",
+  "flags": [
+   "heal"
+  ],
+  "heal": [
+   1,
+   2
+  ]
+ },
+ "morning_sun": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "self",
+  "flags": [
+   "heal"
+  ],
+  "effect": "weather_heal"
+ },
+ "safeguard": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 25,
+  "priority": 0,
+  "target": "allySide",
+  "flags": [],
+  "side_condition": "safeguard"
+ },
+ "whirlwind": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": -6,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable",
+   "bypasssub",
+   "wind"
+  ],
+  "force_switch": true
+ },
+ "roar": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": -6,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "reflectable",
+   "bypasssub"
+  ],
+  "force_switch": true
+ },
+ "baton_pass": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 40,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "self_switch": "copyvolatile",
+  "effect": "baton_pass"
+ },
+ "helping_hand": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 5,
+  "target": "adjacentAlly",
+  "flags": [
+   "bypasssub"
+  ],
+  "volatile_status": "helping_hand",
+  "no_sleep_talk": true
+ },
+ "follow_me": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 2,
+  "target": "self",
+  "flags": [],
+  "volatile_status": "follow_me"
+ },
+ "tearful_look": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "reflectable",
+   "mirror"
+  ],
+  "boosts": {
+   "atk": -1,
+   "spa": -1
+  }
+ },
+ "noble_roar": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "reflectable",
+   "bypasssub"
+  ],
+  "boosts": {
+   "atk": -1,
+   "spa": -1
+  }
+ },
+ "play_nice": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "mirror",
+   "reflectable",
+   "bypasssub"
+  ],
+  "boosts": {
+   "atk": -1
+  }
+ },
+ "pain_split": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "effect": "pain_split"
+ },
+ "fake_out": {
+  "type": "normal",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 3,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "effect": "fake_out",
+  "secondary": {
+   "chance": 100,
+   "volatile_status": "flinch"
+  }
+ },
+ "rapid_spin": {
+  "type": "normal",
+  "category": "physical",
+  "power": 50,
+  "accuracy": 100,
+  "pp": 40,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "effect": "rapid_spin",
+  "self": {
+   "boosts": {
+    "spe": 1
+   }
+  }
+ },
+ "explosion": {
+  "type": "normal",
+  "category": "physical",
+  "power": 250,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "self_destruct": "always"
+ },
+ "self_destruct": {
+  "type": "normal",
+  "category": "physical",
+  "power": 200,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "self_destruct": "always"
+ },
+ "crush_claw": {
+  "type": "normal",
+  "category": "physical",
+  "power": 75,
+  "accuracy": 95,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 50,
+   "boosts": {
+    "def": -1
+   }
+  }
+ },
+ "retaliate": {
+  "type": "normal",
+  "category": "physical",
+  "power": 70,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "double_hit": {
+  "type": "normal",
+  "category": "physical",
+  "power": 35,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "multihit": 2
+ },
+ "fury_swipes": {
+  "type": "normal",
+  "category": "physical",
+  "power": 18,
+  "accuracy": 80,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "multihit": [
+   2,
+   5
+  ]
+ },
+ "strength": {
+  "type": "normal",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "hyper_fang": {
+  "type": "normal",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 90,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "bite"
+  ],
+  "secondary": {
+   "chance": 10,
+   "volatile_status": "flinch"
+  }
+ },
+ "mega_punch": {
+  "type": "normal",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 85,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch"
+  ]
+ },
+ "lovely_kiss": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": 75,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "status": "slp"
+ },
+ "sing": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": 55,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "reflectable",
+   "bypasssub"
+  ],
+  "status": "slp"
+ },
+ "supersonic": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": 55,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "reflectable",
+   "bypasssub"
+  ],
+  "volatile_status": "confusion"
+ },
+ "swagger": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": 85,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "volatile_status": "confusion",
+  "boosts": {
+   "atk": 2
+  }
+ },
+ "psych_up": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "bypasssub"
+  ],
+  "effect": "psych_up"
+ },
+ "weather_ball": {
+  "type": "normal",
+  "category": "special",
+  "power": 50,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "bullet"
+  ],
+  "effect": "weather_ball",
+  "no_type_change": true
+ },
+ "laser_focus": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 30,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "volatile_status": "laser_focus"
+ },
+ "block": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "mirror",
+   "reflectable"
+  ],
+  "volatile_status": "trapped",
+  "effect": "trap_move"
+ },
+ "mean_look": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "mirror",
+   "reflectable"
+  ],
+  "volatile_status": "trapped",
+  "effect": "trap_move"
+ },
+ "bind": {
+  "type": "normal",
+  "category": "physical",
+  "power": 15,
+  "accuracy": 85,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "volatile_status": "partially_trapped"
+ },
+ "wrap": {
+  "type": "normal",
+  "category": "physical",
+  "power": 15,
+  "accuracy": 90,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "volatile_status": "partially_trapped"
+ },
+ "population_bomb": {
+  "type": "normal",
+  "category": "physical",
+  "power": 20,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "multihit": 10,
+  "multi_accuracy": true
+ },
+ "shell_smash": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 15,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "atk": 2,
+   "spa": 2,
+   "spe": 2,
+   "def": -1,
+   "spd": -1
+  }
+ },
+ "struggle": {
+  "type": "???",
+  "category": "physical",
+  "power": 50,
+  "accuracy": true,
+  "pp": 1,
+  "priority": 0,
+  "target": "randomNormal",
+  "flags": [
+   "contact"
+  ],
+  "effect": "struggle",
+  "no_pp_boosts": true,
+  "no_sleep_talk": true,
+  "no_encore": true,
+  "ignore_immunity": true
+ },
+ "tickle": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "boosts": {
+   "atk": -1,
+   "def": -1
+  }
+ },
+ "thrash": {
+  "type": "normal",
+  "category": "physical",
+  "power": 120,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "randomNormal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "locked_move": true
+ },
+ "glare": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "status": "par"
+ },
+ "flail": {
+  "type": "normal",
+  "category": "physical",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "low_hp"
+ },
+ "crush_grip": {
+  "type": "normal",
+  "category": "physical",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "target_hp"
+ },
+ "chip_away": {
+  "type": "normal",
+  "category": "physical",
+  "power": 70,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "ignore_defensive": true,
+  "ignore_evasion": true
+ },
+ "acupressure": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 30,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "effect": "acupressure"
+ },
+ "sand_attack": {
+  "type": "ground",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "boosts": {
+   "accuracy": -1
+  }
+ },
+ "ember": {
+  "type": "fire",
+  "category": "special",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 25,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "brn"
+  }
+ },
+ "flamethrower": {
+  "type": "fire",
+  "category": "special",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "brn"
+  }
+ },
+ "fire_blast": {
+  "type": "fire",
+  "category": "special",
+  "power": 110,
+  "accuracy": 85,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "brn"
+  }
+ },
+ "overheat": {
+  "type": "fire",
+  "category": "special",
+  "power": 130,
+  "accuracy": 90,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "self": {
+   "boosts": {
+    "spa": -2
+   }
+  }
+ },
+ "heat_wave": {
+  "type": "fire",
+  "category": "special",
+  "power": 95,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "wind"
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "brn"
+  }
+ },
+ "flame_charge": {
+  "type": "fire",
+  "category": "physical",
+  "power": 50,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "self": {
+   "boosts": {
+    "spe": 1
+   }
+  }
+ },
+ "fire_punch": {
+  "type": "fire",
+  "category": "physical",
+  "power": 75,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch"
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "brn"
+  }
+ },
+ "flare_blitz": {
+  "type": "fire",
+  "category": "physical",
+  "power": 120,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "defrost"
+  ],
+  "recoil": [
+   33,
+   100
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "brn"
+  }
+ },
+ "fire_fang": {
+  "type": "fire",
+  "category": "physical",
+  "power": 65,
+  "accuracy": 95,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "bite"
+  ],
+  "secondaries": [
+   {
+    "chance": 10,
+    "status": "brn"
+   },
+   {
+    "chance": 10,
+    "volatile_status": "flinch"
+   }
+  ]
+ },
+ "flame_wheel": {
+  "type": "fire",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 25,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "defrost"
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "brn"
+  }
+ },
+ "will_o_wisp": {
+  "type": "fire",
+  "category": "status",
+  "power": 0,
+  "accuracy": 85,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "status": "brn"
+ },
+ "sunny_day": {
+  "type": "fire",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "all",
+  "flags": [],
+  "weather": "sun"
+ },
+ "lava_plume": {
+  "type": "fire",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "status": "brn"
+  }
+ },
+ "fire_lash": {
+  "type": "fire",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "def": -1
+   }
+  }
+ },
+ "bitter_blade": {
+  "type": "fire",
+  "category": "physical",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing",
+   "heal"
+  ],
+  "drain": [
+   1,
+   2
+  ]
+ },
+ "mystical_fire": {
+  "type": "fire",
+  "category": "special",
+  "power": 75,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "spa": -1
+   }
+  }
+ },
+ "fire_spin": {
+  "type": "fire",
+  "category": "special",
+  "power": 35,
+  "accuracy": 85,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "volatile_status": "partially_trapped"
+ },
+ "blaze_kick": {
+  "type": "fire",
+  "category": "physical",
+  "power": 85,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "crit_ratio": 2,
+  "secondary": {
+   "chance": 10,
+   "status": "brn"
+  }
+ },
+ "eruption": {
+  "type": "fire",
+  "category": "special",
+  "power": 150,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "user_hp"
+ },
+ "heat_crash": {
+  "type": "fire",
+  "category": "physical",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "crushes_minimized"
+  ],
+  "base_power_callback": "heavy_slam"
+ },
+ "fiery_dance": {
+  "type": "fire",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "dance"
+  ],
+  "secondary": {
+   "chance": 50,
+   "self": {
+    "boosts": {
+     "spa": 1
+    }
+   }
+  }
+ },
+ "torch_song": {
+  "type": "fire",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "bypasssub"
+  ],
+  "secondary": {
+   "chance": 100,
+   "self": {
+    "boosts": {
+     "spa": 1
+    }
+   }
+  }
+ },
+ "armor_cannon": {
+  "type": "fire",
+  "category": "special",
+  "power": 120,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "self": {
+   "boosts": {
+    "def": -1,
+    "spd": -1
+   }
+  }
+ },
+ "inferno": {
+  "type": "fire",
+  "category": "special",
+  "power": 100,
+  "accuracy": 50,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "status": "brn"
+  }
+ },
+ "scorching_sands": {
+  "type": "ground",
+  "category": "special",
+  "power": 70,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "defrost"
+  ],
+  "thaws_target": true,
+  "secondary": {
+   "chance": 30,
+   "status": "brn"
+  }
+ },
+ "water_gun": {
+  "type": "water",
+  "category": "special",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 25,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ]
+ },
+ "hydro_pump": {
+  "type": "water",
+  "category": "special",
+  "power": 110,
+  "accuracy": 80,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ]
+ },
+ "surf": {
+  "type": "water",
+  "category": "special",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+   "protect",
+   "mirror"
+  ]
+ },
+ "scald": {
+  "type": "water",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "defrost"
+  ],
+  "thaws_target": true,
+  "secondary": {
+   "chance": 30,
+   "status": "brn"
+  }
+ },
+ "waterfall": {
+  "type": "water",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 20,
+   "volatile_status": "flinch"
+  }
+ },
+ "liquidation": {
+  "type": "water",
+  "category": "physical",
+  "power": 85,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 20,
+   "boosts": {
+    "def": -1
+   }
+  }
+ },
+ "aqua_jet": {
+  "type": "water",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "aqua_tail": {
+  "type": "water",
+  "category": "physical",
+  "power": 90,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "flip_turn": {
+  "type": "water",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "self_switch": true
+ },
+ "wave_crash": {
+  "type": "water",
+  "category": "physical",
+  "power": 120,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "recoil": [
+   33,
+   100
+  ]
+ },
+ "aqua_cutter": {
+  "type": "water",
+  "category": "physical",
+  "power": 70,
+  "accuracy": 95,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "crit_ratio": 2
+ },
+ "razor_shell": {
+  "type": "water",
+  "category": "physical",
+  "power": 75,
+  "accuracy": 95,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "secondary": {
+   "chance": 50,
+   "boosts": {
+    "def": -1
+   }
+  }
+ },
+ "water_pulse": {
+  "type": "water",
+  "category": "special",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "pulse"
+  ],
+  "secondary": {
+   "chance": 20,
+   "volatile_status": "confusion"
+  }
+ },
+ "whirlpool": {
+  "type": "water",
+  "category": "special",
+  "power": 35,
+  "accuracy": 85,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "volatile_status": "partially_trapped"
+ },
+ "muddy_water": {
+  "type": "water",
+  "category": "special",
+  "power": 90,
+  "accuracy": 85,
+  "pp": 10,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "boosts": {
+    "accuracy": -1
+   }
+  }
+ },
+ "brine": {
+  "type": "water",
+  "category": "special",
+  "power": 65,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "brine"
+ },
+ "water_spout": {
+  "type": "water",
+  "category": "special",
+  "power": 150,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "user_hp"
+ },
+ "aqua_ring": {
+  "type": "water",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "volatile_status": "aqua_ring"
+ },
+ "rain_dance": {
+  "type": "water",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "all",
+  "flags": [],
+  "weather": "rain"
+ },
+ "chilling_water": {
+  "type": "water",
+  "category": "special",
+  "power": 50,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "atk": -1
+   }
+  }
+ },
+ "crabhammer": {
+  "type": "water",
+  "category": "physical",
+  "power": 100,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "crit_ratio": 2
+ },
+ "bubble_beam": {
+  "type": "water",
+  "category": "special",
+  "power": 65,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "boosts": {
+    "spe": -1
+   }
+  }
+ },
+ "water_shuriken": {
+  "type": "water",
+  "category": "special",
+  "power": 15,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "multihit": [
+   2,
+   5
+  ]
+ },
+ "soak": {
+  "type": "water",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "effect": "soak"
+ },
+ "jet_punch": {
+  "type": "water",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch"
+  ]
+ },
+ "clamp": {
+  "type": "water",
+  "category": "physical",
+  "power": 35,
+  "accuracy": 85,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "volatile_status": "partially_trapped"
+ },
+ "sparkling_aria": {
+  "type": "water",
+  "category": "special",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "bypasssub"
+  ]
+ },
+ "thunder_shock": {
+  "type": "electric",
+  "category": "special",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "par"
+  }
+ },
+ "thunderbolt": {
+  "type": "electric",
+  "category": "special",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "par"
+  }
+ },
+ "thunder": {
+  "type": "electric",
+  "category": "special",
+  "power": 110,
+  "accuracy": 70,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "always_hit_in": [
+   "rain"
+  ],
+  "accuracy_in": {
+   "sun": 50
+  },
+  "hits_invulnerable": [
+   "fly"
+  ],
+  "secondary": {
+   "chance": 30,
+   "status": "par"
+  }
+ },
+ "volt_switch": {
+  "type": "electric",
+  "category": "special",
+  "power": 70,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "self_switch": true
+ },
+ "discharge": {
+  "type": "electric",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "status": "par"
+  }
+ },
+ "thunder_wave": {
+  "type": "electric",
+  "category": "status",
+  "power": 0,
+  "accuracy": 90,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "status": "par",
+  "ignore_immunity": false
+ },
+ "wild_charge": {
+  "type": "electric",
+  "category": "physical",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "recoil": [
+   1,
+   4
+  ]
+ },
+ "zing_zap": {
+  "type": "electric",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "volatile_status": "flinch"
+  }
+ },
+ "thunder_punch": {
+  "type": "electric",
+  "category": "physical",
+  "power": 75,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch"
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "par"
+  }
+ },
+ "spark": {
+  "type": "electric",
+  "category": "physical",
+  "power": 65,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "status": "par"
+  }
+ },
+ "nuzzle": {
+  "type": "electric",
+  "category": "physical",
+  "power": 20,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "status": "par"
+  }
+ },
+ "electro_ball": {
+  "type": "electric",
+  "category": "special",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "bullet"
+  ],
+  "base_power_callback": "speed_ratio"
+ },
+ "charge_beam": {
+  "type": "electric",
+  "category": "special",
+  "power": 50,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 70,
+   "self": {
+    "boosts": {
+     "spa": 1
+    }
+   }
+  }
+ },
+ "volt_tackle": {
+  "type": "electric",
+  "category": "physical",
+  "power": 120,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "recoil": [
+   33,
+   100
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "par"
+  }
+ },
+ "thunder_fang": {
+  "type": "electric",
+  "category": "physical",
+  "power": 65,
+  "accuracy": 95,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "bite"
+  ],
+  "secondaries": [
+   {
+    "chance": 10,
+    "status": "par"
+   },
+   {
+    "chance": 10,
+    "volatile_status": "flinch"
+   }
+  ]
+ },
+ "electric_terrain": {
+  "type": "electric",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "all",
+  "flags": [],
+  "terrain": "electric"
+ },
+ "electroweb": {
+  "type": "electric",
+  "category": "special",
+  "power": 55,
+  "accuracy": 95,
+  "pp": 15,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "spe": -1
+   }
+  }
+ },
+ "charge": {
+  "type": "electric",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "volatile_status": "charge",
+  "boosts": {
+   "spd": 1
+  }
+ },
+ "parabolic_charge": {
+  "type": "electric",
+  "category": "special",
+  "power": 65,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+   "protect",
+   "mirror",
+   "heal"
+  ],
+  "drain": [
+   1,
+   2
+  ]
+ },
+ "zap_cannon": {
+  "type": "electric",
+  "category": "special",
+  "power": 120,
+  "accuracy": 50,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "bullet"
+  ],
+  "secondary": {
+   "chance": 100,
+   "status": "par"
+  }
+ },
+ "magnet_rise": {
+  "type": "electric",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "volatile_status": "magnet_rise"
+ },
+ "eerie_impulse": {
+  "type": "electric",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "boosts": {
+   "spa": -2
+  }
+ },
+ "overdrive": {
+  "type": "electric",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "bypasssub"
+  ]
+ },
+ "supercell_slam": {
+  "type": "electric",
+  "category": "physical",
+  "power": 100,
+  "accuracy": 95,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "effect": "high_jump_kick"
+ },
+ "absorb": {
+  "type": "grass",
+  "category": "special",
+  "power": 20,
+  "accuracy": 100,
+  "pp": 25,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "heal"
+  ],
+  "drain": [
+   1,
+   2
+  ]
+ },
+ "mega_drain": {
+  "type": "grass",
+  "category": "special",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "heal"
+  ],
+  "drain": [
+   1,
+   2
+  ]
+ },
+ "giga_drain": {
+  "type": "grass",
+  "category": "special",
+  "power": 75,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "heal"
+  ],
+  "drain": [
+   1,
+   2
+  ]
+ },
+ "leaf_storm": {
+  "type": "grass",
+  "category": "special",
+  "power": 130,
+  "accuracy": 90,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "self": {
+   "boosts": {
+    "spa": -2
+   }
+  }
+ },
+ "energy_ball": {
+  "type": "grass",
+  "category": "special",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "bullet"
+  ],
+  "secondary": {
+   "chance": 10,
+   "boosts": {
+    "spd": -1
+   }
+  }
+ },
+ "leaf_blade": {
+  "type": "grass",
+  "category": "physical",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "crit_ratio": 2
+ },
+ "solar_beam": {
+  "type": "grass",
+  "category": "special",
+  "power": 120,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "charge"
+  ],
+  "effect": "charge_move",
+  "charge_skip_weather": "sun",
+  "no_sleep_talk": true
+ },
+ "solar_blade": {
+  "type": "grass",
+  "category": "physical",
+  "power": 125,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing",
+   "charge"
+  ],
+  "effect": "charge_move",
+  "charge_skip_weather": "sun",
+  "no_sleep_talk": true
+ },
+ "grassy_terrain": {
+  "type": "grass",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "all",
+  "flags": [],
+  "terrain": "grassy"
+ },
+ "spore": {
+  "type": "grass",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "powder",
+   "reflectable"
+  ],
+  "status": "slp"
+ },
+ "sleep_powder": {
+  "type": "grass",
+  "category": "status",
+  "power": 0,
+  "accuracy": 75,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "powder",
+   "reflectable"
+  ],
+  "status": "slp"
+ },
+ "stun_spore": {
+  "type": "grass",
+  "category": "status",
+  "power": 0,
+  "accuracy": 75,
+  "pp": 30,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "powder",
+   "reflectable"
+  ],
+  "status": "par"
+ },
+ "poison_powder": {
+  "type": "poison",
+  "category": "status",
+  "power": 0,
+  "accuracy": 75,
+  "pp": 35,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "powder",
+   "reflectable"
+  ],
+  "status": "psn"
+ },
+ "leech_seed": {
+  "type": "grass",
+  "category": "status",
+  "power": 0,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "volatile_status": "leech_seed"
+ },
+ "synthesis": {
+  "type": "grass",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "self",
+  "flags": [
+   "heal"
+  ],
+  "effect": "weather_heal"
+ },
+ "grass_knot": {
+  "type": "grass",
+  "category": "special",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "weight"
+ },
+ "power_whip": {
+  "type": "grass",
+  "category": "physical",
+  "power": 120,
+  "accuracy": 85,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "wood_hammer": {
+  "type": "grass",
+  "category": "physical",
+  "power": 120,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "recoil": [
+   33,
+   100
+  ]
+ },
+ "seed_bomb": {
+  "type": "grass",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "bullet"
+  ]
+ },
+ "horn_leech": {
+  "type": "grass",
+  "category": "physical",
+  "power": 75,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "heal"
+  ],
+  "drain": [
+   1,
+   2
+  ]
+ },
+ "petal_dance": {
+  "type": "grass",
+  "category": "special",
+  "power": 120,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "randomNormal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "dance"
+  ],
+  "locked_move": true
+ },
+ "petal_blizzard": {
+  "type": "grass",
+  "category": "physical",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+   "protect",
+   "mirror",
+   "wind"
+  ]
+ },
+ "razor_leaf": {
+  "type": "grass",
+  "category": "physical",
+  "power": 55,
+  "accuracy": 95,
+  "pp": 25,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "crit_ratio": 2
+ },
+ "magical_leaf": {
+  "type": "grass",
+  "category": "special",
+  "power": 60,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ]
+ },
+ "strength_sap": {
+  "type": "grass",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable",
+   "heal"
+  ],
+  "effect": "strength_sap"
+ },
+ "grassy_glide": {
+  "type": "grass",
+  "category": "physical",
+  "power": 55,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "effect": "grassy_glide"
+ },
+ "bullet_seed": {
+  "type": "grass",
+  "category": "physical",
+  "power": 25,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "bullet"
+  ],
+  "multihit": [
+   2,
+   5
+  ]
+ },
+ "cotton_spore": {
+  "type": "grass",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 40,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "powder",
+   "reflectable"
+  ],
+  "boosts": {
+   "spe": -2
+  }
+ },
+ "trop_kick": {
+  "type": "grass",
+  "category": "physical",
+  "power": 70,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "atk": -1
+   }
+  }
+ },
+ "apple_acid": {
+  "type": "grass",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "spd": -1
+   }
+  }
+ },
+ "grav_apple": {
+  "type": "grass",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "def": -1
+   }
+  }
+ },
+ "leafage": {
+  "type": "grass",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 40,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ]
+ },
+ "vine_whip": {
+  "type": "grass",
+  "category": "physical",
+  "power": 45,
+  "accuracy": 100,
+  "pp": 25,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "growth": {
+  "type": "normal",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "effect": "growth",
+  "boosts": {
+   "atk": 1,
+   "spa": 1
+  }
+ },
+ "aromatherapy": {
+  "type": "grass",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "allyTeam",
+  "flags": [],
+  "effect": "heal_bell"
+ },
+ "drum_beating": {
+  "type": "grass",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "spe": -1
+   }
+  }
+ },
+ "spiky_shield": {
+  "type": "grass",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 4,
+  "target": "self",
+  "flags": [],
+  "volatile_status": "spiky_shield",
+  "effect": "protect",
+  "stalling": true
+ },
+ "cotton_guard": {
+  "type": "grass",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "def": 3
+  }
+ },
+ "ingrain": {
+  "type": "grass",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "volatile_status": "ingrain"
+ },
+ "leaf_tornado": {
+  "type": "grass",
+  "category": "special",
+  "power": 65,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 50,
+   "boosts": {
+    "accuracy": -1
+   }
+  }
+ },
+ "trailblaze": {
+  "type": "grass",
+  "category": "physical",
+  "power": 50,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "self": {
+   "boosts": {
+    "spe": 1
+   }
+  }
+ },
+ "ice_beam": {
+  "type": "ice",
+  "category": "special",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "frz"
+  }
+ },
+ "blizzard": {
+  "type": "ice",
+  "category": "special",
+  "power": 110,
+  "accuracy": 70,
+  "pp": 5,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "wind"
+  ],
+  "always_hit_in": [
+   "snow"
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "frz"
+  }
+ },
+ "freeze_dry": {
+  "type": "ice",
+  "category": "special",
+  "power": 70,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "effect": "freeze_dry",
+  "secondary": {
+   "chance": 10,
+   "status": "frz"
+  }
+ },
+ "icicle_crash": {
+  "type": "ice",
+  "category": "physical",
+  "power": 85,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "volatile_status": "flinch"
+  }
+ },
+ "ice_shard": {
+  "type": "ice",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ]
+ },
+ "icicle_spear": {
+  "type": "ice",
+  "category": "physical",
+  "power": 25,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "multihit": [
+   2,
+   5
+  ]
+ },
+ "ice_punch": {
+  "type": "ice",
+  "category": "physical",
+  "power": 75,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch"
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "frz"
+  }
+ },
+ "ice_fang": {
+  "type": "ice",
+  "category": "physical",
+  "power": 65,
+  "accuracy": 95,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "bite"
+  ],
+  "secondaries": [
+   {
+    "chance": 10,
+    "status": "frz"
+   },
+   {
+    "chance": 10,
+    "volatile_status": "flinch"
+   }
+  ]
+ },
+ "frost_breath": {
+  "type": "ice",
+  "category": "special",
+  "power": 60,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "will_crit": true
+ },
+ "aurora_veil": {
+  "type": "ice",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "allySide",
+  "flags": [],
+  "side_condition": "aurora_veil",
+  "effect": "aurora_veil"
+ },
+ "snowscape": {
+  "type": "ice",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "all",
+  "flags": [],
+  "weather": "snow"
+ },
+ "icy_wind": {
+  "type": "ice",
+  "category": "special",
+  "power": 55,
+  "accuracy": 95,
+  "pp": 15,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "wind"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "spe": -1
+   }
+  }
+ },
+ "avalanche": {
+  "type": "ice",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": -4,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "avalanche"
+ },
+ "aurora_beam": {
+  "type": "ice",
+  "category": "special",
+  "power": 65,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "boosts": {
+    "atk": -1
+   }
+  }
+ },
+ "ice_spinner": {
+  "type": "ice",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "effect": "ice_spinner"
+ },
+ "haze": {
+  "type": "ice",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 30,
+  "priority": 0,
+  "target": "all",
+  "flags": [],
+  "effect": "haze"
+ },
+ "mist": {
+  "type": "ice",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 30,
+  "priority": 0,
+  "target": "allySide",
+  "flags": [],
+  "side_condition": "mist"
+ },
+ "powder_snow": {
+  "type": "ice",
+  "category": "special",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 25,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "frz"
+  }
+ },
+ "ice_hammer": {
+  "type": "ice",
+  "category": "physical",
+  "power": 100,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch"
+  ],
+  "self": {
+   "boosts": {
+    "spe": -1
+   }
+  }
+ },
+ "close_combat": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 120,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "self": {
+   "boosts": {
+    "def": -1,
+    "spd": -1
+   }
+  }
+ },
+ "sacred_sword": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "ignore_defensive": true,
+  "ignore_evasion": true
+ },
+ "drain_punch": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 75,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch",
+   "heal"
+  ],
+  "drain": [
+   1,
+   2
+  ]
+ },
+ "mach_punch": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch"
+  ]
+ },
+ "aura_sphere": {
+  "type": "fighting",
+  "category": "special",
+  "power": 80,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "bullet",
+   "pulse"
+  ]
+ },
+ "focus_blast": {
+  "type": "fighting",
+  "category": "special",
+  "power": 120,
+  "accuracy": 70,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "bullet"
+  ],
+  "secondary": {
+   "chance": 10,
+   "boosts": {
+    "spd": -1
+   }
+  }
+ },
+ "superpower": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 120,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "self": {
+   "boosts": {
+    "atk": -1,
+    "def": -1
+   }
+  }
+ },
+ "body_press": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "override_offensive_stat": "def"
+ },
+ "brick_break": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 75,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "effect": "brick_break"
+ },
+ "low_kick": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "weight"
+ },
+ "vacuum_wave": {
+  "type": "fighting",
+  "category": "special",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ]
+ },
+ "bulk_up": {
+  "type": "fighting",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "atk": 1,
+   "def": 1
+  }
+ },
+ "secret_sword": {
+  "type": "fighting",
+  "category": "special",
+  "power": 85,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "override_defensive_stat": "def"
+ },
+ "cross_chop": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 100,
+  "accuracy": 80,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "crit_ratio": 2
+ },
+ "high_jump_kick": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 130,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "effect": "high_jump_kick"
+ },
+ "reversal": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "low_hp"
+ },
+ "counter": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": -5,
+  "target": "scripted",
+  "flags": [
+   "contact",
+   "protect"
+  ],
+  "damage_callback": "counter",
+  "effect": "counter"
+ },
+ "detect": {
+  "type": "fighting",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 4,
+  "target": "self",
+  "flags": [],
+  "volatile_status": "protect",
+  "effect": "protect",
+  "stalling": true
+ },
+ "quick_guard": {
+  "type": "fighting",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 15,
+  "priority": 3,
+  "target": "allySide",
+  "flags": [],
+  "side_condition": "quick_guard"
+ },
+ "final_gambit": {
+  "type": "fighting",
+  "category": "special",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect"
+  ],
+  "damage_callback": "final_gambit",
+  "effect": "final_gambit"
+ },
+ "thunderous_kick": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "def": -1
+   }
+  }
+ },
+ "storm_throw": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "will_crit": true
+ },
+ "karate_chop": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 50,
+  "accuracy": 100,
+  "pp": 25,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "crit_ratio": 2
+ },
+ "rock_smash": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 50,
+   "boosts": {
+    "def": -1
+   }
+  }
+ },
+ "power_up_punch": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch"
+  ],
+  "secondary": {
+   "chance": 100,
+   "self": {
+    "boosts": {
+     "atk": 1
+    }
+   }
+  }
+ },
+ "low_sweep": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 65,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "spe": -1
+   }
+  }
+ },
+ "circle_throw": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": -6,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "force_switch": true
+ },
+ "hammer_arm": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 100,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch"
+  ],
+  "self": {
+   "boosts": {
+    "spe": -1
+   }
+  }
+ },
+ "sky_uppercut": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 85,
+  "accuracy": 90,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch"
+  ],
+  "hits_invulnerable": [
+   "fly"
+  ]
+ },
+ "force_palm": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "status": "par"
+  }
+ },
+ "seismic_toss": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "damage_callback": "level"
+ },
+ "vital_throw": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 70,
+  "accuracy": true,
+  "pp": 10,
+  "priority": -1,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "arm_thrust": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 15,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "multihit": [
+   2,
+   5
+  ]
+ },
+ "double_kick": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 30,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "multihit": 2
+ },
+ "dynamic_punch": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 100,
+  "accuracy": 50,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch"
+  ],
+  "secondary": {
+   "chance": 100,
+   "volatile_status": "confusion"
+  }
+ },
+ "revenge": {
+  "type": "fighting",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": -4,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "avalanche"
+ },
+ "earthquake": {
+  "type": "ground",
+  "category": "physical",
+  "power": 100,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "double_vs_invulnerable": [
+   "dig"
+  ]
+ },
+ "earth_power": {
+  "type": "ground",
+  "category": "special",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "boosts": {
+    "spd": -1
+   }
+  }
+ },
+ "high_horsepower": {
+  "type": "ground",
+  "category": "physical",
+  "power": 95,
+  "accuracy": 95,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "stomping_tantrum": {
+  "type": "ground",
+  "category": "physical",
+  "power": 75,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "effect": "stomping_tantrum",
+  "base_power_callback": "stomping_tantrum"
+ },
+ "bulldoze": {
+  "type": "ground",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "spe": -1
+   }
+  }
+ },
+ "drill_run": {
+  "type": "ground",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 95,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "crit_ratio": 2
+ },
+ "sand_tomb": {
+  "type": "ground",
+  "category": "physical",
+  "power": 35,
+  "accuracy": 85,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "volatile_status": "partially_trapped"
+ },
+ "spikes": {
+  "type": "ground",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "foeSide",
+  "flags": [
+   "reflectable"
+  ],
+  "side_condition": "spikes"
+ },
+ "mud_shot": {
+  "type": "ground",
+  "category": "special",
+  "power": 55,
+  "accuracy": 95,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "spe": -1
+   }
+  }
+ },
+ "mud_slap": {
+  "type": "ground",
+  "category": "special",
+  "power": 20,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "accuracy": -1
+   }
+  }
+ },
+ "dig": {
+  "type": "ground",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "charge"
+  ],
+  "effect": "charge_move",
+  "semi_invulnerable": "dig",
+  "no_sleep_talk": true
+ },
+ "bone_rush": {
+  "type": "ground",
+  "category": "physical",
+  "power": 25,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "multihit": [
+   2,
+   5
+  ]
+ },
+ "headlong_rush": {
+  "type": "ground",
+  "category": "physical",
+  "power": 120,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch"
+  ],
+  "self": {
+   "boosts": {
+    "def": -1,
+    "spd": -1
+   }
+  }
+ },
+ "shore_up": {
+  "type": "ground",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "self",
+  "flags": [
+   "heal"
+  ],
+  "effect": "shore_up"
+ },
+ "mud_bomb": {
+  "type": "ground",
+  "category": "special",
+  "power": 65,
+  "accuracy": 85,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "bullet"
+  ],
+  "secondary": {
+   "chance": 30,
+   "boosts": {
+    "accuracy": -1
+   }
+  }
+ },
+ "sandstorm": {
+  "type": "rock",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "all",
+  "flags": [
+   "wind"
+  ],
+  "weather": "sand"
+ },
+ "brave_bird": {
+  "type": "flying",
+  "category": "physical",
+  "power": 120,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "recoil": [
+   33,
+   100
+  ]
+ },
+ "hurricane": {
+  "type": "flying",
+  "category": "special",
+  "power": 110,
+  "accuracy": 70,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "wind"
+  ],
+  "always_hit_in": [
+   "rain"
+  ],
+  "accuracy_in": {
+   "sun": 50
+  },
+  "hits_invulnerable": [
+   "fly"
+  ],
+  "secondary": {
+   "chance": 30,
+   "volatile_status": "confusion"
+  }
+ },
+ "air_slash": {
+  "type": "flying",
+  "category": "special",
+  "power": 75,
+  "accuracy": 95,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "secondary": {
+   "chance": 30,
+   "volatile_status": "flinch"
+  }
+ },
+ "air_cutter": {
+  "type": "flying",
+  "category": "special",
+  "power": 60,
+  "accuracy": 95,
+  "pp": 25,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "slicing",
+   "wind"
+  ],
+  "crit_ratio": 2
+ },
+ "acrobatics": {
+  "type": "flying",
+  "category": "physical",
+  "power": 55,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "acrobatics"
+ },
+ "aerial_ace": {
+  "type": "flying",
+  "category": "physical",
+  "power": 60,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing"
+  ]
+ },
+ "dual_wingbeat": {
+  "type": "flying",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "multihit": 2
+ },
+ "roost": {
+  "type": "flying",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "self",
+  "flags": [
+   "heal"
+  ],
+  "heal": [
+   1,
+   2
+  ],
+  "volatile_status": "roost"
+ },
+ "tailwind": {
+  "type": "flying",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 15,
+  "priority": 0,
+  "target": "allySide",
+  "flags": [
+   "wind"
+  ],
+  "side_condition": "tailwind"
+ },
+ "defog": {
+  "type": "flying",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable",
+   "bypasssub"
+  ],
+  "effect": "defog",
+  "boosts": {
+   "evasion": -1
+  }
+ },
+ "fly": {
+  "type": "flying",
+  "category": "physical",
+  "power": 90,
+  "accuracy": 95,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "charge"
+  ],
+  "effect": "charge_move",
+  "semi_invulnerable": "fly",
+  "no_sleep_talk": true
+ },
+ "drill_peck": {
+  "type": "flying",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "feather_dance": {
+  "type": "flying",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable",
+   "dance"
+  ],
+  "boosts": {
+   "atk": -2
+  }
+ },
+ "gust": {
+  "type": "flying",
+  "category": "special",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 35,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "wind"
+  ],
+  "hits_invulnerable": [
+   "fly"
+  ],
+  "double_vs_invulnerable": [
+   "fly"
+  ]
+ },
+ "wing_attack": {
+  "type": "flying",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 35,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "peck": {
+  "type": "flying",
+  "category": "physical",
+  "power": 35,
+  "accuracy": 100,
+  "pp": 35,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "stone_edge": {
+  "type": "rock",
+  "category": "physical",
+  "power": 100,
+  "accuracy": 80,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "crit_ratio": 2
+ },
+ "rock_slide": {
+  "type": "rock",
+  "category": "physical",
+  "power": 75,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "volatile_status": "flinch"
+  }
+ },
+ "rock_blast": {
+  "type": "rock",
+  "category": "physical",
+  "power": 25,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "bullet"
+  ],
+  "multihit": [
+   2,
+   5
+  ]
+ },
+ "head_smash": {
+  "type": "rock",
+  "category": "physical",
+  "power": 150,
+  "accuracy": 80,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "recoil": [
+   1,
+   2
+  ]
+ },
+ "power_gem": {
+  "type": "rock",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ]
+ },
+ "ancient_power": {
+  "type": "rock",
+  "category": "special",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "self": {
+    "boosts": {
+     "atk": 1,
+     "def": 1,
+     "spa": 1,
+     "spd": 1,
+     "spe": 1
+    }
+   }
+  }
+ },
+ "stealth_rock": {
+  "type": "rock",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "foeSide",
+  "flags": [
+   "reflectable"
+  ],
+  "side_condition": "stealth_rock"
+ },
+ "rock_tomb": {
+  "type": "rock",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 95,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "spe": -1
+   }
+  }
+ },
+ "accelerock": {
+  "type": "rock",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "stone_axe": {
+  "type": "rock",
+  "category": "physical",
+  "power": 65,
+  "accuracy": 90,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "effect": "stone_axe"
+ },
+ "rock_polish": {
+  "type": "rock",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "spe": 2
+  }
+ },
+ "wide_guard": {
+  "type": "rock",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 3,
+  "target": "allySide",
+  "flags": [],
+  "side_condition": "wide_guard"
+ },
+ "smack_down": {
+  "type": "rock",
+  "category": "physical",
+  "power": 50,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "volatile_status": "smack_down",
+  "hits_invulnerable": [
+   "fly"
+  ]
+ },
+ "rock_throw": {
+  "type": "rock",
+  "category": "physical",
+  "power": 50,
+  "accuracy": 90,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ]
+ },
+ "salt_cure": {
+  "type": "rock",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "volatile_status": "salt_cure"
+ },
+ "meteor_beam": {
+  "type": "rock",
+  "category": "special",
+  "power": 120,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "charge"
+  ],
+  "effect": "meteor_beam",
+  "no_sleep_talk": true
+ },
+ "iron_head": {
+  "type": "steel",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "volatile_status": "flinch"
+  }
+ },
+ "flash_cannon": {
+  "type": "steel",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "boosts": {
+    "spd": -1
+   }
+  }
+ },
+ "steel_beam": {
+  "type": "steel",
+  "category": "special",
+  "power": 140,
+  "accuracy": 95,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "effect": "steel_beam"
+ },
+ "heavy_slam": {
+  "type": "steel",
+  "category": "physical",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "crushes_minimized"
+  ],
+  "base_power_callback": "heavy_slam"
+ },
+ "smart_strike": {
+  "type": "steel",
+  "category": "physical",
+  "power": 70,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "meteor_mash": {
+  "type": "steel",
+  "category": "physical",
+  "power": 90,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch"
+  ],
+  "secondary": {
+   "chance": 20,
+   "self": {
+    "boosts": {
+     "atk": 1
+    }
+   }
+  }
+ },
+ "bullet_punch": {
+  "type": "steel",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch"
+  ]
+ },
+ "iron_defense": {
+  "type": "steel",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 15,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "def": 2
+  }
+ },
+ "steel_wing": {
+  "type": "steel",
+  "category": "physical",
+  "power": 70,
+  "accuracy": 90,
+  "pp": 25,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "self": {
+    "boosts": {
+     "def": 1
+    }
+   }
+  }
+ },
+ "metal_claw": {
+  "type": "steel",
+  "category": "physical",
+  "power": 50,
+  "accuracy": 95,
+  "pp": 35,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "self": {
+    "boosts": {
+     "atk": 1
+    }
+   }
+  }
+ },
+ "gyro_ball": {
+  "type": "steel",
+  "category": "physical",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "bullet"
+  ],
+  "base_power_callback": "gyro_ball"
+ },
+ "anchor_shot": {
+  "type": "steel",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "volatile_status": "trapped"
+  }
+ },
+ "iron_tail": {
+  "type": "steel",
+  "category": "physical",
+  "power": 100,
+  "accuracy": 75,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "boosts": {
+    "def": -1
+   }
+  }
+ },
+ "metal_sound": {
+  "type": "steel",
+  "category": "status",
+  "power": 0,
+  "accuracy": 85,
+  "pp": 40,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "reflectable",
+   "bypasssub"
+  ],
+  "boosts": {
+   "spd": -2
+  }
+ },
+ "gear_grind": {
+  "type": "steel",
+  "category": "physical",
+  "power": 50,
+  "accuracy": 85,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "multihit": 2
+ },
+ "u_turn": {
+  "type": "bug",
+  "category": "physical",
+  "power": 70,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "self_switch": true
+ },
+ "bug_buzz": {
+  "type": "bug",
+  "category": "special",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "bypasssub"
+  ],
+  "secondary": {
+   "chance": 10,
+   "boosts": {
+    "spd": -1
+   }
+  }
+ },
+ "leech_life": {
+  "type": "bug",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "heal"
+  ],
+  "drain": [
+   1,
+   2
+  ]
+ },
+ "x_scissor": {
+  "type": "bug",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing"
+  ]
+ },
+ "megahorn": {
+  "type": "bug",
+  "category": "physical",
+  "power": 120,
+  "accuracy": 85,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "first_impression": {
+  "type": "bug",
+  "category": "physical",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 2,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "effect": "fake_out"
+ },
+ "quiver_dance": {
+  "type": "bug",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "self",
+  "flags": [
+   "dance"
+  ],
+  "boosts": {
+   "spa": 1,
+   "spd": 1,
+   "spe": 1
+  }
+ },
+ "struggle_bug": {
+  "type": "bug",
+  "category": "special",
+  "power": 50,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "spa": -1
+   }
+  }
+ },
+ "lunge": {
+  "type": "bug",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "atk": -1
+   }
+  }
+ },
+ "sticky_web": {
+  "type": "bug",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "foeSide",
+  "flags": [
+   "reflectable"
+  ],
+  "side_condition": "sticky_web"
+ },
+ "infestation": {
+  "type": "bug",
+  "category": "special",
+  "power": 20,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "volatile_status": "partially_trapped"
+ },
+ "pin_missile": {
+  "type": "bug",
+  "category": "physical",
+  "power": 25,
+  "accuracy": 95,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "multihit": [
+   2,
+   5
+  ]
+ },
+ "string_shot": {
+  "type": "bug",
+  "category": "status",
+  "power": 0,
+  "accuracy": 95,
+  "pp": 40,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "boosts": {
+   "spe": -2
+  }
+ },
+ "rage_powder": {
+  "type": "bug",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 2,
+  "target": "self",
+  "flags": [
+   "powder"
+  ],
+  "volatile_status": "rage_powder"
+ },
+ "fury_cutter": {
+  "type": "bug",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 95,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "effect": "fury_cutter",
+  "base_power_callback": "fury_cutter"
+ },
+ "skitter_smack": {
+  "type": "bug",
+  "category": "physical",
+  "power": 70,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "spa": -1
+   }
+  }
+ },
+ "pounce": {
+  "type": "bug",
+  "category": "physical",
+  "power": 50,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "spe": -1
+   }
+  }
+ },
+ "bug_bite": {
+  "type": "bug",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "sludge_bomb": {
+  "type": "poison",
+  "category": "special",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "bullet"
+  ],
+  "secondary": {
+   "chance": 30,
+   "status": "psn"
+  }
+ },
+ "sludge_wave": {
+  "type": "poison",
+  "category": "special",
+  "power": 95,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "status": "psn"
+  }
+ },
+ "gunk_shot": {
+  "type": "poison",
+  "category": "physical",
+  "power": 120,
+  "accuracy": 80,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "status": "psn"
+  }
+ },
+ "poison_jab": {
+  "type": "poison",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "status": "psn"
+  }
+ },
+ "toxic": {
+  "type": "poison",
+  "category": "status",
+  "power": 0,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "status": "tox",
+  "effect": "toxic"
+ },
+ "toxic_spikes": {
+  "type": "poison",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "foeSide",
+  "flags": [
+   "reflectable"
+  ],
+  "side_condition": "toxic_spikes"
+ },
+ "venoshock": {
+  "type": "poison",
+  "category": "special",
+  "power": 65,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "venoshock"
+ },
+ "clear_smog": {
+  "type": "poison",
+  "category": "special",
+  "power": 50,
+  "accuracy": true,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "effect": "clear_smog"
+ },
+ "cross_poison": {
+  "type": "poison",
+  "category": "physical",
+  "power": 70,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "crit_ratio": 2,
+  "secondary": {
+   "chance": 10,
+   "status": "psn"
+  }
+ },
+ "acid_spray": {
+  "type": "poison",
+  "category": "special",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "bullet"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "spd": -2
+   }
+  }
+ },
+ "poison_fang": {
+  "type": "poison",
+  "category": "physical",
+  "power": 50,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "bite"
+  ],
+  "secondary": {
+   "chance": 50,
+   "status": "tox"
+  }
+ },
+ "baneful_bunker": {
+  "type": "poison",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 4,
+  "target": "self",
+  "flags": [],
+  "volatile_status": "baneful_bunker",
+  "effect": "protect",
+  "stalling": true
+ },
+ "coil": {
+  "type": "poison",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "atk": 1,
+   "accuracy": 1,
+   "def": 1
+  }
+ },
+ "sludge": {
+  "type": "poison",
+  "category": "special",
+  "power": 65,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "status": "psn"
+  }
+ },
+ "acid_armor": {
+  "type": "poison",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "def": 2
+  }
+ },
+ "poison_tail": {
+  "type": "poison",
+  "category": "physical",
+  "power": 50,
+  "accuracy": 100,
+  "pp": 25,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "crit_ratio": 2,
+  "secondary": {
+   "chance": 10,
+   "status": "psn"
+  }
+ },
+ "poison_gas": {
+  "type": "poison",
+  "category": "status",
+  "power": 0,
+  "accuracy": 90,
+  "pp": 40,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "status": "psn"
+ },
+ "psychic": {
+  "type": "psychic",
+  "category": "special",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "boosts": {
+    "spd": -1
+   }
+  }
+ },
+ "psyshock": {
+  "type": "psychic",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "override_defensive_stat": "def"
+ },
+ "psycho_cut": {
+  "type": "psychic",
+  "category": "physical",
+  "power": 70,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "crit_ratio": 2
+ },
+ "calm_mind": {
+  "type": "psychic",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "spa": 1,
+   "spd": 1
+  }
+ },
+ "expanding_force": {
+  "type": "psychic",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "effect": "expanding_force"
+ },
+ "stored_power": {
+  "type": "psychic",
+  "category": "special",
+  "power": 20,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "stored_power"
+ },
+ "future_sight": {
+  "type": "psychic",
+  "category": "special",
+  "power": 120,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [],
+  "effect": "future_sight"
+ },
+ "trick_room": {
+  "type": "psychic",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": -7,
+  "target": "all",
+  "flags": [],
+  "pseudo_weather": "trick_room"
+ },
+ "psychic_terrain": {
+  "type": "psychic",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "all",
+  "flags": [],
+  "terrain": "psychic"
+ },
+ "teleport": {
+  "type": "psychic",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": -6,
+  "target": "self",
+  "flags": [],
+  "self_switch": true,
+  "effect": "teleport"
+ },
+ "zen_headbutt": {
+  "type": "psychic",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 90,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 20,
+   "volatile_status": "flinch"
+  }
+ },
+ "psychic_fangs": {
+  "type": "psychic",
+  "category": "physical",
+  "power": 85,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "bite"
+  ],
+  "effect": "brick_break"
+ },
+ "trick": {
+  "type": "psychic",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "effect": "trick"
+ },
+ "agility": {
+  "type": "psychic",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 30,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "spe": 2
+  }
+ },
+ "amnesia": {
+  "type": "psychic",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "spd": 2
+  }
+ },
+ "cosmic_power": {
+  "type": "psychic",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "spd": 1,
+   "def": 1
+  }
+ },
+ "light_screen": {
+  "type": "psychic",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 30,
+  "priority": 0,
+  "target": "allySide",
+  "flags": [],
+  "side_condition": "light_screen"
+ },
+ "reflect": {
+  "type": "psychic",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "allySide",
+  "flags": [],
+  "side_condition": "reflect"
+ },
+ "heal_pulse": {
+  "type": "psychic",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "pulse",
+   "reflectable",
+   "heal",
+   "bypasssub"
+  ],
+  "effect": "heal_pulse"
+ },
+ "psyblade": {
+  "type": "psychic",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "effect": "psyblade"
+ },
+ "extrasensory": {
+  "type": "psychic",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "volatile_status": "flinch"
+  }
+ },
+ "dream_eater": {
+  "type": "psychic",
+  "category": "special",
+  "power": 100,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "heal"
+  ],
+  "drain": [
+   1,
+   2
+  ],
+  "effect": "dream_eater"
+ },
+ "hypnosis": {
+  "type": "psychic",
+  "category": "status",
+  "power": 0,
+  "accuracy": 60,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "status": "slp"
+ },
+ "meditate": {
+  "type": "psychic",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 40,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "atk": 1
+  }
+ },
+ "gravity": {
+  "type": "psychic",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "all",
+  "flags": [],
+  "pseudo_weather": "gravity"
+ },
+ "confusion": {
+  "type": "psychic",
+  "category": "special",
+  "power": 50,
+  "accuracy": 100,
+  "pp": 25,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "volatile_status": "confusion"
+  }
+ },
+ "psybeam": {
+  "type": "psychic",
+  "category": "special",
+  "power": 65,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "volatile_status": "confusion"
+  }
+ },
+ "draco_meteor": {
+  "type": "dragon",
+  "category": "special",
+  "power": 130,
+  "accuracy": 90,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "self": {
+   "boosts": {
+    "spa": -2
+   }
+  }
+ },
+ "dragon_pulse": {
+  "type": "dragon",
+  "category": "special",
+  "power": 85,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "pulse"
+  ]
+ },
+ "dragon_claw": {
+  "type": "dragon",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "outrage": {
+  "type": "dragon",
+  "category": "physical",
+  "power": 120,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "randomNormal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "locked_move": true
+ },
+ "dragon_dance": {
+  "type": "dragon",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "self",
+  "flags": [
+   "dance"
+  ],
+  "boosts": {
+   "atk": 1,
+   "spe": 1
+  }
+ },
+ "dragon_tail": {
+  "type": "dragon",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": -6,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "force_switch": true
+ },
+ "breaking_swipe": {
+  "type": "dragon",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "atk": -1
+   }
+  }
+ },
+ "scale_shot": {
+  "type": "dragon",
+  "category": "physical",
+  "power": 25,
+  "accuracy": 90,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "multihit": [
+   2,
+   5
+  ],
+  "self": {
+   "boosts": {
+    "spe": 1,
+    "def": -1
+   }
+  }
+ },
+ "dragon_rush": {
+  "type": "dragon",
+  "category": "physical",
+  "power": 100,
+  "accuracy": 75,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "crushes_minimized"
+  ],
+  "secondary": {
+   "chance": 20,
+   "volatile_status": "flinch"
+  }
+ },
+ "dragon_breath": {
+  "type": "dragon",
+  "category": "special",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "status": "par"
+  }
+ },
+ "dual_chop": {
+  "type": "dragon",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 90,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "multihit": 2
+ },
+ "dragon_hammer": {
+  "type": "dragon",
+  "category": "physical",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "twister": {
+  "type": "dragon",
+  "category": "special",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "wind"
+  ],
+  "hits_invulnerable": [
+   "fly"
+  ],
+  "double_vs_invulnerable": [
+   "fly"
+  ],
+  "secondary": {
+   "chance": 20,
+   "volatile_status": "flinch"
+  }
+ },
+ "knock_off": {
+  "type": "dark",
+  "category": "physical",
+  "power": 65,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "effect": "knock_off",
+  "base_power_callback": "knock_off"
+ },
+ "crunch": {
+  "type": "dark",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "bite"
+  ],
+  "secondary": {
+   "chance": 20,
+   "boosts": {
+    "def": -1
+   }
+  }
+ },
+ "dark_pulse": {
+  "type": "dark",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "pulse"
+  ],
+  "secondary": {
+   "chance": 20,
+   "volatile_status": "flinch"
+  }
+ },
+ "sucker_punch": {
+  "type": "dark",
+  "category": "physical",
+  "power": 70,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "effect": "sucker_punch"
+ },
+ "foul_play": {
+  "type": "dark",
+  "category": "physical",
+  "power": 95,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "use_target_offense": true
+ },
+ "night_slash": {
+  "type": "dark",
+  "category": "physical",
+  "power": 70,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "crit_ratio": 2
+ },
+ "taunt": {
+  "type": "dark",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable",
+   "bypasssub"
+  ],
+  "volatile_status": "taunt"
+ },
+ "parting_shot": {
+  "type": "dark",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "reflectable",
+   "bypasssub"
+  ],
+  "self_switch": true,
+  "boosts": {
+   "atk": -1,
+   "spa": -1
+  }
+ },
+ "nasty_plot": {
+  "type": "dark",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "spa": 2
+  }
+ },
+ "throat_chop": {
+  "type": "dark",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "volatile_status": "throat_chop"
+ },
+ "snarl": {
+  "type": "dark",
+  "category": "special",
+  "power": 55,
+  "accuracy": 95,
+  "pp": 15,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "bypasssub"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "spa": -1
+   }
+  }
+ },
+ "kowtow_cleave": {
+  "type": "dark",
+  "category": "physical",
+  "power": 85,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing"
+  ]
+ },
+ "ceaseless_edge": {
+  "type": "dark",
+  "category": "physical",
+  "power": 65,
+  "accuracy": 90,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "slicing"
+  ],
+  "effect": "ceaseless_edge"
+ },
+ "bite": {
+  "type": "dark",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 25,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "bite"
+  ],
+  "secondary": {
+   "chance": 30,
+   "volatile_status": "flinch"
+  }
+ },
+ "assurance": {
+  "type": "dark",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "effect": "assurance",
+  "base_power_callback": "assurance"
+ },
+ "payback": {
+  "type": "dark",
+  "category": "physical",
+  "power": 50,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "payback"
+ },
+ "fake_tears": {
+  "type": "dark",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "boosts": {
+   "spd": -2
+  }
+ },
+ "hone_claws": {
+  "type": "dark",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 15,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "boosts": {
+   "atk": 1,
+   "accuracy": 1
+  }
+ },
+ "memento": {
+  "type": "dark",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "self_destruct": "if_hit",
+  "boosts": {
+   "atk": -2,
+   "spa": -2
+  }
+ },
+ "switcheroo": {
+  "type": "dark",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "effect": "trick"
+ },
+ "darkest_lariat": {
+  "type": "dark",
+  "category": "physical",
+  "power": 85,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "ignore_defensive": true,
+  "ignore_evasion": true
+ },
+ "false_surrender": {
+  "type": "dark",
+  "category": "physical",
+  "power": 80,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "power_trip": {
+  "type": "dark",
+  "category": "physical",
+  "power": 20,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "stored_power"
+ },
+ "brutal_swing": {
+  "type": "dark",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "thief": {
+  "type": "dark",
+  "category": "physical",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 25,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "punishment": {
+  "type": "dark",
+  "category": "physical",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "punishment"
+ },
+ "night_daze": {
+  "type": "dark",
+  "category": "special",
+  "power": 85,
+  "accuracy": 95,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 40,
+   "boosts": {
+    "accuracy": -1
+   }
+  }
+ },
+ "shadow_ball": {
+  "type": "ghost",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "bullet"
+  ],
+  "secondary": {
+   "chance": 20,
+   "boosts": {
+    "spd": -1
+   }
+  }
+ },
+ "shadow_claw": {
+  "type": "ghost",
+  "category": "physical",
+  "power": 70,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "crit_ratio": 2
+ },
+ "shadow_sneak": {
+  "type": "ghost",
+  "category": "physical",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ]
+ },
+ "hex": {
+  "type": "ghost",
+  "category": "special",
+  "power": 65,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "base_power_callback": "hex"
+ },
+ "phantom_force": {
+  "type": "ghost",
+  "category": "physical",
+  "power": 90,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "mirror",
+   "charge"
+  ],
+  "effect": "charge_move",
+  "semi_invulnerable": "phantom_force",
+  "breaks_protect": true,
+  "no_sleep_talk": true
+ },
+ "poltergeist": {
+  "type": "ghost",
+  "category": "physical",
+  "power": 110,
+  "accuracy": 90,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "effect": "poltergeist"
+ },
+ "curse": {
+  "type": "ghost",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "bypasssub"
+  ],
+  "effect": "curse"
+ },
+ "destiny_bond": {
+  "type": "ghost",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "self",
+  "flags": [],
+  "volatile_status": "destiny_bond",
+  "no_encore": true
+ },
+ "shadow_punch": {
+  "type": "ghost",
+  "category": "physical",
+  "power": 60,
+  "accuracy": true,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "punch"
+  ]
+ },
+ "night_shade": {
+  "type": "ghost",
+  "category": "special",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "damage_callback": "level"
+ },
+ "astonish": {
+  "type": "ghost",
+  "category": "physical",
+  "power": 30,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "volatile_status": "flinch"
+  }
+ },
+ "bitter_malice": {
+  "type": "ghost",
+  "category": "special",
+  "power": 75,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "atk": -1
+   }
+  }
+ },
+ "lick": {
+  "type": "ghost",
+  "category": "physical",
+  "power": 30,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "status": "par"
+  }
+ },
+ "confuse_ray": {
+  "type": "ghost",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "volatile_status": "confusion"
+ },
+ "spirit_shackle": {
+  "type": "ghost",
+  "category": "physical",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "volatile_status": "trapped"
+  }
+ },
+ "nightmare": {
+  "type": "ghost",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "volatile_status": "nightmare"
+ },
+ "shadow_bone": {
+  "type": "ghost",
+  "category": "physical",
+  "power": 85,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 20,
+   "boosts": {
+    "def": -1
+   }
+  }
+ },
+ "ominous_wind": {
+  "type": "ghost",
+  "category": "special",
+  "power": 60,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "wind"
+  ],
+  "secondary": {
+   "chance": 10,
+   "self": {
+    "boosts": {
+     "atk": 1,
+     "def": 1,
+     "spa": 1,
+     "spd": 1,
+     "spe": 1
+    }
+   }
+  }
+ },
+ "moonblast": {
+  "type": "fairy",
+  "category": "special",
+  "power": 95,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 30,
+   "boosts": {
+    "spa": -1
+   }
+  }
+ },
+ "dazzling_gleam": {
+  "type": "fairy",
+  "category": "special",
+  "power": 80,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror"
+  ]
+ },
+ "play_rough": {
+  "type": "fairy",
+  "category": "physical",
+  "power": 90,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 10,
+   "boosts": {
+    "atk": -1
+   }
+  }
+ },
+ "draining_kiss": {
+  "type": "fairy",
+  "category": "special",
+  "power": 50,
+  "accuracy": 100,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror",
+   "heal"
+  ],
+  "drain": [
+   3,
+   4
+  ]
+ },
+ "spirit_break": {
+  "type": "fairy",
+  "category": "physical",
+  "power": 75,
+  "accuracy": 100,
+  "pp": 15,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "contact",
+   "protect",
+   "mirror"
+  ],
+  "secondary": {
+   "chance": 100,
+   "boosts": {
+    "spa": -1
+   }
+  }
+ },
+ "misty_terrain": {
+  "type": "fairy",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 10,
+  "priority": 0,
+  "target": "all",
+  "flags": [],
+  "terrain": "misty"
+ },
+ "misty_explosion": {
+  "type": "fairy",
+  "category": "special",
+  "power": 100,
+  "accuracy": 100,
+  "pp": 5,
+  "priority": 0,
+  "target": "allAdjacent",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "self_destruct": "always",
+  "effect": "misty_explosion"
+ },
+ "charm": {
+  "type": "fairy",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 20,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "boosts": {
+   "atk": -2
+  }
+ },
+ "baby_doll_eyes": {
+  "type": "fairy",
+  "category": "status",
+  "power": 0,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 1,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "boosts": {
+   "atk": -1
+  }
+ },
+ "sweet_kiss": {
+  "type": "fairy",
+  "category": "status",
+  "power": 0,
+  "accuracy": 75,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "reflectable"
+  ],
+  "volatile_status": "confusion"
+ },
+ "fairy_wind": {
+  "type": "fairy",
+  "category": "special",
+  "power": 40,
+  "accuracy": 100,
+  "pp": 30,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror",
+   "wind"
+  ]
+ },
+ "disarming_voice": {
+  "type": "fairy",
+  "category": "special",
+  "power": 40,
+  "accuracy": true,
+  "pp": 15,
+  "priority": 0,
+  "target": "allAdjacentFoes",
+  "flags": [
+   "protect",
+   "mirror",
+   "sound",
+   "bypasssub"
+  ]
+ },
+ "moonlight": {
+  "type": "fairy",
+  "category": "status",
+  "power": 0,
+  "accuracy": true,
+  "pp": 5,
+  "priority": 0,
+  "target": "self",
+  "flags": [
+   "heal"
+  ],
+  "effect": "weather_heal"
+ },
+ "natures_madness": {
+  "type": "fairy",
+  "category": "special",
+  "power": 0,
+  "accuracy": 90,
+  "pp": 10,
+  "priority": 0,
+  "target": "normal",
+  "flags": [
+   "protect",
+   "mirror"
+  ],
+  "damage_callback": "half_hp"
+ }
+}

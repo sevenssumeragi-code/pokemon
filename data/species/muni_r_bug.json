@@ -1,0 +1,147 @@
+{
+ "muni_r_bug": {
+  "num": 15,
+  "types": [
+   "bug"
+  ],
+  "base_stats": {
+   "hp": 65,
+   "atk": 50,
+   "def": 60,
+   "spa": 80,
+   "spd": 75,
+   "spe": 90
+  },
+  "abilities": {
+   "0": "compound_eyes"
+  },
+  "weight_kg": 3.0,
+  "height_m": 0.4,
+  "base_form": "muni",
+  "form": "R虫",
+  "region_form": true,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "pound"
+    },
+    {
+     "level": 1,
+     "move": "string_shot"
+    },
+    {
+     "level": 4,
+     "move": "struggle_bug"
+    },
+    {
+     "level": 7,
+     "move": "supersonic"
+    },
+    {
+     "level": 10,
+     "move": "sleep_powder"
+    },
+    {
+     "level": 13,
+     "move": "stun_spore"
+    },
+    {
+     "level": 16,
+     "move": "poison_powder"
+    },
+    {
+     "level": 19,
+     "move": "gust"
+    },
+    {
+     "level": 22,
+     "move": "psybeam"
+    },
+    {
+     "level": 25,
+     "move": "minimize"
+    },
+    {
+     "level": 28,
+     "move": "air_cutter"
+    },
+    {
+     "level": 31,
+     "move": "bug_buzz"
+    },
+    {
+     "level": 34,
+     "move": "rage_powder"
+    },
+    {
+     "level": 37,
+     "move": "quiver_dance"
+    },
+    {
+     "level": 40,
+     "move": "air_slash"
+    },
+    {
+     "level": 43,
+     "move": "hurricane"
+    },
+    {
+     "level": 46,
+     "move": "energy_ball"
+    }
+   ],
+   "tm": [
+    "attract",
+    "baton_pass",
+    "calm_mind",
+    "dazzling_gleam",
+    "double_team",
+    "draining_kiss",
+    "electroweb",
+    "encore",
+    "endure",
+    "facade",
+    "giga_drain",
+    "hyper_voice",
+    "icy_wind",
+    "infestation",
+    "leech_life",
+    "light_screen",
+    "pounce",
+    "protect",
+    "psych_up",
+    "psychic",
+    "reflect",
+    "rest",
+    "roost",
+    "safeguard",
+    "shadow_ball",
+    "skitter_smack",
+    "sleep_talk",
+    "snore",
+    "sticky_web",
+    "stored_power",
+    "substitute",
+    "swagger",
+    "tailwind",
+    "taunt",
+    "thunder_wave",
+    "toxic",
+    "u_turn"
+   ]
+  },
+  "catch_rate": 120,
+  "base_exp": 100,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "spa": 1
+  },
+  "gender_ratio": 0.5,
+  "sprite": "muni_r_bug",
+  "dex_key": "muni_r_bug"
+ }
+}

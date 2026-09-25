@@ -1,0 +1,149 @@
+{
+ "jinpachi_r": {
+  "num": 11,
+  "types": [
+   "rock"
+  ],
+  "base_stats": {
+   "hp": 80,
+   "atk": 120,
+   "def": 90,
+   "spa": 55,
+   "spd": 110,
+   "spe": 50
+  },
+  "abilities": {
+   "0": "sturdy"
+  },
+  "weight_kg": 130.0,
+  "height_m": 1.6,
+  "base_form": "jinpachi",
+  "form": "R",
+  "region_form": true,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "tackle"
+    },
+    {
+     "level": 1,
+     "move": "leer"
+    },
+    {
+     "level": 5,
+     "move": "rock_throw"
+    },
+    {
+     "level": 9,
+     "move": "howl"
+    },
+    {
+     "level": 13,
+     "move": "rock_tomb"
+    },
+    {
+     "level": 17,
+     "move": "bulldoze"
+    },
+    {
+     "level": 21,
+     "move": "rock_slide"
+    },
+    {
+     "level": 25,
+     "move": "iron_defense"
+    },
+    {
+     "level": 29,
+     "move": "stealth_rock"
+    },
+    {
+     "level": 33,
+     "move": "swords_dance"
+    },
+    {
+     "level": 37,
+     "move": "stone_axe"
+    },
+    {
+     "level": 41,
+     "move": "sandstorm"
+    },
+    {
+     "level": 45,
+     "move": "stone_edge"
+    },
+    {
+     "level": 49,
+     "move": "earthquake"
+    },
+    {
+     "level": 53,
+     "move": "head_smash"
+    },
+    {
+     "level": 57,
+     "move": "body_press"
+    },
+    {
+     "level": 61,
+     "move": "rock_polish"
+    }
+   ],
+   "tm": [
+    "accelerock",
+    "ancient_power",
+    "attract",
+    "body_slam",
+    "brick_break",
+    "bulk_up",
+    "close_combat",
+    "counter",
+    "crunch",
+    "curse",
+    "double_edge",
+    "double_team",
+    "endure",
+    "facade",
+    "fire_fang",
+    "fire_punch",
+    "flare_blitz",
+    "heavy_slam",
+    "high_horsepower",
+    "iron_head",
+    "knock_off",
+    "low_kick",
+    "protect",
+    "rest",
+    "roar",
+    "rock_blast",
+    "salt_cure",
+    "sleep_talk",
+    "smack_down",
+    "snore",
+    "stomping_tantrum",
+    "stone_axe",
+    "substitute",
+    "superpower",
+    "swagger",
+    "taunt",
+    "toxic",
+    "wide_guard",
+    "zen_headbutt"
+   ]
+  },
+  "catch_rate": 45,
+  "base_exp": 175,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "atk": 2
+  },
+  "gender_ratio": 0.5,
+  "sprite": "jinpachi_r",
+  "dex_key": "jinpachi_r"
+ }
+}

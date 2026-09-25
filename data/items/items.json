@@ -1,0 +1,781 @@
+{
+ "choice_band": {
+  "handler": "choice",
+  "params": {
+   "stat": "atk"
+  },
+  "is_choice": true,
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "choice_specs": {
+  "handler": "choice",
+  "params": {
+   "stat": "spa"
+  },
+  "is_choice": true,
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "choice_scarf": {
+  "handler": "choice",
+  "params": {
+   "stat": "spe"
+  },
+  "is_choice": true,
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "life_orb": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "focus_sash": {
+  "consumable": true,
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "leftovers": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "black_sludge": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "sitrus_berry": {
+  "is_berry": true,
+  "handler": "hp_berry",
+  "params": {
+   "threshold": [
+    1,
+    2
+   ],
+   "heal_fraction": [
+    1,
+    4
+   ]
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "oran_berry": {
+  "is_berry": true,
+  "handler": "hp_berry",
+  "params": {
+   "threshold": [
+    1,
+    2
+   ],
+   "heal_flat": 10
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "lum_berry": {
+  "is_berry": true,
+  "flags": {},
+  "params": {},
+  "pocket": "held"
+ },
+ "chesto_berry": {
+  "is_berry": true,
+  "handler": "status_berry",
+  "params": {
+   "cures": [
+    "slp"
+   ]
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "cheri_berry": {
+  "is_berry": true,
+  "handler": "status_berry",
+  "params": {
+   "cures": [
+    "par"
+   ]
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "pecha_berry": {
+  "is_berry": true,
+  "handler": "status_berry",
+  "params": {
+   "cures": [
+    "psn",
+    "tox"
+   ]
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "rawst_berry": {
+  "is_berry": true,
+  "handler": "status_berry",
+  "params": {
+   "cures": [
+    "brn"
+   ]
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "aspear_berry": {
+  "is_berry": true,
+  "handler": "status_berry",
+  "params": {
+   "cures": [
+    "frz"
+   ]
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "persim_berry": {
+  "is_berry": true,
+  "handler": "status_berry",
+  "params": {
+   "cures": [
+    "confusion"
+   ]
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "occa_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "fire"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "passho_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "water"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "wacan_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "electric"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "rindo_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "grass"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "yache_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "ice"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "chople_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "fighting"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "kebia_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "poison"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "shuca_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "ground"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "coba_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "flying"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "payapa_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "psychic"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "tanga_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "bug"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "charti_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "rock"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "kasib_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "ghost"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "haban_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "dragon"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "colbur_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "dark"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "babiri_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "steel"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "roseli_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "fairy"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "chilan_berry": {
+  "is_berry": true,
+  "handler": "resist_berry",
+  "params": {
+   "type": "normal"
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "salac_berry": {
+  "is_berry": true,
+  "handler": "pinch_berry",
+  "params": {
+   "boosts": {
+    "spe": 1
+   }
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "liechi_berry": {
+  "is_berry": true,
+  "handler": "pinch_berry",
+  "params": {
+   "boosts": {
+    "atk": 1
+   }
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "petaya_berry": {
+  "is_berry": true,
+  "handler": "pinch_berry",
+  "params": {
+   "boosts": {
+    "spa": 1
+   }
+  },
+  "flags": {},
+  "pocket": "held"
+ },
+ "assault_vest": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "rocky_helmet": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "eviolite": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "weakness_policy": {
+  "consumable": true,
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "light_clay": {
+  "handler": "passive",
+  "flags": {
+   "screen_extender": true
+  },
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "heat_rock": {
+  "handler": "passive",
+  "extends_weather": "sun",
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "damp_rock": {
+  "handler": "passive",
+  "extends_weather": "rain",
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "smooth_rock": {
+  "handler": "passive",
+  "extends_weather": "sand",
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "icy_rock": {
+  "handler": "passive",
+  "extends_weather": "snow",
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "terrain_extender": {
+  "handler": "passive",
+  "extends_terrain": true,
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "silk_scarf": {
+  "handler": "type_boost",
+  "params": {
+   "type": "normal"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "charcoal": {
+  "handler": "type_boost",
+  "params": {
+   "type": "fire"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "mystic_water": {
+  "handler": "type_boost",
+  "params": {
+   "type": "water"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "magnet": {
+  "handler": "type_boost",
+  "params": {
+   "type": "electric"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "miracle_seed": {
+  "handler": "type_boost",
+  "params": {
+   "type": "grass"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "never_melt_ice": {
+  "handler": "type_boost",
+  "params": {
+   "type": "ice"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "black_belt": {
+  "handler": "type_boost",
+  "params": {
+   "type": "fighting"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "poison_barb": {
+  "handler": "type_boost",
+  "params": {
+   "type": "poison"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "soft_sand": {
+  "handler": "type_boost",
+  "params": {
+   "type": "ground"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "sharp_beak": {
+  "handler": "type_boost",
+  "params": {
+   "type": "flying"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "twisted_spoon": {
+  "handler": "type_boost",
+  "params": {
+   "type": "psychic"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "silver_powder": {
+  "handler": "type_boost",
+  "params": {
+   "type": "bug"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "hard_stone": {
+  "handler": "type_boost",
+  "params": {
+   "type": "rock"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "spell_tag": {
+  "handler": "type_boost",
+  "params": {
+   "type": "ghost"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "dragon_fang": {
+  "handler": "type_boost",
+  "params": {
+   "type": "dragon"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "black_glasses": {
+  "handler": "type_boost",
+  "params": {
+   "type": "dark"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "metal_coat": {
+  "handler": "type_boost",
+  "params": {
+   "type": "steel"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "fairy_feather": {
+  "handler": "type_boost",
+  "params": {
+   "type": "fairy"
+  },
+  "flags": {},
+  "is_berry": false,
+  "pocket": "held"
+ },
+ "air_balloon": {
+  "flags": {
+   "airborne": true
+  },
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "eject_button": {
+  "consumable": true,
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "red_card": {
+  "consumable": true,
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "quick_claw": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "bright_powder": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "wide_lens": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "expert_belt": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "muscle_band": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "wise_glasses": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "scope_lens": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "shed_shell": {
+  "handler": "passive",
+  "flags": {
+   "prevents_trapping": true
+  },
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "heavy_duty_boots": {
+  "handler": "passive",
+  "flags": {
+   "hazard_immune": true
+  },
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "safety_goggles": {
+  "handler": "passive",
+  "flags": {
+   "powder_immune": true,
+   "weather_immune": true
+  },
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "protective_pads": {
+  "handler": "passive",
+  "flags": {
+   "no_contact": true
+  },
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "mental_herb": {
+  "consumable": true,
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "white_herb": {
+  "consumable": true,
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "power_herb": {
+  "handler": "passive",
+  "consumable": true,
+  "flags": {
+   "skips_charge": true
+  },
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "flame_orb": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "toxic_orb": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "covert_cloak": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "clear_amulet": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "shell_bell": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "big_root": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "loaded_dice": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "metronome": {
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "grip_claw": {
+  "handler": "passive",
+  "flags": {
+   "extends_binding": true
+  },
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ },
+ "binding_band": {
+  "handler": "passive",
+  "flags": {
+   "stronger_binding": true
+  },
+  "is_berry": false,
+  "params": {},
+  "pocket": "held"
+ }
+}

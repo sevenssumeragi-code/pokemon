@@ -1,0 +1,153 @@
+{
+ "renny_r": {
+  "num": 13,
+  "types": [
+   "fairy"
+  ],
+  "base_stats": {
+   "hp": 105,
+   "atk": 115,
+   "def": 80,
+   "spa": 55,
+   "spd": 75,
+   "spe": 80
+  },
+  "abilities": {
+   "0": "pixilate"
+  },
+  "weight_kg": 70.0,
+  "height_m": 1.4,
+  "base_form": "renny",
+  "form": "R",
+  "region_form": true,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "tackle"
+    },
+    {
+     "level": 1,
+     "move": "leer"
+    },
+    {
+     "level": 4,
+     "move": "fairy_wind"
+    },
+    {
+     "level": 8,
+     "move": "quick_attack"
+    },
+    {
+     "level": 12,
+     "move": "bite"
+    },
+    {
+     "level": 16,
+     "move": "headbutt"
+    },
+    {
+     "level": 20,
+     "move": "play_rough"
+    },
+    {
+     "level": 24,
+     "move": "yawn"
+    },
+    {
+     "level": 28,
+     "move": "body_slam"
+    },
+    {
+     "level": 32,
+     "move": "rest"
+    },
+    {
+     "level": 36,
+     "move": "crunch"
+    },
+    {
+     "level": 40,
+     "move": "take_down"
+    },
+    {
+     "level": 44,
+     "move": "hyper_voice"
+    },
+    {
+     "level": 48,
+     "move": "double_edge"
+    },
+    {
+     "level": 52,
+     "move": "extreme_speed"
+    },
+    {
+     "level": 56,
+     "move": "sleep_talk"
+    },
+    {
+     "level": 60,
+     "move": "boomburst"
+    }
+   ],
+   "tm": [
+    "attract",
+    "body_press",
+    "brick_break",
+    "bulk_up",
+    "charm",
+    "curse",
+    "double_team",
+    "drain_punch",
+    "earthquake",
+    "endure",
+    "facade",
+    "fake_out",
+    "false_swipe",
+    "fire_fang",
+    "giga_impact",
+    "heavy_slam",
+    "hyper_fang",
+    "ice_fang",
+    "ice_punch",
+    "iron_head",
+    "knock_off",
+    "low_kick",
+    "mega_kick",
+    "population_bomb",
+    "protect",
+    "rest",
+    "retaliate",
+    "roar",
+    "rock_slide",
+    "slash",
+    "sleep_talk",
+    "snore",
+    "spirit_break",
+    "stone_edge",
+    "strength",
+    "substitute",
+    "superpower",
+    "swagger",
+    "taunt",
+    "thunder_fang",
+    "toxic",
+    "wish",
+    "zen_headbutt"
+   ]
+  },
+  "catch_rate": 45,
+  "base_exp": 175,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "atk": 2
+  },
+  "gender_ratio": 0.5,
+  "sprite": "renny_r",
+  "dex_key": "renny_r"
+ }
+}

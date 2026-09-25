@@ -1,0 +1,155 @@
+{
+ "gel_r_poison": {
+  "num": 17,
+  "types": [
+   "poison"
+  ],
+  "base_stats": {
+   "hp": 100,
+   "atk": 95,
+   "def": 80,
+   "spa": 60,
+   "spd": 105,
+   "spe": 65
+  },
+  "abilities": {
+   "0": "intimidate"
+  },
+  "weight_kg": 45.0,
+  "height_m": 1.1,
+  "base_form": "gel",
+  "form": "R毒",
+  "region_form": true,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "pound"
+    },
+    {
+     "level": 1,
+     "move": "leer"
+    },
+    {
+     "level": 5,
+     "move": "poison_gas"
+    },
+    {
+     "level": 9,
+     "move": "acid_spray"
+    },
+    {
+     "level": 13,
+     "move": "bite"
+    },
+    {
+     "level": 17,
+     "move": "poison_tail"
+    },
+    {
+     "level": 21,
+     "move": "toxic_spikes"
+    },
+    {
+     "level": 25,
+     "move": "venoshock"
+    },
+    {
+     "level": 29,
+     "move": "poison_jab"
+    },
+    {
+     "level": 33,
+     "move": "toxic"
+    },
+    {
+     "level": 37,
+     "move": "recover"
+    },
+    {
+     "level": 41,
+     "move": "baneful_bunker"
+    },
+    {
+     "level": 45,
+     "move": "coil"
+    },
+    {
+     "level": 49,
+     "move": "gunk_shot"
+    },
+    {
+     "level": 53,
+     "move": "haze"
+    },
+    {
+     "level": 57,
+     "move": "cross_poison"
+    },
+    {
+     "level": 61,
+     "move": "acid_armor"
+    }
+   ],
+   "tm": [
+    "aqua_tail",
+    "attract",
+    "body_press",
+    "body_slam",
+    "brick_break",
+    "bulk_up",
+    "chilling_water",
+    "clear_smog",
+    "counter",
+    "crunch",
+    "curse",
+    "double_team",
+    "drain_punch",
+    "earthquake",
+    "endure",
+    "facade",
+    "fire_punch",
+    "ice_punch",
+    "icy_wind",
+    "iron_defense",
+    "knock_off",
+    "low_kick",
+    "pain_split",
+    "play_rough",
+    "poison_fang",
+    "protect",
+    "rest",
+    "roar",
+    "rock_slide",
+    "seismic_toss",
+    "sleep_talk",
+    "sludge_bomb",
+    "sludge_wave",
+    "snore",
+    "spikes",
+    "stomping_tantrum",
+    "stone_edge",
+    "substitute",
+    "swagger",
+    "taunt",
+    "thunder_punch",
+    "toxic",
+    "venoshock",
+    "yawn"
+   ]
+  },
+  "catch_rate": 60,
+  "base_exp": 170,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "hp": 1,
+   "spd": 1
+  },
+  "gender_ratio": 0.5,
+  "sprite": "gel_r_poison",
+  "dex_key": "gel_r_poison"
+ }
+}

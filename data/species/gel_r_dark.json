@@ -1,0 +1,160 @@
+{
+ "gel_r_dark": {
+  "num": 18,
+  "types": [
+   "dark"
+  ],
+  "base_stats": {
+   "hp": 110,
+   "atk": 80,
+   "def": 80,
+   "spa": 80,
+   "spd": 80,
+   "spe": 75
+  },
+  "abilities": {
+   "0": "intimidate"
+  },
+  "weight_kg": 40.0,
+  "height_m": 1.1,
+  "base_form": "gel",
+  "form": "R悪",
+  "region_form": true,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "pound"
+    },
+    {
+     "level": 1,
+     "move": "leer"
+    },
+    {
+     "level": 5,
+     "move": "bite"
+    },
+    {
+     "level": 9,
+     "move": "fake_tears"
+    },
+    {
+     "level": 13,
+     "move": "snarl"
+    },
+    {
+     "level": 17,
+     "move": "taunt"
+    },
+    {
+     "level": 21,
+     "move": "knock_off"
+    },
+    {
+     "level": 25,
+     "move": "night_slash"
+    },
+    {
+     "level": 29,
+     "move": "foul_play"
+    },
+    {
+     "level": 33,
+     "move": "dark_pulse"
+    },
+    {
+     "level": 37,
+     "move": "recover"
+    },
+    {
+     "level": 41,
+     "move": "parting_shot"
+    },
+    {
+     "level": 45,
+     "move": "crunch"
+    },
+    {
+     "level": 49,
+     "move": "nasty_plot"
+    },
+    {
+     "level": 53,
+     "move": "haze"
+    },
+    {
+     "level": 57,
+     "move": "sucker_punch"
+    },
+    {
+     "level": 61,
+     "move": "kowtow_cleave"
+    }
+   ],
+   "tm": [
+    "aqua_tail",
+    "assurance",
+    "attract",
+    "body_press",
+    "body_slam",
+    "brick_break",
+    "bulk_up",
+    "calm_mind",
+    "chilling_water",
+    "counter",
+    "curse",
+    "double_team",
+    "drain_punch",
+    "earthquake",
+    "encore",
+    "endure",
+    "facade",
+    "fire_punch",
+    "flamethrower",
+    "hyper_voice",
+    "ice_beam",
+    "ice_punch",
+    "icy_wind",
+    "iron_defense",
+    "low_kick",
+    "memento",
+    "pain_split",
+    "payback",
+    "play_rough",
+    "protect",
+    "psychic",
+    "rest",
+    "roar",
+    "rock_slide",
+    "seismic_toss",
+    "shadow_ball",
+    "sleep_talk",
+    "snore",
+    "stomping_tantrum",
+    "stone_edge",
+    "substitute",
+    "swagger",
+    "throat_chop",
+    "thunder_punch",
+    "thunder_wave",
+    "thunderbolt",
+    "toxic",
+    "u_turn",
+    "will_o_wisp",
+    "yawn"
+   ]
+  },
+  "catch_rate": 60,
+  "base_exp": 170,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "hp": 2
+  },
+  "gender_ratio": 0.5,
+  "sprite": "gel_r_dark",
+  "dex_key": "gel_r_dark"
+ }
+}

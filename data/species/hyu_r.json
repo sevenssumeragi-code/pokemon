@@ -1,0 +1,153 @@
+{
+ "hyu_r": {
+  "num": 12,
+  "types": [
+   "grass"
+  ],
+  "base_stats": {
+   "hp": 65,
+   "atk": 55,
+   "def": 65,
+   "spa": 120,
+   "spd": 80,
+   "spe": 115
+  },
+  "abilities": {
+   "0": "contrary"
+  },
+  "weight_kg": 10.0,
+  "height_m": 1.2,
+  "base_form": "hyu",
+  "form": "R",
+  "region_form": true,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "absorb"
+    },
+    {
+     "level": 1,
+     "move": "leer"
+    },
+    {
+     "level": 5,
+     "move": "leafage"
+    },
+    {
+     "level": 9,
+     "move": "leech_seed"
+    },
+    {
+     "level": 13,
+     "move": "mega_drain"
+    },
+    {
+     "level": 17,
+     "move": "sleep_powder"
+    },
+    {
+     "level": 21,
+     "move": "magical_leaf"
+    },
+    {
+     "level": 25,
+     "move": "synthesis"
+    },
+    {
+     "level": 29,
+     "move": "giga_drain"
+    },
+    {
+     "level": 33,
+     "move": "energy_ball"
+    },
+    {
+     "level": 37,
+     "move": "grassy_terrain"
+    },
+    {
+     "level": 41,
+     "move": "leaf_storm"
+    },
+    {
+     "level": 45,
+     "move": "strength_sap"
+    },
+    {
+     "level": 49,
+     "move": "solar_beam"
+    },
+    {
+     "level": 53,
+     "move": "apple_acid"
+    },
+    {
+     "level": 57,
+     "move": "petal_dance"
+    },
+    {
+     "level": 61,
+     "move": "spore"
+    }
+   ],
+   "tm": [
+    "armor_cannon",
+    "attract",
+    "calm_mind",
+    "close_combat",
+    "confuse_ray",
+    "dazzling_gleam",
+    "double_team",
+    "draco_meteor",
+    "earth_power",
+    "endure",
+    "facade",
+    "grass_knot",
+    "hex",
+    "hyper_voice",
+    "icy_wind",
+    "knock_off",
+    "leaf_tornado",
+    "light_screen",
+    "nasty_plot",
+    "overheat",
+    "protect",
+    "psychic",
+    "psyshock",
+    "reflect",
+    "rest",
+    "seed_bomb",
+    "shadow_ball",
+    "sleep_talk",
+    "sludge_bomb",
+    "snarl",
+    "snore",
+    "struggle_bug",
+    "stun_spore",
+    "substitute",
+    "sunny_day",
+    "superpower",
+    "swagger",
+    "taunt",
+    "toxic",
+    "trailblaze",
+    "trick",
+    "weather_ball",
+    "will_o_wisp"
+   ]
+  },
+  "catch_rate": 45,
+  "base_exp": 175,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "spa": 2
+  },
+  "gender_ratio": 0.5,
+  "sprite": "hyu_r",
+  "dex_key": "hyu_r"
+ }
+}

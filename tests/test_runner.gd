@@ -52,6 +52,8 @@ func _init() -> void:
 	for f in all_failures:
 		print("  FAILED " + f)
 	print("=== %d tests, %d assertions, %d failed, %d ms ===" % [total_tests, total_asserts, failed_tests, dt])
+	EffectRegistry.reset()
+	GameData.loaded = false
 	quit(1 if failed_tests > 0 else 0)
 
 func _list_test_files() -> Array[String]:

@@ -1,0 +1,161 @@
+{
+ "muni": {
+  "num": 4,
+  "types": [
+   "fairy"
+  ],
+  "base_stats": {
+   "hp": 65,
+   "atk": 55,
+   "def": 70,
+   "spa": 70,
+   "spd": 75,
+   "spe": 85
+  },
+  "abilities": {
+   "0": "prankster"
+  },
+  "weight_kg": 4.5,
+  "height_m": 0.4,
+  "base_form": "muni",
+  "form": "",
+  "region_form": false,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "pound"
+    },
+    {
+     "level": 1,
+     "move": "charm"
+    },
+    {
+     "level": 4,
+     "move": "fairy_wind"
+    },
+    {
+     "level": 7,
+     "move": "baby_doll_eyes"
+    },
+    {
+     "level": 10,
+     "move": "disarming_voice"
+    },
+    {
+     "level": 13,
+     "move": "minimize"
+    },
+    {
+     "level": 16,
+     "move": "sweet_kiss"
+    },
+    {
+     "level": 19,
+     "move": "draining_kiss"
+    },
+    {
+     "level": 22,
+     "move": "encore"
+    },
+    {
+     "level": 25,
+     "move": "wish"
+    },
+    {
+     "level": 28,
+     "move": "dazzling_gleam"
+    },
+    {
+     "level": 31,
+     "move": "attract"
+    },
+    {
+     "level": 34,
+     "move": "moonlight"
+    },
+    {
+     "level": 37,
+     "move": "moonblast"
+    },
+    {
+     "level": 40,
+     "move": "play_rough"
+    },
+    {
+     "level": 43,
+     "move": "misty_terrain"
+    },
+    {
+     "level": 46,
+     "move": "light_screen"
+    },
+    {
+     "level": 49,
+     "move": "reflect"
+    },
+    {
+     "level": 52,
+     "move": "thunder_wave"
+    },
+    {
+     "level": 55,
+     "move": "tearful_look"
+    }
+   ],
+   "tm": [
+    "attract",
+    "baton_pass",
+    "body_slam",
+    "calm_mind",
+    "charge_beam",
+    "confuse_ray",
+    "double_team",
+    "endure",
+    "energy_ball",
+    "facade",
+    "fake_tears",
+    "heal_bell",
+    "helping_hand",
+    "hyper_voice",
+    "icy_wind",
+    "knock_off",
+    "mystical_fire",
+    "protect",
+    "psych_up",
+    "psychic",
+    "rest",
+    "safeguard",
+    "screech",
+    "shadow_ball",
+    "sleep_talk",
+    "snore",
+    "spirit_break",
+    "stored_power",
+    "substitute",
+    "swagger",
+    "taunt",
+    "thunderbolt",
+    "tickle",
+    "toxic",
+    "trick",
+    "u_turn",
+    "will_o_wisp",
+    "work_up",
+    "yawn"
+   ]
+  },
+  "catch_rate": 190,
+  "base_exp": 90,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "spe": 1
+  },
+  "gender_ratio": 0.5,
+  "sprite": "muni",
+  "dex_key": "muni"
+ }
+}

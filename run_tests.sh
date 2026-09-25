@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 # Run the headless unit test suite. Optional arg: substring filter on test file name.
+# Fails if any SCRIPT ERROR / ERROR appears in Godot's output (script errors don't stop Godot).
 set -u
 cd "$(dirname "$0")"
 GODOT="${GODOT:-godot}"
-# Rebuild the global script class cache so class_name resolves headless.
 "$GODOT" --headless --path . --import >/dev/null 2>&1
-if [ $# -gt 0 ]; then
-  "$GODOT" --headless --path . -s tests/test_runner.gd -- "$1"
-else
-  "$GODOT" --headless --path . -s tests/test_runner.gd
-fi
+OUT=$("$GODOT" --headless --path . -s tests/test_runner.gd -- "${1:-}" 2>&1 | grep -v "^Godot Engine")
+echo "$OUT"
+STATUS=0
+echo "$OUT" | grep -q "failed, " || STATUS=1
+echo "$OUT" | grep -v "resources still in use" | grep -qE "SCRIPT ERROR|^ERROR|USER ERROR" && STATUS=1
+echo "$OUT" | grep -qE "=== .* 0 failed" || STATUS=1
+exit $STATUS

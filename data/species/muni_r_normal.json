@@ -1,0 +1,152 @@
+{
+ "muni_r_normal": {
+  "num": 16,
+  "types": [
+   "normal"
+  ],
+  "base_stats": {
+   "hp": 70,
+   "atk": 60,
+   "def": 70,
+   "spa": 60,
+   "spd": 75,
+   "spe": 85
+  },
+  "abilities": {
+   "0": "minimal_body"
+  },
+  "weight_kg": 5.0,
+  "height_m": 0.3,
+  "base_form": "muni",
+  "form": "Rノ",
+  "region_form": true,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "pound"
+    },
+    {
+     "level": 1,
+     "move": "growl"
+    },
+    {
+     "level": 4,
+     "move": "quick_attack"
+    },
+    {
+     "level": 7,
+     "move": "sand_attack"
+    },
+    {
+     "level": 10,
+     "move": "minimize"
+    },
+    {
+     "level": 13,
+     "move": "double_team"
+    },
+    {
+     "level": 16,
+     "move": "headbutt"
+    },
+    {
+     "level": 19,
+     "move": "encore"
+    },
+    {
+     "level": 22,
+     "move": "body_slam"
+    },
+    {
+     "level": 25,
+     "move": "wish"
+    },
+    {
+     "level": 28,
+     "move": "yawn"
+    },
+    {
+     "level": 31,
+     "move": "soft_boiled"
+    },
+    {
+     "level": 34,
+     "move": "baton_pass"
+    },
+    {
+     "level": 37,
+     "move": "hyper_voice"
+    },
+    {
+     "level": 40,
+     "move": "double_edge"
+    },
+    {
+     "level": 43,
+     "move": "tearful_look"
+    },
+    {
+     "level": 46,
+     "move": "extreme_speed"
+    },
+    {
+     "level": 49,
+     "move": "boomburst"
+    }
+   ],
+   "tm": [
+    "acrobatics",
+    "attract",
+    "calm_mind",
+    "charm",
+    "counter",
+    "double_team",
+    "endure",
+    "facade",
+    "fake_out",
+    "flamethrower",
+    "heal_bell",
+    "ice_beam",
+    "icy_wind",
+    "knock_off",
+    "light_screen",
+    "play_rough",
+    "protect",
+    "psych_up",
+    "psychic",
+    "reflect",
+    "rest",
+    "retaliate",
+    "safeguard",
+    "seismic_toss",
+    "shadow_ball",
+    "sleep_talk",
+    "snore",
+    "stored_power",
+    "substitute",
+    "swagger",
+    "taunt",
+    "thunder_wave",
+    "thunderbolt",
+    "toxic",
+    "tri_attack",
+    "u_turn",
+    "will_o_wisp",
+    "work_up"
+   ]
+  },
+  "catch_rate": 120,
+  "base_exp": 100,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "spd": 1
+  },
+  "gender_ratio": 0.5,
+  "sprite": "muni_r_normal",
+  "dex_key": "muni_r_normal"
+ }
+}

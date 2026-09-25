@@ -1,0 +1,48 @@
+{
+ "sun": {
+  "duration": 5,
+  "extended_duration": 8,
+  "boost": {
+   "fire": 1.5
+  },
+  "nerf": {
+   "water": 0.5
+  },
+  "prevents_status": [
+   "frz"
+  ],
+  "weather_ball_type": "fire"
+ },
+ "rain": {
+  "duration": 5,
+  "extended_duration": 8,
+  "boost": {
+   "water": 1.5
+  },
+  "nerf": {
+   "fire": 0.5
+  },
+  "weather_ball_type": "water"
+ },
+ "sand": {
+  "duration": 5,
+  "extended_duration": 8,
+  "damage": [
+   1,
+   16
+  ],
+  "immune_types": [
+   "rock",
+   "ground",
+   "steel"
+  ],
+  "spd_boost_type": "rock",
+  "weather_ball_type": "rock"
+ },
+ "snow": {
+  "duration": 5,
+  "extended_duration": 8,
+  "def_boost_type": "ice",
+  "weather_ball_type": "ice"
+ }
+}

@@ -1,0 +1,174 @@
+{
+ "awakened_lion": {
+  "original": true,
+  "params": {
+   "multiplier": 2.0
+  },
+  "desc_key": "awakened_lion",
+  "flags": {}
+ },
+ "flame_domain": {
+  "original": true,
+  "params": {
+   "multiplier": 1.5
+  },
+  "desc_key": "flame_domain",
+  "flags": {}
+ },
+ "dark_domain": {
+  "original": true,
+  "params": {
+   "multiplier": 1.5
+  },
+  "desc_key": "dark_domain",
+  "flags": {}
+ },
+ "sacred_light": {
+  "original": true,
+  "params": {
+   "multiplier": 0.7,
+   "types": [
+    "ghost",
+    "dark"
+   ]
+  },
+  "desc_key": "sacred_light",
+  "flags": {}
+ },
+ "minimal_body": {
+  "original": true,
+  "params": {
+   "evasion_multiplier": 1.5
+  },
+  "desc_key": "minimal_body",
+  "flags": {}
+ },
+ "prankster": {
+  "original": false,
+  "desc_key": "prankster",
+  "params": {},
+  "flags": {}
+ },
+ "snow_warning": {
+  "original": false,
+  "desc_key": "snow_warning",
+  "params": {},
+  "flags": {}
+ },
+ "sharpness": {
+  "original": false,
+  "desc_key": "sharpness",
+  "params": {},
+  "flags": {}
+ },
+ "steadfast": {
+  "original": false,
+  "desc_key": "steadfast",
+  "params": {},
+  "flags": {}
+ },
+ "static": {
+  "original": false,
+  "desc_key": "static",
+  "params": {},
+  "flags": {}
+ },
+ "unburden": {
+  "original": false,
+  "desc_key": "unburden",
+  "params": {},
+  "flags": {}
+ },
+ "sturdy": {
+  "original": false,
+  "desc_key": "sturdy",
+  "params": {},
+  "flags": {}
+ },
+ "contrary": {
+  "original": false,
+  "desc_key": "contrary",
+  "params": {},
+  "flags": {}
+ },
+ "pixilate": {
+  "original": false,
+  "desc_key": "pixilate",
+  "params": {},
+  "flags": {}
+ },
+ "multiscale": {
+  "original": false,
+  "desc_key": "multiscale",
+  "params": {},
+  "flags": {}
+ },
+ "compound_eyes": {
+  "original": false,
+  "desc_key": "compound_eyes",
+  "params": {},
+  "flags": {}
+ },
+ "intimidate": {
+  "original": false,
+  "desc_key": "intimidate",
+  "params": {},
+  "flags": {}
+ },
+ "competitive": {
+  "original": false,
+  "desc_key": "competitive",
+  "params": {},
+  "flags": {}
+ },
+ "levitate": {
+  "original": false,
+  "desc_key": "levitate",
+  "params": {},
+  "flags": {}
+ },
+ "inner_focus": {
+  "original": false,
+  "flags": {
+   "intimidate_immune": true
+  },
+  "desc_key": "inner_focus",
+  "params": {}
+ },
+ "regenerator": {
+  "original": false,
+  "desc_key": "regenerator",
+  "params": {},
+  "flags": {}
+ },
+ "natural_cure": {
+  "original": false,
+  "desc_key": "natural_cure",
+  "params": {},
+  "flags": {}
+ },
+ "technician": {
+  "original": false,
+  "desc_key": "technician",
+  "params": {},
+  "flags": {}
+ },
+ "guts": {
+  "original": false,
+  "desc_key": "guts",
+  "params": {},
+  "flags": {}
+ },
+ "thick_fat": {
+  "original": false,
+  "desc_key": "thick_fat",
+  "params": {},
+  "flags": {}
+ },
+ "clear_body": {
+  "original": false,
+  "desc_key": "clear_body",
+  "params": {},
+  "flags": {}
+ }
+}

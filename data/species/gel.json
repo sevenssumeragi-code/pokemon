@@ -1,0 +1,146 @@
+{
+ "gel": {
+  "num": 5,
+  "types": [
+   "ice"
+  ],
+  "base_stats": {
+   "hp": 70,
+   "atk": 60,
+   "def": 70,
+   "spa": 120,
+   "spd": 80,
+   "spe": 110
+  },
+  "abilities": {
+   "0": "snow_warning"
+  },
+  "weight_kg": 32.0,
+  "height_m": 1.1,
+  "base_form": "gel",
+  "form": "",
+  "region_form": false,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "powder_snow"
+    },
+    {
+     "level": 1,
+     "move": "leer"
+    },
+    {
+     "level": 5,
+     "move": "icy_wind"
+    },
+    {
+     "level": 9,
+     "move": "water_gun"
+    },
+    {
+     "level": 13,
+     "move": "aurora_beam"
+    },
+    {
+     "level": 17,
+     "move": "haze"
+    },
+    {
+     "level": 21,
+     "move": "ice_shard"
+    },
+    {
+     "level": 25,
+     "move": "frost_breath"
+    },
+    {
+     "level": 29,
+     "move": "aurora_veil"
+    },
+    {
+     "level": 33,
+     "move": "freeze_dry"
+    },
+    {
+     "level": 37,
+     "move": "ice_beam"
+    },
+    {
+     "level": 41,
+     "move": "snowscape"
+    },
+    {
+     "level": 45,
+     "move": "calm_mind"
+    },
+    {
+     "level": 49,
+     "move": "blizzard"
+    },
+    {
+     "level": 53,
+     "move": "mist"
+    },
+    {
+     "level": 57,
+     "move": "moonblast"
+    }
+   ],
+   "tm": [
+    "attract",
+    "avalanche",
+    "chilling_water",
+    "dazzling_gleam",
+    "double_team",
+    "earth_power",
+    "encore",
+    "endure",
+    "energy_ball",
+    "facade",
+    "flash_cannon",
+    "focus_blast",
+    "haze",
+    "hydro_pump",
+    "hyper_voice",
+    "ice_spinner",
+    "icy_wind",
+    "light_screen",
+    "nasty_plot",
+    "protect",
+    "psychic",
+    "psyshock",
+    "rain_dance",
+    "recover",
+    "reflect",
+    "rest",
+    "shadow_ball",
+    "sleep_talk",
+    "snore",
+    "substitute",
+    "surf",
+    "swagger",
+    "taunt",
+    "thunder_wave",
+    "thunderbolt",
+    "toxic",
+    "tri_attack",
+    "water_pulse",
+    "weather_ball",
+    "yawn"
+   ]
+  },
+  "catch_rate": 60,
+  "base_exp": 170,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "spa": 2
+  },
+  "gender_ratio": 0.5,
+  "sprite": "gel",
+  "dex_key": "gel"
+ }
+}

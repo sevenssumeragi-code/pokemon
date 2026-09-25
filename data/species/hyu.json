@@ -1,0 +1,147 @@
+{
+ "hyu": {
+  "num": 3,
+  "types": [
+   "ghost"
+  ],
+  "base_stats": {
+   "hp": 70,
+   "atk": 50,
+   "def": 65,
+   "spa": 120,
+   "spd": 80,
+   "spe": 115
+  },
+  "abilities": {
+   "0": "dark_domain"
+  },
+  "weight_kg": 12.0,
+  "height_m": 1.2,
+  "base_form": "hyu",
+  "form": "",
+  "region_form": false,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "astonish"
+    },
+    {
+     "level": 1,
+     "move": "lick"
+    },
+    {
+     "level": 5,
+     "move": "confuse_ray"
+    },
+    {
+     "level": 9,
+     "move": "night_shade"
+    },
+    {
+     "level": 13,
+     "move": "shadow_sneak"
+    },
+    {
+     "level": 17,
+     "move": "hex"
+    },
+    {
+     "level": 21,
+     "move": "will_o_wisp"
+    },
+    {
+     "level": 25,
+     "move": "shadow_ball"
+    },
+    {
+     "level": 29,
+     "move": "curse"
+    },
+    {
+     "level": 33,
+     "move": "nasty_plot"
+    },
+    {
+     "level": 37,
+     "move": "dark_pulse"
+    },
+    {
+     "level": 41,
+     "move": "pain_split"
+    },
+    {
+     "level": 45,
+     "move": "phantom_force"
+    },
+    {
+     "level": 49,
+     "move": "destiny_bond"
+    },
+    {
+     "level": 53,
+     "move": "poltergeist"
+    },
+    {
+     "level": 57,
+     "move": "bitter_malice"
+    },
+    {
+     "level": 61,
+     "move": "shadow_claw"
+    }
+   ],
+   "tm": [
+    "attract",
+    "calm_mind",
+    "dazzling_gleam",
+    "disable",
+    "double_team",
+    "dream_eater",
+    "endure",
+    "energy_ball",
+    "facade",
+    "focus_blast",
+    "giga_drain",
+    "haze",
+    "hyper_voice",
+    "hypnosis",
+    "icy_wind",
+    "knock_off",
+    "memento",
+    "nightmare",
+    "ominous_wind",
+    "protect",
+    "psychic",
+    "psyshock",
+    "rest",
+    "shadow_bone",
+    "shadow_punch",
+    "sleep_talk",
+    "sludge_bomb",
+    "snore",
+    "substitute",
+    "sucker_punch",
+    "swagger",
+    "taunt",
+    "thunder_wave",
+    "thunderbolt",
+    "toxic",
+    "trick",
+    "trick_room"
+   ]
+  },
+  "catch_rate": 45,
+  "base_exp": 175,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "spa": 2
+  },
+  "gender_ratio": 0.5,
+  "sprite": "hyu",
+  "dex_key": "hyu"
+ }
+}

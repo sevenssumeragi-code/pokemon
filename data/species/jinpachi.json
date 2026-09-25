@@ -1,0 +1,152 @@
+{
+ "jinpachi": {
+  "num": 2,
+  "types": [
+   "fire"
+  ],
+  "base_stats": {
+   "hp": 70,
+   "atk": 115,
+   "def": 70,
+   "spa": 80,
+   "spd": 70,
+   "spe": 115
+  },
+  "abilities": {
+   "0": "flame_domain"
+  },
+  "weight_kg": 55.0,
+  "height_m": 1.5,
+  "base_form": "jinpachi",
+  "form": "",
+  "region_form": false,
+  "evolves_from": null,
+  "evolution": null,
+  "nfe": false,
+  "learnset": {
+   "level": [
+    {
+     "level": 1,
+     "move": "scratch"
+    },
+    {
+     "level": 1,
+     "move": "ember"
+    },
+    {
+     "level": 5,
+     "move": "quick_attack"
+    },
+    {
+     "level": 9,
+     "move": "howl"
+    },
+    {
+     "level": 13,
+     "move": "flame_wheel"
+    },
+    {
+     "level": 17,
+     "move": "fire_fang"
+    },
+    {
+     "level": 21,
+     "move": "flame_charge"
+    },
+    {
+     "level": 25,
+     "move": "will_o_wisp"
+    },
+    {
+     "level": 29,
+     "move": "fire_punch"
+    },
+    {
+     "level": 33,
+     "move": "swords_dance"
+    },
+    {
+     "level": 37,
+     "move": "blaze_kick"
+    },
+    {
+     "level": 41,
+     "move": "sunny_day"
+    },
+    {
+     "level": 45,
+     "move": "flare_blitz"
+    },
+    {
+     "level": 49,
+     "move": "heat_wave"
+    },
+    {
+     "level": 53,
+     "move": "overheat"
+    },
+    {
+     "level": 57,
+     "move": "fire_lash"
+    },
+    {
+     "level": 61,
+     "move": "bitter_blade"
+    }
+   ],
+   "tm": [
+    "agility",
+    "attract",
+    "body_slam",
+    "brick_break",
+    "bulk_up",
+    "close_combat",
+    "crunch",
+    "double_edge",
+    "double_team",
+    "earthquake",
+    "endure",
+    "extreme_speed",
+    "facade",
+    "fake_out",
+    "fire_blast",
+    "flamethrower",
+    "heat_crash",
+    "iron_head",
+    "knock_off",
+    "low_kick",
+    "play_rough",
+    "protect",
+    "psychic_fangs",
+    "rest",
+    "roar",
+    "rock_slide",
+    "scorching_sands",
+    "sleep_talk",
+    "snore",
+    "solar_beam",
+    "stone_edge",
+    "substitute",
+    "swagger",
+    "taunt",
+    "thunder_punch",
+    "torch_song",
+    "toxic",
+    "trailblaze",
+    "u_turn",
+    "wild_charge",
+    "work_up",
+    "zen_headbutt"
+   ]
+  },
+  "catch_rate": 45,
+  "base_exp": 175,
+  "growth_rate": "medium_fast",
+  "ev_yield": {
+   "spe": 2
+  },
+  "gender_ratio": 0.5,
+  "sprite": "jinpachi",
+  "dex_key": "jinpachi"
+ }
+}
