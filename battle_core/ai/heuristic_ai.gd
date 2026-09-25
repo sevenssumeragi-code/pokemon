@@ -231,6 +231,9 @@ func _is_physical_attacker(p) -> bool:
 func _score_move(user, move_id: String, target, foes: Array) -> float:
 	var md := GameData.get_move(move_id)
 	var score := 0.0
+	var faster: bool = target != null and _faster(user, target)
+	if user.ability == "prankster" and md["category"] == "status" and target != null and not target.has_type("dark"):
+		faster = true  # Prankster: status moves go first
 	# asleep: only sleep-usable moves matter unless we wake this turn (Rest sleep is a known 2 turns)
 	if user.status == "slp":
 		var wakes_now: bool = int(user.status_state.get("time", 2)) <= 1
@@ -240,7 +243,6 @@ func _score_move(user, move_id: String, target, foes: Array) -> float:
 			return -100.0
 		elif md.get("sleep_usable", false):
 			return -100.0
-	var faster := target != null and _faster(user, target)
 	var their := 0.0
 	if target != null:
 		their = _best_damage_pct(target, user)["pct"]
@@ -393,8 +395,8 @@ func _score_move(user, move_id: String, target, foes: Array) -> float:
 			"spikes": score = (20.0 - 6.0 * int(side.side_conditions.get(sc, {}).get("layers", 0))) if user.side.foe.has_alive_bench() else 0.0
 			"toxic_spikes": score = 18.0 if user.side.foe.has_alive_bench() else 0.0
 			"sticky_web": score = 20.0 if user.side.foe.has_alive_bench() else 0.0
-			"reflect": score = 24.0 if _is_physical_attacker(target) else 10.0
-			"light_screen": score = 24.0 if (target != null and not _is_physical_attacker(target)) else 10.0
+			"reflect": score = 30.0 if (target != null and _is_physical_attacker(target)) else 12.0
+			"light_screen": score = 30.0 if (target != null and not _is_physical_attacker(target)) else 12.0
 			"aurora_veil": score = 30.0 if _b.is_weather(["snow", "hail"]) else -60.0
 			"tailwind": score = 18.0
 			"safeguard": score = 8.0

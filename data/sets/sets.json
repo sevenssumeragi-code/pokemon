@@ -335,22 +335,22 @@
    "role": "attacker"
   },
   {
-   "name": "eviolite_bulk",
+   "name": "band",
    "moves": [
-    "bulk_up",
-    "drain_punch",
+    "sacred_sword",
     "night_slash",
-    "psycho_cut"
+    "x_scissor",
+    "aqua_cutter"
    ],
-   "item": "eviolite",
-   "nature": "impish",
+   "item": "choice_band",
+   "nature": "jolly",
    "evs": {
-    "hp": 252,
-    "def": 252,
-    "atk": 4
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
    },
    "ability": "sharpness",
-   "role": "bulky_attacker"
+   "role": "attacker"
   }
  ],
  "trans": [
@@ -579,22 +579,22 @@
  ],
  "jinpachi_r": [
   {
-   "name": "rocks_tank",
+   "name": "vest",
    "moves": [
-    "stealth_rock",
     "stone_edge",
     "earthquake",
-    "body_press"
+    "heavy_slam",
+    "fire_punch"
    ],
-   "item": "leftovers",
-   "nature": "impish",
+   "item": "assault_vest",
+   "nature": "brave",
    "evs": {
     "hp": 252,
-    "def": 252,
-    "spd": 4
+    "atk": 252,
+    "spe": 4
    },
    "ability": "sturdy",
-   "role": "wall"
+   "role": "bulky_attacker"
   },
   {
    "name": "sd_wp",

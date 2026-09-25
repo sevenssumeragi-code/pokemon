@@ -5,10 +5,10 @@
    "grass"
   ],
   "base_stats": {
-   "hp": 75,
+   "hp": 80,
    "atk": 55,
-   "def": 65,
-   "spa": 110,
+   "def": 70,
+   "spa": 100,
    "spd": 80,
    "spe": 115
   },
