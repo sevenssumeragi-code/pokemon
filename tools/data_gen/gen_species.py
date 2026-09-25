@@ -34,7 +34,7 @@ sp("renny","レニィ",["water"],105,115,80,55,75,80,"awakened_lion",num=1,weigh
    tm=COMMON_TM+["ice_fang","ice_punch","earthquake","stone_edge","rock_slide","flip_turn","aqua_tail","superpower","body_press","iron_head","bulk_up","dragon_tail","knock_off","snore","rain_dance","brick_break","low_kick","play_rough","zen_headbutt","chilling_water","surf","scald","heavy_slam","curse","taunt","roar","avalanche","ice_beam","hydro_pump"],
    dex="眠りから覚めた瞬間、獅子のような咆哮とともに全力の一撃を放つ。深い眠りほど目覚めは激しい。")
 # 2 ジンパチ ほのお A/S
-sp("jinpachi","ジンパチ",["fire"],70,105,70,80,70,115,"flame_domain",num=2,weight=55.0,height=1.5,catch_rate=45,base_exp=175,ev_yield={"spe":2},
+sp("jinpachi","ジンパチ",["fire"],70,105,70,85,70,110,"flame_domain",num=2,weight=55.0,height=1.5,catch_rate=45,base_exp=175,ev_yield={"spe":2},
    level=[(1,"scratch"),(1,"ember"),(5,"quick_attack"),(9,"howl"),(13,"flame_wheel"),(17,"fire_fang"),(21,"flame_charge"),(25,"will_o_wisp"),(29,"fire_punch"),(33,"swords_dance"),(37,"blaze_kick"),(41,"sunny_day"),(45,"flare_blitz"),(49,"heat_wave"),(53,"overheat"),(57,"fire_lash"),(61,"bitter_blade")],
    tm=COMMON_TM+["u_turn","close_combat","earthquake","iron_head","wild_charge","thunder_punch","play_rough","crunch","knock_off","bulk_up","taunt","roar","flamethrower","fire_blast","solar_beam","psychic_fangs","low_kick","brick_break","stone_edge","rock_slide","fake_out","trailblaze","body_slam","double_edge","snore","scorching_sands","zen_headbutt","heat_crash","agility","work_up","torch_song"],
    dex="周囲の空気を自身の炎の領域に変えてしまう。仲間の炎まで激しく燃え上がらせる。")
@@ -59,7 +59,7 @@ sp("neo","ネオ",["fighting"],60,100,55,70,55,80,"sharpness",hidden="steadfast"
    tm=COMMON_TM+["brick_break","bulk_up","rock_slide","stone_edge","earthquake","knock_off","u_turn","aura_sphere","vacuum_wave","air_cutter","leaf_blade","stone_axe","ceaseless_edge","drain_punch","mach_punch","poison_jab","iron_head","taunt","work_up","body_press","low_kick","aqua_cutter","razor_shell","focus_blast","cross_poison","detect","counter","reversal","bullet_punch","snore"],
    dex="鋭い爪を研ぎ澄ますのが日課。まだ幼いが、切れ味だけは大人にも負けない。")
 # 7 トランス かくとう/じめん
-sp("trans","トランス",["fighting","ground"],85,120,80,105,75,70,"sharpness",hidden="steadfast",num=7,weight=95.0,height=1.8,evolves_from="neo",catch_rate=45,base_exp=190,ev_yield={"atk":3},
+sp("trans","トランス",["fighting","ground"],90,120,80,105,75,70,"sharpness",hidden="steadfast",num=7,weight=95.0,height=1.8,evolves_from="neo",catch_rate=45,base_exp=190,ev_yield={"atk":3},
    level=[(1,"scratch"),(1,"leer"),(1,"karate_chop"),(1,"cut"),(12,"fury_cutter"),(16,"focus_energy"),(20,"slash"),(24,"aerial_ace"),(28,"night_slash"),(32,"swords_dance"),(34,"stone_axe"),(38,"x_scissor"),(42,"sacred_sword"),(46,"psycho_cut"),(50,"earth_power"),(54,"secret_sword"),(58,"close_combat"),(62,"high_horsepower")],
    tm=COMMON_TM+["brick_break","bulk_up","rock_slide","stone_edge","earthquake","knock_off","u_turn","aura_sphere","vacuum_wave","air_cutter","leaf_blade","ceaseless_edge","drain_punch","mach_punch","poison_jab","iron_head","taunt","work_up","body_press","low_kick","aqua_cutter","razor_shell","focus_blast","cross_poison","detect","counter","reversal","bullet_punch","snore","stomping_tantrum","bulldoze","scorching_sands","spikes","stealth_rock","superpower","headlong_rush","solar_blade","iron_defense","psyblade"],
    dex="大地の力を得た斬撃の達人。一振りで岩盤ごと相手を斬り裂くという。")
@@ -69,17 +69,17 @@ sp("marutan","マルタン",["flying"],95,60,110,90,110,65,"sacred_light",num=8,
    tm=COMMON_TM+["u_turn","toxic","heat_wave","dazzling_gleam","psychic","light_screen","reflect","safeguard","haze","thunder_wave","body_press","iron_defense","stored_power","calm_mind","hyper_voice","fly","dual_wingbeat","steel_wing","feather_dance","aerial_ace","snore","taunt","encore","baton_pass","air_cutter","chilling_water","mystical_fire","draining_kiss","foul_play","psych_up","nasty_plot"],
    dex="羽根から聖なる光を放つ。闇や亡霊の力を弱め、仲間を静かに守る。")
 # 9 なまずお でんき/はがね
-sp("namazuo","なまずお",["electric","steel"],70,105,85,60,70,110,"static",num=9,weight=60.0,height=1.2,catch_rate=60,base_exp=170,ev_yield={"atk":2},
+sp("namazuo","なまずお",["electric","steel"],70,105,85,65,70,105,"static",num=9,weight=60.0,height=1.2,catch_rate=60,base_exp=170,ev_yield={"atk":2},
    level=[(1,"tackle"),(1,"thunder_shock"),(5,"metal_claw"),(9,"nuzzle"),(13,"spark"),(17,"cut"),(21,"iron_head"),(25,"thunder_wave"),(29,"slash"),(33,"swords_dance"),(37,"wild_charge"),(41,"night_slash"),(45,"iron_defense"),(49,"x_scissor"),(53,"zing_zap"),(57,"smart_strike"),(61,"volt_tackle")],
    tm=COMMON_TM+["volt_switch","thunderbolt","thunder","steel_beam","flash_cannon","aqua_cutter","psycho_cut","sacred_sword","leaf_blade","stone_axe","ceaseless_edge","aerial_ace","air_cutter","crunch","earthquake","rock_slide","stone_edge","brick_break","body_press","bulk_up","taunt","electric_terrain","magnet_rise","gyro_ball","heavy_slam","thunder_punch","ice_punch","fire_punch","snore","agility","u_turn","razor_shell","x_scissor","electroweb","charge"],
    dex="鋼のひげに静電気をため込む。触れた者はしびれてしまう。")
 # 10 ほねばみ はがね/ひこう
-sp("honebami","ほねばみ",["steel","flying"],75,100,80,60,75,110,"unburden",num=10,weight=18.0,height=1.0,catch_rate=60,base_exp=170,ev_yield={"spe":2},
+sp("honebami","ほねばみ",["steel","flying"],75,100,80,65,75,105,"unburden",num=10,weight=18.0,height=1.0,catch_rate=60,base_exp=170,ev_yield={"spe":2},
    level=[(1,"peck"),(1,"leer"),(5,"metal_claw"),(9,"quick_attack"),(13,"wing_attack"),(17,"cut"),(21,"steel_wing"),(25,"aerial_ace"),(29,"slash"),(33,"swords_dance"),(37,"air_cutter"),(41,"iron_head"),(45,"night_slash"),(49,"acrobatics"),(53,"drill_peck"),(57,"smart_strike"),(61,"air_slash")],
    tm=COMMON_TM+["u_turn","tailwind","roost","knock_off","x_scissor","psycho_cut","sacred_sword","stone_axe","ceaseless_edge","aqua_cutter","leaf_blade","dual_wingbeat","drill_peck","fly","rock_slide","stone_edge","body_press","iron_defense","taunt","defog","brick_break","low_kick","agility","steel_beam","flash_cannon","bullet_punch","snore","hurricane","feather_dance","heavy_slam"],
    dex="骨のように軽い鋼の翼を持つ。荷物を捨てると風のような速さで飛び回る。")
 # 11 ジンパチR いわ
-sp("jinpachi_r","ジンパチ（リージョン）",["rock"],90,120,90,55,110,50,"sturdy",num=11,weight=130.0,height=1.6,base_form="jinpachi",form="R",catch_rate=45,base_exp=175,ev_yield={"atk":2},
+sp("jinpachi_r","ジンパチ（リージョン）",["rock"],105,120,95,55,115,50,"sturdy",num=11,weight=130.0,height=1.6,base_form="jinpachi",form="R",catch_rate=45,base_exp=175,ev_yield={"atk":2},
    level=[(1,"tackle"),(1,"leer"),(5,"rock_throw"),(9,"howl"),(13,"rock_tomb"),(17,"bulldoze"),(21,"rock_slide"),(25,"iron_defense"),(29,"stealth_rock"),(33,"swords_dance"),(37,"stone_axe"),(41,"sandstorm"),(45,"stone_edge"),(49,"earthquake"),(53,"head_smash"),(57,"body_press"),(61,"rock_polish")],
    tm=COMMON_TM+["fire_punch","fire_fang","flare_blitz","heavy_slam","iron_head","superpower","close_combat","crunch","knock_off","bulk_up","taunt","roar","brick_break","stomping_tantrum","high_horsepower","accelerock","smack_down","curse","counter","ancient_power","snore","low_kick","zen_headbutt","salt_cure","rock_blast","body_slam","double_edge","stone_axe","wide_guard"],
    dex="火山地帯で岩の体を得た姿。動きは鈍いが、その体はどんな一撃にも一度は耐える。")
@@ -114,12 +114,12 @@ sp("gel_r_poison","ゲル（毒）",["poison"],100,95,80,60,105,65,"intimidate",
    tm=COMMON_TM+["earthquake","knock_off","crunch","body_press","iron_defense","taunt","roar","pain_split","sludge_bomb","sludge_wave","ice_punch","fire_punch","thunder_punch","drain_punch","brick_break","low_kick","aqua_tail","play_rough","snore","clear_smog","venoshock","stomping_tantrum","bulk_up","rock_slide","stone_edge","poison_fang","yawn","curse","body_slam","seismic_toss","counter","spikes","icy_wind","chilling_water"],
    dex="毒の沼で育った姿。強烈な威圧感で相手をひるませ、じわじわと毒で追いつめる。")
 # 18 ゲルR悪 あく
-sp("gel_r_dark","ゲル（悪）",["dark"],110,80,80,80,80,75,"intimidate",num=18,weight=40.0,height=1.1,base_form="gel",form="R悪",catch_rate=60,base_exp=170,ev_yield={"hp":2},
+sp("gel_r_dark","ゲル（悪）",["dark"],120,85,90,80,90,75,"intimidate",num=18,weight=40.0,height=1.1,base_form="gel",form="R悪",catch_rate=60,base_exp=170,ev_yield={"hp":2},
    level=[(1,"pound"),(1,"leer"),(5,"bite"),(9,"fake_tears"),(13,"snarl"),(17,"taunt"),(21,"knock_off"),(25,"night_slash"),(29,"foul_play"),(33,"dark_pulse"),(37,"recover"),(41,"parting_shot"),(45,"crunch"),(49,"nasty_plot"),(53,"haze"),(57,"sucker_punch"),(61,"kowtow_cleave")],
    tm=COMMON_TM+["ice_beam","thunderbolt","flamethrower","earthquake","body_press","iron_defense","roar","pain_split","ice_punch","fire_punch","thunder_punch","drain_punch","brick_break","low_kick","aqua_tail","play_rough","snore","stomping_tantrum","bulk_up","calm_mind","rock_slide","stone_edge","yawn","curse","body_slam","seismic_toss","counter","icy_wind","chilling_water","u_turn","psychic","shadow_ball","hyper_voice","thunder_wave","will_o_wisp","encore","memento","assurance","payback","throat_chop"],
    dex="夜の湿地で生きる姿。にらみで相手を萎縮させ、持ち前のタフさで戦いを長引かせる。")
 # 19 トランスR エスパー
-sp("trans_r","トランス（リージョン）",["psychic"],85,115,75,110,75,75,"competitive",num=19,weight=80.0,height=1.8,base_form="trans",form="R",catch_rate=45,base_exp=190,ev_yield={"atk":2,"spa":1},
+sp("trans_r","トランス（リージョン）",["psychic"],90,115,75,110,75,75,"competitive",num=19,weight=80.0,height=1.8,base_form="trans",form="R",catch_rate=45,base_exp=190,ev_yield={"atk":2,"spa":1},
    level=[(1,"scratch"),(1,"leer"),(1,"confusion"),(1,"cut"),(12,"fury_cutter"),(16,"focus_energy"),(20,"slash"),(24,"aerial_ace"),(28,"psybeam"),(32,"swords_dance"),(34,"psycho_cut"),(38,"night_slash"),(42,"calm_mind"),(46,"psychic"),(50,"sacred_sword"),(54,"psyblade"),(58,"expanding_force"),(62,"psyshock")],
    tm=COMMON_TM+["brick_break","bulk_up","rock_slide","stone_edge","earthquake","knock_off","u_turn","aura_sphere","vacuum_wave","air_cutter","leaf_blade","ceaseless_edge","stone_axe","drain_punch","mach_punch","poison_jab","iron_head","taunt","work_up","body_press","low_kick","aqua_cutter","razor_shell","focus_blast","cross_poison","detect","counter","reversal","bullet_punch","snore","trick_room","psychic_terrain","light_screen","reflect","trick","stored_power","dazzling_gleam","shadow_ball","thunderbolt","ice_punch","thunder_punch","fire_punch","secret_sword","x_scissor","close_combat","teleport","agility","nasty_plot"],
    dex="精神の力に目覚めた姿。挑発されるほど闘志と念力が高まる。")

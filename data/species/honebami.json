@@ -9,9 +9,9 @@
    "hp": 75,
    "atk": 100,
    "def": 80,
-   "spa": 60,
+   "spa": 65,
    "spd": 75,
-   "spe": 110
+   "spe": 105
   },
   "abilities": {
    "0": "unburden"

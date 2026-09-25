@@ -5,11 +5,11 @@
    "rock"
   ],
   "base_stats": {
-   "hp": 90,
+   "hp": 105,
    "atk": 120,
-   "def": 90,
+   "def": 95,
    "spa": 55,
-   "spd": 110,
+   "spd": 115,
    "spe": 50
   },
   "abilities": {
