@@ -1,7 +1,7 @@
 # PROJECT_STATE
 
 ## 現在フェーズ
-Phase 2 合格（6v6 Round 9）→ Phase 3（2D対戦UI）実装中。1v1 最終確認（各型100戦）を並行実行中。
+Phase 2 完了（reports/phase2_summary.md）・Phase 3 実装済み（人間プレイ確認待ち）→ Phase 4（RPG層）実装中
 
 ## 環境
 - Godot 4.3 stable（`/usr/local/bin/godot`、ヘッドレス動作確認済み）
@@ -45,10 +45,17 @@ Phase 2 合格（6v6 Round 9）→ Phase 3（2D対戦UI）実装中。1v1 最終
 - ゲーム本体: `godot --path .`（メインシーン scenes/main.tscn）
 - スクリーンショット（表示なし環境）: `xvfb-run -a -s "-screen 0 960x540x24" godot --path . --rendering-driver opengl3 -s tools/screenshot.gd`
 
+## Phase 4 進捗
+- [x] アイテム（回復・ボール・進化・大事なもの）、経験値/レベル/進化（Growth）、GameState セーブ／ロード（一致テスト済み）
+- [x] 戦闘エンジン: 野生戦（にげる・捕獲 Gen5式・道具使用）、経験値配分用の参加者記録
+- [ ] マップデータ形式・探索シーン・イベントインタプリタ・NPC・エンカウント
+- [ ] RPG UI（会話・メニュー・パーティ・バッグ・図鑑・ショップ・セーブ）
+- [ ] コンテンツ（町1・フィールド1・ダンジョン1・ボス・エンディング）と通しテスト
+
 ## 次の具体的タスク3つ
-1. `reports/balance_r9_1v1.md` を確認し Phase 2 完了報告をまとめる
-2. Phase 3 仕上げ: キーボード操作（矢印/決定/キャンセル）、メッセージ送りの調整、CPUチームの選択肢（ランダム／固定）
-3. Phase 4（RPG層）設計: マップ・イベント・NPC のデータ形式（data/maps, data/events）と探索シーン
+1. data/maps・data/events のスキーマと MapData / EventRunner（ヘッドレステスト可能なロジック層）
+2. 探索シーン（タイルマップ描画・グリッド移動・ワープ・NPC対話・草むらエンカウント→野生戦→経験値/捕獲）
+3. RPG UI 一式とコンテンツ、ニューゲーム→ボス撃破→エンディングの自動通しテスト
 
 ## 既知の不具合
 - なし（テスト101件全通過）。Battle の参照循環によるメモリ増加は `Battle.dispose()` で解消済み（長時間シミュレーション用）。

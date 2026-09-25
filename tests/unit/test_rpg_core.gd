@@ -19,7 +19,7 @@ func test_level_up_learn_and_evolve() -> void:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = 5
 	var s := PokemonSet.generate("neo", 33, rng)
-	var gained := Growth.add_exp(s, Growth.exp_for_level("medium_fast", 34) - s.exp)
+	var gained := Growth.add_exp(s, Growth.exp_for_level("medium_fast", 34) - Growth.exp_for_level("medium_fast", 33))
 	assert_eq(gained, [34])
 	assert_eq(Growth.evolution_by_level("neo", 34), "trans")
 	assert_eq(Growth.evolution_by_level("neo", 33), "")
