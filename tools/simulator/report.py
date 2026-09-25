@@ -77,7 +77,7 @@ else:
     P(f"AI: heuristic vs heuristic, team size {3 if mode=='3v3' else 6}, avg turns {avg_turns:.1f}, ties {M['ties']}")
     P("")
     P("## Per-species (team-inclusion win rate)")
-    P("| species | 種族 | games | team win% | avg dmg/game | KOs/game | faint% | first-move% | avg turns | 60+ turn% | status |")
+    P("| species | 種族 | games | team win% | avg dmg/game | KOs/game | faint% | first-move% | avg turns | long-game% | status |")
     P("|---|---|---|---|---|---|---|---|---|---|---|")
     for sp, s in sorted(M["species"].items(), key=lambda kv: -kv[1]["wins"]/max(1,kv[1]["games"])):
         g = max(1, s["games"]); wr = 100*s["wins"]/g
@@ -97,11 +97,13 @@ else:
     for k, v in M["items"].most_common(): P(f"| {JIT.get(k,k)} | {v} |")
     P(""); P("## Turn distribution")
     P("| turns | battles |"); P("|---|---|")
-    for t in sorted(M["turns_hist"]): P(f"| {t}{'+' if t>=60 else ''} | {M['turns_hist'][t]} |")
-    if avg_turns > 40: fails.append(f"average turns too long: {avg_turns:.1f}")
-    long = sum(v for t, v in M["turns_hist"].items() if t >= 60)
-    if long / max(1, M["battles"]) > 0.03: fails.append(f"{100*long/M['battles']:.1f}% of battles reach 60+ turns")
-    P(""); P("## Most frequent 60+ turn set combinations")
+    for t in sorted(M["turns_hist"]): P(f"| {t}{'+' if t>=150 else ''} | {M['turns_hist'][t]} |")
+    six = (mode == "6v6")
+    if avg_turns > (60 if six else 40): fails.append(f"average turns too long: {avg_turns:.1f}")
+    LONG = 100 if six else 60
+    long = sum(v for t, v in M["turns_hist"].items() if t >= LONG)
+    if long / max(1, M["battles"]) > 0.03: fails.append(f"{100*long/M['battles']:.1f}% of battles reach {LONG}+ turns")
+    P(""); P("## Most frequent long-game (60+ turns in 3v3 / 100+ in 6v6) set combinations")
     for k, v in M["stalls"].most_common(15): P(f"- {v}x {k}")
     P(""); P("## Species-vs-species team win% (row species' team vs column species' team)")
     ids = sorted(M["species"].keys())

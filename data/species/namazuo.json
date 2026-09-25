@@ -7,10 +7,10 @@
   ],
   "base_stats": {
    "hp": 70,
-   "atk": 105,
+   "atk": 100,
    "def": 85,
    "spa": 65,
-   "spd": 70,
+   "spd": 75,
    "spe": 105
   },
   "abilities": {

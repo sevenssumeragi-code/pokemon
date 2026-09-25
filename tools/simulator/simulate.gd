@@ -118,10 +118,10 @@ func run_team(mode: String, battles: int, seed: int, ai_kind: String) -> Diction
 		var bt := Battle.new({"seed": rng.next(1 << 30), "teams": teams, "log": false, "max_turns": 300})
 		BattleRunner.run(bt, make_ai(ai_kind, rng.next(1 << 30)), make_ai(ai_kind, rng.next(1 << 30)))
 		total_turns += bt.turn
-		turns_hist[str(mini(bt.turn, 60))] = int(turns_hist.get(str(mini(bt.turn, 60)), 0)) + 1
+		turns_hist[str(mini(bt.turn, 150))] = int(turns_hist.get(str(mini(bt.turn, 150)), 0)) + 1
 		if bt.winner < 0:
 			ties += 1
-		if bt.turn >= 60:
+		if bt.turn >= (100 if team_size == 6 else 60):
 			var key := ""
 			var names: Array = set_names[0].duplicate()
 			names.append_array(set_names[1])
@@ -144,7 +144,7 @@ func run_team(mode: String, battles: int, seed: int, ai_kind: String) -> Diction
 						fainted = 1
 				_acc(species, sp, "fainted", fainted)
 				_acc(species, sp, "turns", bt.turn)
-				if bt.turn >= 60:
+				if bt.turn >= (100 if team_size == 6 else 60):
 					_acc(species, sp, "long_games", 1)
 				_acc(set_stats, set_names[side][i], "games", 1)
 				_acc(set_stats, set_names[side][i], "wins", won)

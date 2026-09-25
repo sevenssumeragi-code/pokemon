@@ -69,7 +69,7 @@ sp("marutan","マルタン",["flying"],95,60,110,90,110,65,"sacred_light",num=8,
    tm=COMMON_TM+["u_turn","toxic","heat_wave","dazzling_gleam","psychic","light_screen","reflect","safeguard","haze","thunder_wave","body_press","iron_defense","stored_power","calm_mind","hyper_voice","fly","dual_wingbeat","steel_wing","feather_dance","aerial_ace","snore","taunt","encore","baton_pass","air_cutter","chilling_water","mystical_fire","draining_kiss","foul_play","psych_up","nasty_plot"],
    dex="羽根から聖なる光を放つ。闇や亡霊の力を弱め、仲間を静かに守る。")
 # 9 なまずお でんき/はがね
-sp("namazuo","なまずお",["electric","steel"],70,105,85,65,70,105,"static",num=9,weight=60.0,height=1.2,catch_rate=60,base_exp=170,ev_yield={"atk":2},
+sp("namazuo","なまずお",["electric","steel"],70,100,85,65,75,105,"static",num=9,weight=60.0,height=1.2,catch_rate=60,base_exp=170,ev_yield={"atk":2},
    level=[(1,"tackle"),(1,"thunder_shock"),(5,"metal_claw"),(9,"nuzzle"),(13,"spark"),(17,"cut"),(21,"iron_head"),(25,"thunder_wave"),(29,"slash"),(33,"swords_dance"),(37,"wild_charge"),(41,"night_slash"),(45,"iron_defense"),(49,"x_scissor"),(53,"zing_zap"),(57,"smart_strike"),(61,"volt_tackle")],
    tm=COMMON_TM+["volt_switch","thunderbolt","thunder","steel_beam","flash_cannon","aqua_cutter","psycho_cut","sacred_sword","leaf_blade","stone_axe","ceaseless_edge","aerial_ace","air_cutter","crunch","earthquake","rock_slide","stone_edge","brick_break","body_press","bulk_up","taunt","electric_terrain","magnet_rise","gyro_ball","heavy_slam","thunder_punch","ice_punch","fire_punch","snore","agility","u_turn","razor_shell","x_scissor","electroweb","charge"],
    dex="鋼のひげに静電気をため込む。触れた者はしびれてしまう。")
