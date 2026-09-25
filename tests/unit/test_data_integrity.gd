@@ -111,3 +111,13 @@ func test_bst_guidelines() -> void:
 			assert_in_range(t, 400, 440, id)
 		else:
 			assert_in_range(t, 500, 540, id)
+
+func test_recommended_sets_are_legal() -> void:
+	var sets := GameData._load_json("res://data/sets/sets.json")
+	assert_eq(sets.size(), 19, "every species has sets")
+	for sp in sets:
+		assert_true(sets[sp].size() >= 2, sp + " needs >= 2 sets")
+		for sd in sets[sp]:
+			var ps := PokemonSet.from_dict({"species": sp, "moves": sd["moves"], "item": sd["item"], "nature": sd["nature"], "evs": sd["evs"], "ability": sd["ability"]})
+			var errs := ps.validate()
+			assert_true(errs.is_empty(), "%s/%s: %s" % [sp, sd["name"], str(errs)])

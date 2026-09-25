@@ -109,6 +109,9 @@ func _resist_berry(b, p, ev):
 		return null
 	if not b.can_eat_berry(p):
 		return null
+	if b.estimating:
+		b.chain_modify(1, 2)
+		return null
 	if b.use_item(p, ev["source"], mv):
 		b.add_log(["-activate", b.pid(p), p.last_item, "weaken"])
 		b.chain_modify(1, 2)

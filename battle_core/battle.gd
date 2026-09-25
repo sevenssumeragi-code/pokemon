@@ -41,10 +41,11 @@ var active_target = null
 var event_stack: Array = []  # each: {id, modifier}
 var event_depth: int = 0
 var effect_state_stack: Array = []
-var stats: Dictionary = {"ability_activations": {}, "item_activations": {}, "moves_used": {}, "crits": 0, "misses": 0}
+var stats: Dictionary = {"ability_activations": {}, "item_activations": {}, "moves_used": {}, "crits": 0, "misses": 0, "damage_by_species": {}, "kos_by_species": {}, "first_move": {}, "turns_present": {}}
 var max_turns: int = 1000
 var debug_fixed_roll: int = -1  # 85..100 forces the damage random factor (tests)
 var debug_no_crit: bool = false
+var estimating: bool = false  # true while AI runs side-effect-free damage estimates
 
 # ============================================================
 # Setup
@@ -92,6 +93,8 @@ func start() -> void:
 # Logging
 # ============================================================
 func add_log(entry: Array) -> void:
+	if estimating:
+		return
 	if log_enabled:
 		log.append(entry)
 	if debug:
@@ -103,6 +106,8 @@ func pid(p) -> String:
 	return p.slot_id() + ":" + p.display_name
 
 func stat_inc(cat: String, key: String) -> void:
+	if estimating:
+		return
 	var d: Dictionary = stats[cat]
 	d[key] = int(d.get(key, 0)) + 1
 
@@ -642,7 +647,10 @@ func next_turn() -> void:
 		add_log(["tie", "turn limit"])
 		return
 	add_log(["turn", turn])
+	_first_mover_recorded = false
 	for p in all_active():
+		var tp: Dictionary = stats["turns_present"]
+		tp[p.species_id] = int(tp.get(p.species_id, 0)) + 1
 		p.move_this_turn = ""
 		p.hurt_this_turn = 0
 		p.used_item_this_turn = false
@@ -722,6 +730,10 @@ func _run_action(action: Dictionary) -> void:
 			var p = action["pokemon"]
 			if p == null or p.fainted or not p.active:
 				return
+			if not _first_mover_recorded:
+				_first_mover_recorded = true
+				var fm: Dictionary = stats["first_move"]
+				fm[p.species_id] = int(fm.get(p.species_id, 0)) + 1
 			run_move(p, action["move"], action["target_loc"], {"move_data": action.get("move_data", {})})
 		"residual":
 			add_log(["residual"])
@@ -950,6 +962,36 @@ func run_move(p, move_id: String, target_loc: int = 0, options: Dictionary = {})
 	faint_messages()
 
 var active_move_total_damage: int = 0
+var _first_mover_recorded: bool = false
+
+## Side-effect-free expected damage (average roll, no crit) for AI use. Does not consume RNG.
+func estimate_damage(attacker, defender, move_id: String, roll: int = 92) -> int:
+	var md := GameData.get_move(move_id)
+	if md.is_empty() or md["category"] == "status" or defender == null:
+		return 0
+	var mv: Dictionary = md.duplicate(true)
+	mv["effect_type"] = "move"
+	if mv.get("ignore_immunity", null) == null:
+		mv["ignore_immunity"] = false
+	var prev_est := estimating
+	var prev_roll := debug_fixed_roll
+	var prev_crit := debug_no_crit
+	var prev_move := active_move
+	estimating = true
+	debug_fixed_roll = roll
+	debug_no_crit = true
+	run_event("ModifyType", attacker, defender, mv)
+	move_event("ModifyMove", mv, attacker, defender)
+	var dmg = 0
+	if run_immunity(defender, mv["type"], mv) and not (mv.get("prankster_boosted", false) and defender.has_type("dark")):
+		var d = get_damage(attacker, defender, mv)
+		if typeof(d) == TYPE_INT:
+			dmg = d
+	estimating = prev_est
+	debug_fixed_roll = prev_roll
+	debug_no_crit = prev_crit
+	active_move = prev_move
+	return int(dmg)
 
 ## Execute a move (already past BeforeMove). Returns success.
 func use_move(base_move: Dictionary, p, target, options: Dictionary = {}) -> bool:
@@ -1654,7 +1696,12 @@ func damage_pokemon(target, amount: int, source = null, effect = null, ignore_ev
 	var dealt: int = before - target.hp
 	target.hurt_this_turn += dealt
 	if effect is Dictionary and effect.get("effect_type") == "move":
-		pass
+		if source != null and source != target:
+			var dd: Dictionary = stats["damage_by_species"]
+			dd[source.species_id] = int(dd.get(source.species_id, 0)) + dealt
+			if target.hp <= 0:
+				var kd: Dictionary = stats["kos_by_species"]
+				kd[source.species_id] = int(kd.get(source.species_id, 0)) + 1
 	else:
 		var eid := str(effect.get("id", "")) if effect is Dictionary else str(effect)
 		add_log(["-damage", pid(target), target.hp, target.max_hp, eid])

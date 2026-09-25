@@ -1,0 +1,1066 @@
+{
+ "renny": [
+  {
+   "name": "rest_talk",
+   "moves": [
+    "waterfall",
+    "ice_punch",
+    "rest",
+    "sleep_talk"
+   ],
+   "item": "leftovers",
+   "nature": "adamant",
+   "evs": {
+    "hp": 252,
+    "atk": 252,
+    "spe": 4
+   },
+   "ability": "awakened_lion",
+   "role": "bulky_attacker"
+  },
+  {
+   "name": "band",
+   "moves": [
+    "liquidation",
+    "ice_punch",
+    "crunch",
+    "aqua_jet"
+   ],
+   "item": "choice_band",
+   "nature": "adamant",
+   "evs": {
+    "hp": 252,
+    "atk": 252,
+    "spe": 4
+   },
+   "ability": "awakened_lion",
+   "role": "attacker"
+  },
+  {
+   "name": "yawn_pivot",
+   "moves": [
+    "waterfall",
+    "yawn",
+    "rest",
+    "flip_turn"
+   ],
+   "item": "chesto_berry",
+   "nature": "impish",
+   "evs": {
+    "hp": 252,
+    "def": 252,
+    "spd": 4
+   },
+   "ability": "awakened_lion",
+   "role": "support"
+  }
+ ],
+ "jinpachi": [
+  {
+   "name": "sd_lo",
+   "moves": [
+    "flare_blitz",
+    "close_combat",
+    "swords_dance",
+    "extreme_speed"
+   ],
+   "item": "life_orb",
+   "nature": "jolly",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "flame_domain",
+   "role": "sweeper"
+  },
+  {
+   "name": "scarf",
+   "moves": [
+    "flare_blitz",
+    "close_combat",
+    "u_turn",
+    "wild_charge"
+   ],
+   "item": "choice_scarf",
+   "nature": "jolly",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "flame_domain",
+   "role": "attacker"
+  },
+  {
+   "name": "band",
+   "moves": [
+    "flare_blitz",
+    "close_combat",
+    "knock_off",
+    "u_turn"
+   ],
+   "item": "choice_band",
+   "nature": "adamant",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "flame_domain",
+   "role": "attacker"
+  }
+ ],
+ "hyu": [
+  {
+   "name": "specs",
+   "moves": [
+    "shadow_ball",
+    "dark_pulse",
+    "thunderbolt",
+    "energy_ball"
+   ],
+   "item": "choice_specs",
+   "nature": "timid",
+   "evs": {
+    "spa": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "dark_domain",
+   "role": "attacker"
+  },
+  {
+   "name": "nasty_plot",
+   "moves": [
+    "shadow_ball",
+    "focus_blast",
+    "nasty_plot",
+    "substitute"
+   ],
+   "item": "life_orb",
+   "nature": "timid",
+   "evs": {
+    "spa": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "dark_domain",
+   "role": "sweeper"
+  },
+  {
+   "name": "wisp_hex",
+   "moves": [
+    "will_o_wisp",
+    "hex",
+    "pain_split",
+    "shadow_sneak"
+   ],
+   "item": "leftovers",
+   "nature": "timid",
+   "evs": {
+    "hp": 252,
+    "spe": 252,
+    "spa": 4
+   },
+   "ability": "dark_domain",
+   "role": "support"
+  }
+ ],
+ "muni": [
+  {
+   "name": "minimize",
+   "moves": [
+    "minimize",
+    "moonblast",
+    "wish",
+    "protect"
+   ],
+   "item": "leftovers",
+   "nature": "bold",
+   "evs": {
+    "hp": 252,
+    "def": 252,
+    "spd": 4
+   },
+   "ability": "prankster",
+   "role": "stall"
+  },
+  {
+   "name": "screens",
+   "moves": [
+    "reflect",
+    "light_screen",
+    "thunder_wave",
+    "moonblast"
+   ],
+   "item": "light_clay",
+   "nature": "bold",
+   "evs": {
+    "hp": 252,
+    "def": 252,
+    "spd": 4
+   },
+   "ability": "prankster",
+   "role": "support"
+  },
+  {
+   "name": "support",
+   "moves": [
+    "thunder_wave",
+    "encore",
+    "wish",
+    "moonblast"
+   ],
+   "item": "leftovers",
+   "nature": "calm",
+   "evs": {
+    "hp": 252,
+    "spd": 252,
+    "def": 4
+   },
+   "ability": "prankster",
+   "role": "support"
+  }
+ ],
+ "gel": [
+  {
+   "name": "veil",
+   "moves": [
+    "blizzard",
+    "freeze_dry",
+    "aurora_veil",
+    "moonblast"
+   ],
+   "item": "light_clay",
+   "nature": "timid",
+   "evs": {
+    "spa": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "snow_warning",
+   "role": "weather"
+  },
+  {
+   "name": "specs",
+   "moves": [
+    "blizzard",
+    "freeze_dry",
+    "moonblast",
+    "thunderbolt"
+   ],
+   "item": "choice_specs",
+   "nature": "timid",
+   "evs": {
+    "spa": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "snow_warning",
+   "role": "weather"
+  },
+  {
+   "name": "calm_mind",
+   "moves": [
+    "blizzard",
+    "calm_mind",
+    "freeze_dry",
+    "recover"
+   ],
+   "item": "leftovers",
+   "nature": "timid",
+   "evs": {
+    "hp": 252,
+    "spe": 252,
+    "spa": 4
+   },
+   "ability": "snow_warning",
+   "role": "weather"
+  }
+ ],
+ "neo": [
+  {
+   "name": "eviolite_sd",
+   "moves": [
+    "sacred_sword",
+    "night_slash",
+    "swords_dance",
+    "psycho_cut"
+   ],
+   "item": "eviolite",
+   "nature": "jolly",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "sharpness",
+   "role": "sweeper"
+  },
+  {
+   "name": "scarf",
+   "moves": [
+    "sacred_sword",
+    "x_scissor",
+    "night_slash",
+    "aerial_ace"
+   ],
+   "item": "choice_scarf",
+   "nature": "jolly",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "sharpness",
+   "role": "attacker"
+  },
+  {
+   "name": "steadfast_sash",
+   "moves": [
+    "sacred_sword",
+    "night_slash",
+    "swords_dance",
+    "aqua_cutter"
+   ],
+   "item": "focus_sash",
+   "nature": "jolly",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "steadfast",
+   "role": "sweeper"
+  }
+ ],
+ "trans": [
+  {
+   "name": "sd_lo",
+   "moves": [
+    "sacred_sword",
+    "stone_axe",
+    "swords_dance",
+    "psycho_cut"
+   ],
+   "item": "life_orb",
+   "nature": "adamant",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "sharpness",
+   "role": "sweeper"
+  },
+  {
+   "name": "band",
+   "moves": [
+    "sacred_sword",
+    "high_horsepower",
+    "psycho_cut",
+    "x_scissor"
+   ],
+   "item": "choice_band",
+   "nature": "adamant",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "sharpness",
+   "role": "attacker"
+  },
+  {
+   "name": "rocks",
+   "moves": [
+    "stealth_rock",
+    "sacred_sword",
+    "stone_axe",
+    "u_turn"
+   ],
+   "item": "leftovers",
+   "nature": "adamant",
+   "evs": {
+    "hp": 252,
+    "atk": 252,
+    "spe": 4
+   },
+   "ability": "sharpness",
+   "role": "support"
+  }
+ ],
+ "marutan": [
+  {
+   "name": "defog_wall",
+   "moves": [
+    "roost",
+    "defog",
+    "air_slash",
+    "toxic"
+   ],
+   "item": "leftovers",
+   "nature": "bold",
+   "evs": {
+    "hp": 252,
+    "def": 252,
+    "spd": 4
+   },
+   "ability": "sacred_light",
+   "role": "wall"
+  },
+  {
+   "name": "cosmic",
+   "moves": [
+    "cosmic_power",
+    "roost",
+    "stored_power",
+    "wish"
+   ],
+   "item": "leftovers",
+   "nature": "calm",
+   "evs": {
+    "hp": 252,
+    "spd": 252,
+    "def": 4
+   },
+   "ability": "sacred_light",
+   "role": "stall"
+  },
+  {
+   "name": "support",
+   "moves": [
+    "tailwind",
+    "heal_bell",
+    "roost",
+    "hurricane"
+   ],
+   "item": "leftovers",
+   "nature": "calm",
+   "evs": {
+    "hp": 252,
+    "spd": 252,
+    "def": 4
+   },
+   "ability": "sacred_light",
+   "role": "support"
+  }
+ ],
+ "namazuo": [
+  {
+   "name": "sd_lo",
+   "moves": [
+    "wild_charge",
+    "iron_head",
+    "swords_dance",
+    "night_slash"
+   ],
+   "item": "life_orb",
+   "nature": "jolly",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "static",
+   "role": "sweeper"
+  },
+  {
+   "name": "scarf",
+   "moves": [
+    "wild_charge",
+    "iron_head",
+    "volt_switch",
+    "knock_off"
+   ],
+   "item": "choice_scarf",
+   "nature": "jolly",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "static",
+   "role": "attacker"
+  },
+  {
+   "name": "band",
+   "moves": [
+    "wild_charge",
+    "iron_head",
+    "knock_off",
+    "x_scissor"
+   ],
+   "item": "choice_band",
+   "nature": "adamant",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "static",
+   "role": "attacker"
+  }
+ ],
+ "honebami": [
+  {
+   "name": "unburden_acro",
+   "moves": [
+    "acrobatics",
+    "iron_head",
+    "swords_dance",
+    "night_slash"
+   ],
+   "item": "sitrus_berry",
+   "nature": "jolly",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "unburden",
+   "role": "sweeper"
+  },
+  {
+   "name": "sash_sd",
+   "moves": [
+    "brave_bird",
+    "iron_head",
+    "swords_dance",
+    "kowtow_cleave"
+   ],
+   "item": "focus_sash",
+   "nature": "jolly",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "unburden",
+   "role": "sweeper"
+  },
+  {
+   "name": "band",
+   "moves": [
+    "brave_bird",
+    "iron_head",
+    "kowtow_cleave",
+    "u_turn"
+   ],
+   "item": "choice_band",
+   "nature": "jolly",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "unburden",
+   "role": "attacker"
+  }
+ ],
+ "jinpachi_r": [
+  {
+   "name": "rocks_tank",
+   "moves": [
+    "stealth_rock",
+    "stone_edge",
+    "earthquake",
+    "body_press"
+   ],
+   "item": "leftovers",
+   "nature": "impish",
+   "evs": {
+    "hp": 252,
+    "def": 252,
+    "spd": 4
+   },
+   "ability": "sturdy",
+   "role": "wall"
+  },
+  {
+   "name": "sd_wp",
+   "moves": [
+    "swords_dance",
+    "stone_edge",
+    "earthquake",
+    "heavy_slam"
+   ],
+   "item": "weakness_policy",
+   "nature": "adamant",
+   "evs": {
+    "hp": 252,
+    "atk": 252,
+    "spe": 4
+   },
+   "ability": "sturdy",
+   "role": "sweeper"
+  },
+  {
+   "name": "band",
+   "moves": [
+    "head_smash",
+    "stone_edge",
+    "earthquake",
+    "fire_punch"
+   ],
+   "item": "choice_band",
+   "nature": "brave",
+   "evs": {
+    "hp": 252,
+    "atk": 252,
+    "spe": 4
+   },
+   "ability": "sturdy",
+   "role": "attacker"
+  }
+ ],
+ "hyu_r": [
+  {
+   "name": "lo",
+   "moves": [
+    "leaf_storm",
+    "shadow_ball",
+    "giga_drain",
+    "sludge_bomb"
+   ],
+   "item": "life_orb",
+   "nature": "timid",
+   "evs": {
+    "spa": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "contrary",
+   "role": "sweeper"
+  },
+  {
+   "name": "specs",
+   "moves": [
+    "leaf_storm",
+    "sludge_bomb",
+    "shadow_ball",
+    "psychic"
+   ],
+   "item": "choice_specs",
+   "nature": "timid",
+   "evs": {
+    "spa": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "contrary",
+   "role": "attacker"
+  },
+  {
+   "name": "sub_seed",
+   "moves": [
+    "substitute",
+    "leech_seed",
+    "leaf_storm",
+    "giga_drain"
+   ],
+   "item": "leftovers",
+   "nature": "timid",
+   "evs": {
+    "hp": 252,
+    "spe": 252,
+    "spa": 4
+   },
+   "ability": "contrary",
+   "role": "stall"
+  }
+ ],
+ "renny_r": [
+  {
+   "name": "band",
+   "moves": [
+    "double_edge",
+    "extreme_speed",
+    "play_rough",
+    "earthquake"
+   ],
+   "item": "choice_band",
+   "nature": "adamant",
+   "evs": {
+    "hp": 252,
+    "atk": 252,
+    "spe": 4
+   },
+   "ability": "pixilate",
+   "role": "attacker"
+  },
+  {
+   "name": "bulk_up",
+   "moves": [
+    "bulk_up",
+    "body_slam",
+    "extreme_speed",
+    "earthquake"
+   ],
+   "item": "leftovers",
+   "nature": "adamant",
+   "evs": {
+    "hp": 252,
+    "atk": 252,
+    "spe": 4
+   },
+   "ability": "pixilate",
+   "role": "bulky_attacker"
+  },
+  {
+   "name": "wish",
+   "moves": [
+    "body_slam",
+    "wish",
+    "protect",
+    "extreme_speed"
+   ],
+   "item": "leftovers",
+   "nature": "impish",
+   "evs": {
+    "hp": 252,
+    "def": 252,
+    "spd": 4
+   },
+   "ability": "pixilate",
+   "role": "support"
+  }
+ ],
+ "muni_r_dragon": [
+  {
+   "name": "dd",
+   "moves": [
+    "dragon_dance",
+    "dragon_claw",
+    "roost",
+    "earthquake"
+   ],
+   "item": "leftovers",
+   "nature": "jolly",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "multiscale",
+   "role": "sweeper"
+  },
+  {
+   "name": "bulky",
+   "moves": [
+    "dragon_tail",
+    "roost",
+    "haze",
+    "toxic"
+   ],
+   "item": "leftovers",
+   "nature": "impish",
+   "evs": {
+    "hp": 252,
+    "def": 252,
+    "spd": 4
+   },
+   "ability": "multiscale",
+   "role": "wall"
+  },
+  {
+   "name": "mixed",
+   "moves": [
+    "draco_meteor",
+    "flamethrower",
+    "ice_beam",
+    "u_turn"
+   ],
+   "item": "choice_specs",
+   "nature": "timid",
+   "evs": {
+    "spa": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "multiscale",
+   "role": "attacker"
+  }
+ ],
+ "muni_r_bug": [
+  {
+   "name": "quiver",
+   "moves": [
+    "quiver_dance",
+    "bug_buzz",
+    "sleep_powder",
+    "air_slash"
+   ],
+   "item": "leftovers",
+   "nature": "timid",
+   "evs": {
+    "spa": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "compound_eyes",
+   "role": "sweeper"
+  },
+  {
+   "name": "powder_sash",
+   "moves": [
+    "sleep_powder",
+    "stun_spore",
+    "u_turn",
+    "sticky_web"
+   ],
+   "item": "focus_sash",
+   "nature": "timid",
+   "evs": {
+    "hp": 252,
+    "spe": 252,
+    "spa": 4
+   },
+   "ability": "compound_eyes",
+   "role": "support"
+  },
+  {
+   "name": "quiver_sub",
+   "moves": [
+    "quiver_dance",
+    "bug_buzz",
+    "substitute",
+    "giga_drain"
+   ],
+   "item": "leftovers",
+   "nature": "timid",
+   "evs": {
+    "spa": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "compound_eyes",
+   "role": "sweeper"
+  }
+ ],
+ "muni_r_normal": [
+  {
+   "name": "minimize_bp",
+   "moves": [
+    "minimize",
+    "baton_pass",
+    "substitute",
+    "body_slam"
+   ],
+   "item": "leftovers",
+   "nature": "impish",
+   "evs": {
+    "hp": 252,
+    "def": 252,
+    "spd": 4
+   },
+   "ability": "minimal_body",
+   "role": "support"
+  },
+  {
+   "name": "stall",
+   "moves": [
+    "minimize",
+    "soft_boiled",
+    "body_slam",
+    "toxic"
+   ],
+   "item": "leftovers",
+   "nature": "impish",
+   "evs": {
+    "hp": 252,
+    "def": 252,
+    "spd": 4
+   },
+   "ability": "minimal_body",
+   "role": "stall"
+  },
+  {
+   "name": "support",
+   "moves": [
+    "yawn",
+    "wish",
+    "encore",
+    "body_slam"
+   ],
+   "item": "leftovers",
+   "nature": "impish",
+   "evs": {
+    "hp": 252,
+    "def": 252,
+    "spd": 4
+   },
+   "ability": "minimal_body",
+   "role": "support"
+  }
+ ],
+ "gel_r_poison": [
+  {
+   "name": "wall",
+   "moves": [
+    "toxic",
+    "recover",
+    "poison_jab",
+    "haze"
+   ],
+   "item": "black_sludge",
+   "nature": "impish",
+   "evs": {
+    "hp": 252,
+    "def": 252,
+    "spd": 4
+   },
+   "ability": "intimidate",
+   "role": "wall"
+  },
+  {
+   "name": "tspikes",
+   "moves": [
+    "toxic_spikes",
+    "recover",
+    "poison_jab",
+    "earthquake"
+   ],
+   "item": "black_sludge",
+   "nature": "impish",
+   "evs": {
+    "hp": 252,
+    "def": 252,
+    "spd": 4
+   },
+   "ability": "intimidate",
+   "role": "wall"
+  },
+  {
+   "name": "coil",
+   "moves": [
+    "coil",
+    "poison_jab",
+    "recover",
+    "earthquake"
+   ],
+   "item": "leftovers",
+   "nature": "careful",
+   "evs": {
+    "hp": 252,
+    "spd": 252,
+    "def": 4
+   },
+   "ability": "intimidate",
+   "role": "bulky_attacker"
+  }
+ ],
+ "gel_r_dark": [
+  {
+   "name": "pivot",
+   "moves": [
+    "knock_off",
+    "parting_shot",
+    "recover",
+    "foul_play"
+   ],
+   "item": "leftovers",
+   "nature": "impish",
+   "evs": {
+    "hp": 252,
+    "def": 252,
+    "spd": 4
+   },
+   "ability": "intimidate",
+   "role": "wall"
+  },
+  {
+   "name": "np",
+   "moves": [
+    "nasty_plot",
+    "dark_pulse",
+    "recover",
+    "ice_beam"
+   ],
+   "item": "leftovers",
+   "nature": "bold",
+   "evs": {
+    "hp": 252,
+    "def": 252,
+    "spa": 4
+   },
+   "ability": "intimidate",
+   "role": "bulky_attacker"
+  },
+  {
+   "name": "taunt",
+   "moves": [
+    "taunt",
+    "knock_off",
+    "recover",
+    "toxic"
+   ],
+   "item": "leftovers",
+   "nature": "careful",
+   "evs": {
+    "hp": 252,
+    "spd": 252,
+    "def": 4
+   },
+   "ability": "intimidate",
+   "role": "wall"
+  }
+ ],
+ "trans_r": [
+  {
+   "name": "sd_lo",
+   "moves": [
+    "swords_dance",
+    "psycho_cut",
+    "sacred_sword",
+    "night_slash"
+   ],
+   "item": "life_orb",
+   "nature": "jolly",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "competitive",
+   "role": "sweeper"
+  },
+  {
+   "name": "calm_mind",
+   "moves": [
+    "calm_mind",
+    "psychic",
+    "aura_sphere",
+    "shadow_ball"
+   ],
+   "item": "leftovers",
+   "nature": "timid",
+   "evs": {
+    "spa": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "competitive",
+   "role": "bulky_attacker"
+  },
+  {
+   "name": "scarf",
+   "moves": [
+    "psycho_cut",
+    "sacred_sword",
+    "x_scissor",
+    "trick"
+   ],
+   "item": "choice_scarf",
+   "nature": "jolly",
+   "evs": {
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
+   },
+   "ability": "competitive",
+   "role": "attacker"
+  }
+ ]
+}
