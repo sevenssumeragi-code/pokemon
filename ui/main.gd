@@ -26,8 +26,33 @@ func show_title() -> void:
 	var t := TitleScreen.new()
 	t.start_team_builder.connect(show_team_builder)
 	t.quick_battle.connect(func(): start_battle(TeamStore.default_team()))
+	t.new_game.connect(start_new_game)
+	t.continue_game.connect(continue_game)
 	t.quit_game.connect(func(): get_tree().quit())
 	_swap(t)
+
+func start_new_game() -> void:
+	var g := GameState.new()
+	g.map_id = "home"
+	g.pos = Vector2i(4, 4)
+	g.dir = "down"
+	g.rng_seed = int(Time.get_unix_time_from_system()) % 1000000 + 1
+	start_rpg(g)
+
+func continue_game() -> void:
+	var g := GameState.load_slot(1)
+	if g == null:
+		start_new_game()
+		return
+	start_rpg(g)
+
+func start_rpg(g: GameState) -> void:
+	GameState.current = g
+	var c := RPGController.new()
+	c.state = g
+	c.request_title.connect(show_title)
+	c.game_ended.connect(show_title)
+	_swap(c)
 
 func show_team_builder() -> void:
 	var tb := TeamBuilder.new()

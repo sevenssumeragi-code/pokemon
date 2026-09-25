@@ -4,6 +4,8 @@ extends Control
 
 signal start_team_builder
 signal quick_battle
+signal new_game
+signal continue_game
 signal quit_game
 
 func _ready() -> void:
@@ -20,8 +22,8 @@ func _ready() -> void:
 	vb.anchor_bottom = 0.5
 	vb.offset_left = -160
 	vb.offset_right = 160
-	vb.offset_top = -160
-	vb.offset_bottom = 160
+	vb.offset_top = -210
+	vb.offset_bottom = 210
 	vb.add_theme_constant_override("separation", 14)
 	add_child(vb)
 	var title := UITheme.make_label("モンスターバトル", 40)
@@ -31,6 +33,13 @@ func _ready() -> void:
 	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	vb.add_child(sub)
 	vb.add_child(Control.new())
+	var b0 := UITheme.make_button("はじめから（ぼうけん）", 20, Vector2(320, 48))
+	b0.pressed.connect(func(): new_game.emit())
+	vb.add_child(b0)
+	if GameState.has_save(1):
+		var bc := UITheme.make_button("つづきから", 20, Vector2(320, 48))
+		bc.pressed.connect(func(): continue_game.emit())
+		vb.add_child(bc)
 	var b1 := UITheme.make_button("たいせん（チームを組む）", 20, Vector2(320, 48))
 	b1.pressed.connect(func(): start_team_builder.emit())
 	vb.add_child(b1)

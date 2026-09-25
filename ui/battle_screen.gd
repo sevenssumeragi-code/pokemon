@@ -12,6 +12,8 @@ var cpu_team: Array = []
 var seed_value: int = 0
 var auto_play: bool = false  # headless/self-test: player side is also AI-controlled, no delays
 var message_delay: float = 0.8
+var battle_override: Battle = null  # RPG layer supplies a prebuilt battle (wild/trainer)
+var bot_can_catch: bool = false      # auto-play throws balls at weakened wild monsters
 
 var battle: Battle
 var cpu_ai: HeuristicAI
@@ -45,6 +47,9 @@ var _switch_buttons: Array = []
 var _team_icons: HBoxContainer
 var _enemy_team_icons: HBoxContainer
 var _bag_note: Label
+var _bag_panel: VBoxContainer
+var _bag_item_pending: String = ""
+var _rpg_finish_pending: bool = false
 
 func _ready() -> void:
 	UITheme.fill_parent(self)
@@ -56,9 +61,12 @@ func _ready() -> void:
 func start_battle() -> void:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = seed_value if seed_value != 0 else int(Time.get_unix_time_from_system())
-	if cpu_team.is_empty():
-		cpu_team = TeamStore.random_team(6, rng)
-	battle = Battle.new({"seed": rng.randi(), "teams": [player_team, cpu_team], "names": ["あなた", "CPU"], "log": true})
+	if battle_override != null:
+		battle = battle_override
+	else:
+		if cpu_team.is_empty():
+			cpu_team = TeamStore.random_team(6, rng)
+		battle = Battle.new({"seed": rng.randi(), "teams": [player_team, cpu_team], "names": ["あなた", "CPU"], "log": true})
 	cpu_ai = HeuristicAI.new(rng.randi())
 	cpu_ai.known_moves_only = true
 	auto_ai = HeuristicAI.new(rng.randi())
@@ -201,7 +209,7 @@ func _build_ui() -> void:
 	b_mon.pressed.connect(func(): _show_switch(false))
 	_cmd_panel.add_child(b_mon)
 	var b_bag := UITheme.make_button("アイテム", 20, Vector2(170, 56))
-	b_bag.pressed.connect(func(): _bag_note.text = "たいせんでは アイテムは つかえない！")
+	b_bag.pressed.connect(_show_bag)
 	_cmd_panel.add_child(b_bag)
 	var b_run := UITheme.make_button("にげる", 20, Vector2(170, 56))
 	b_run.pressed.connect(_forfeit)
@@ -240,6 +248,10 @@ func _build_ui() -> void:
 	var sback := UITheme.make_button("もどる", 14, Vector2(100, 30))
 	sback.pressed.connect(_show_commands)
 	_switch_panel.add_child(sback)
+	# bag panel
+	_bag_panel = VBoxContainer.new()
+	_bag_panel.set_anchors_preset(Control.PRESET_FULL_RECT)
+	stack.add_child(_bag_panel)
 	# result panel
 	_result_panel = VBoxContainer.new()
 	_result_panel.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -252,6 +264,7 @@ func _build_ui() -> void:
 	_hide_panels()
 
 func _hide_panels() -> void:
+	_bag_panel.visible = false
 	_cmd_panel.visible = false
 	_move_panel.visible = false
 	_switch_panel.visible = false
@@ -345,6 +358,12 @@ func _begin_playback() -> void:
 func _process(delta: float) -> void:
 	if battle == null:
 		return
+	if _rpg_finish_pending:
+		_timer -= delta
+		if _timer <= 0.0 or auto_play:
+			_rpg_finish_pending = false
+			battle_finished.emit(battle.winner)
+		return
 	if _state == "playing":
 		if _waiting_bar:
 			if _player_bar.is_animating() or _enemy_bar.is_animating():
@@ -411,12 +430,21 @@ func _after_playback() -> void:
 		_state = "ended"
 		_hide_panels()
 		_result_panel.visible = true
-		if battle.winner == 0:
+		if battle.captured != null:
+			_result_label.text = "つかまえた！"
+		elif battle.escaped:
+			_result_label.text = "うまく にげきれた！"
+		elif battle.winner == 0:
 			_result_label.text = "あなたの かち！"
 		elif battle.winner == 1:
 			_result_label.text = "あなたの まけ…"
 		else:
 			_result_label.text = "ひきわけ"
+		if battle_override != null:
+			_result_panel.visible = false
+			_timer = 0.6
+			_rpg_finish_pending = true
+			return
 		battle_finished.emit(battle.winner)
 		return
 	# CPU decides whenever it has a request
@@ -432,6 +460,15 @@ func _after_playback() -> void:
 		return
 	if auto_play:
 		var ch := auto_ai.choose(battle, 0, req)
+		if bot_can_catch and battle.is_wild and req["type"] == "move" and battle.sides[0].team.size() < 6:
+			var foe = battle.sides[1].active[0]
+			var ball := ""
+			for id in ["ultra_ball", "great_ball", "monster_ball"]:
+				if int(battle.bag.get(id, 0)) > 0:
+					ball = id
+					break
+			if ball != "" and foe != null and foe.hp * 2 <= foe.max_hp:
+				ch = [{"type": "item", "item": ball, "target": -1}]
 		battle.choose(0, ch)
 		_cpu_decide()
 		_begin_playback()
@@ -510,6 +547,9 @@ func _choose_move(i: int) -> void:
 	_begin_playback()
 
 func _choose_switch(i: int) -> void:
+	if _bag_item_pending != "":
+		_choose_item(_bag_item_pending, i)
+		return
 	var err := battle.choose(0, [{"type": "switch", "index": i}])
 	if err != "":
 		_message.append_text("[color=salmon]%s[/color]\n" % err)
@@ -517,7 +557,75 @@ func _choose_switch(i: int) -> void:
 	_cpu_decide()
 	_begin_playback()
 
+func _show_bag() -> void:
+	var req: Dictionary = battle.sides[0].request
+	if req.get("type") != "move" or not battle.allow_items:
+		_bag_note.text = "たいせんでは アイテムは つかえない！"
+		return
+	_hide_panels()
+	_bag_panel.visible = true
+	for c in _bag_panel.get_children():
+		c.queue_free()
+	var ids: Array = battle.bag.keys()
+	ids.sort()
+	var any := false
+	var grid := GridContainer.new()
+	grid.columns = 2
+	_bag_panel.add_child(grid)
+	for id in ids:
+		var pocket := str(GameData.get_item(id).get("pocket", "held"))
+		if pocket != "medicine" and pocket != "ball":
+			continue
+		if pocket == "ball" and not battle.is_wild:
+			continue
+		any = true
+		var iid: String = id
+		var b := UITheme.make_button("%s ×%d" % [GameData.name_of("items", id), int(battle.bag[id])], 14, Vector2(170, 36))
+		b.pressed.connect(func(): _pick_bag_item(iid))
+		grid.add_child(b)
+	if not any:
+		_bag_panel.add_child(UITheme.make_label("つかえる アイテムが ない", 14))
+	var back := UITheme.make_button("もどる", 14, Vector2(100, 30))
+	back.pressed.connect(_show_commands)
+	_bag_panel.add_child(back)
+
+func _pick_bag_item(id: String) -> void:
+	var pocket := str(GameData.get_item(id).get("pocket", "held"))
+	if pocket == "ball":
+		_choose_item(id, -1)
+		return
+	_bag_item_pending = id
+	_hide_panels()
+	_switch_panel.visible = true
+	_switch_panel.get_child(1).visible = true
+	for i in range(6):
+		var b: Button = _switch_buttons[i]
+		if i < battle.sides[0].team.size():
+			var p = battle.sides[0].team[i]
+			b.visible = true
+			b.text = "%s  %d/%d %s" % [GameData.name_of("species", p.species_id), p.hp, p.max_hp, GameData.name_of("status", p.status) if p.status != "" else ""]
+			b.disabled = false
+		else:
+			b.visible = false
+
+func _choose_item(id: String, target: int) -> void:
+	_bag_item_pending = ""
+	var err := battle.choose(0, [{"type": "item", "item": id, "target": target}])
+	if err != "":
+		_message.append_text("[color=salmon]%s[/color]\n" % err)
+		_show_commands()
+		return
+	_cpu_decide()
+	_begin_playback()
+
 func _forfeit() -> void:
+	if battle.is_wild:
+		var req: Dictionary = battle.sides[0].request
+		if req.get("type") == "move":
+			battle.choose(0, [{"type": "run"}])
+			_cpu_decide()
+			_begin_playback()
+		return
 	_state = "ended"
 	_hide_panels()
 	_result_panel.visible = true
