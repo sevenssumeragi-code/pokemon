@@ -44,8 +44,6 @@ if mode == "1v1":
     fixed = [(k, m) for k, m in M["matchups"].items() if m["n"] >= 30 and (m["wins_a"] == 0 or m["wins_b"] == 0)]
     P(""); P(f"## Fixed (100%/0%) set matchups: {len(fixed)} / {len(M['matchups'])} ({100*len(fixed)/max(1,len(M['matchups'])):.1f}%)")
     sp_fixed = collections.Counter()
-    for k, m in M["matchups"]:
-        pass
     for k, m in fixed:
         winner = m["a"] if m["wins_b"] == 0 else m["b"]; loser = m["b"] if winner == m["a"] else m["a"]
         sp_fixed[(winner, loser)] += 1
