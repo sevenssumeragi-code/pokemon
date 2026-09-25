@@ -293,6 +293,7 @@ func _launch_battle(b: Battle) -> void:
 	battle_screen.battle_override = b
 	battle_screen.auto_play = auto_play
 	battle_screen.bot_can_catch = auto_play
+	battle_screen.message_delay = [1.2, 0.8, 0.4][clampi(int(state.settings.get("text_speed", 1)), 0, 2)]
 	battle_screen.player_team = BattleFlow.party_sets(state)
 	battle_screen.battle_finished.connect(_on_battle_finished)
 	add_child(battle_screen)
