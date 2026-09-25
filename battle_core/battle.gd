@@ -2189,6 +2189,37 @@ func _end_effect(e: Dictionary) -> void:
 		"field":
 			remove_pseudo_weather(e["id"])
 
+## Break reference cycles (Battle <-> Side <-> Pokemon) so RefCounted memory is released.
+## Call after reading results; the battle object is unusable afterwards.
+func dispose() -> void:
+	for side in sides:
+		for p in side.team:
+			p.battle = null
+			p.side = null
+			p.volatiles.clear()
+			p.status_state.clear()
+			p.ability_state.clear()
+			p.item_state.clear()
+			p.attacked_by.clear()
+			p.last_attacked_by.clear()
+		side.battle = null
+		side.foe = null
+		side.active.clear()
+		side.team.clear()
+		side.side_conditions.clear()
+		side.slot_conditions.clear()
+	sides.clear()
+	queue.clear()
+	faint_queue.clear()
+	weather_state.clear()
+	terrain_state.clear()
+	pseudo_weather.clear()
+	active_move = {}
+	active_pokemon = null
+	active_target = null
+	last_move = {}
+	log.clear()
+
 # ============================================================
 # Serialization (for save/load and tests)
 # ============================================================

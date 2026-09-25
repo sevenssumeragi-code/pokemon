@@ -73,6 +73,7 @@ func run_1v1(battles_per_pair: int, seed: int, ai_kind: String) -> Dictionary:
 						elif bt.winner == 1: wins_b += 1
 						else: ties += 1
 						n += 1
+						bt.dispose()
 					matchups[key] = {"a": a, "set_a": sa["name"], "b": b, "set_b": sb["name"], "wins_a": wins_a, "wins_b": wins_b, "ties": ties, "avg_turns": float(turns) / battles_per_pair}
 					_acc(species, a, "games", battles_per_pair); _acc(species, a, "wins", wins_a)
 					_acc(species, b, "games", battles_per_pair); _acc(species, b, "wins", wins_b)
@@ -155,4 +156,5 @@ func run_team(mode: String, battles: int, seed: int, ai_kind: String) -> Diction
 			abilities[ab] = int(abilities.get(ab, 0)) + int(bt.stats["ability_activations"][ab])
 		for it in bt.stats["item_activations"]:
 			items[it] = int(items.get(it, 0)) + int(bt.stats["item_activations"][it])
+		bt.dispose()
 	return {"battles": battles, "team_size": team_size, "species": species, "sets": set_stats, "abilities": abilities, "items": items, "turns_hist": turns_hist, "ties": ties, "avg_turns": float(total_turns) / maxf(1, battles), "pairs": pair_stats, "stalls": stalls}
