@@ -325,6 +325,17 @@ func _slot_idx(tag: String) -> int:
 	var slot := 1 if tag.length() > 2 and tag[2] == "b" else 0
 	return side + slot
 
+func _focus_first(panel: Control) -> void:
+	for c in panel.get_children():
+		if c is Button and c.visible and not c.disabled:
+			c.grab_focus()
+			return
+		if c is Container:
+			for cc in c.get_children():
+				if cc is Button and cc.visible and not cc.disabled:
+					cc.grab_focus()
+					return
+
 func _hide_panels() -> void:
 	_target_panel.visible = false
 	_bag_panel.visible = false
@@ -580,6 +591,7 @@ func _show_commands() -> void:
 	_hide_panels()
 	_bag_note.text = ""
 	_cmd_panel.visible = true
+	_focus_first(_cmd_panel)
 	if battle.slots_per_side > 1:
 		var rs := _current_req_slot()
 		if not rs.is_empty():
@@ -631,6 +643,7 @@ func _show_moves() -> void:
 			b.visible = true
 		else:
 			b.visible = false
+	_focus_first(_move_panel)
 
 func _show_switch(forced: bool) -> void:
 	_state = "switch"
@@ -654,6 +667,7 @@ func _show_switch(forced: bool) -> void:
 			b.visible = false
 	if trapped:
 		_bag_note.text = "にげられない！ こうたいできない！"
+	_focus_first(_switch_panel)
 
 func _choose_move(i: int) -> void:
 	var req: Dictionary = battle.sides[0].request
