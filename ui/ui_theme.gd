@@ -8,8 +8,6 @@ static func fill_parent(c: Control) -> void:
 	var parent := c.get_parent()
 	if parent is Window:
 		c.size = (parent as Window).size
-	elif parent is Control:
-		c.size = (parent as Control).size
 
 static func panel_style(bg: Color = Color(0.08, 0.09, 0.14, 0.92), border: Color = Color(0.85, 0.85, 0.9)) -> StyleBoxFlat:
 	var sb := StyleBoxFlat.new()

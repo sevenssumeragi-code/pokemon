@@ -57,8 +57,10 @@ static func from_dict(d: Dictionary) -> GameState:
 	g.badges = int(d.get("badges", 0))
 	return g
 
+static var slot_prefix: String = "save"  # tests override to avoid touching real saves
+
 static func save_path(slot: int) -> String:
-	return "user://save%d.json" % slot
+	return "user://%s%d.json" % [slot_prefix, slot]
 
 func save(slot: int = 1) -> bool:
 	var f := FileAccess.open(save_path(slot), FileAccess.WRITE)

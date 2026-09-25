@@ -8,7 +8,8 @@ func _ready() -> void:
 	UITheme.fill_parent(self)
 	GameData.ensure_loaded()
 	get_tree().root.size_changed.connect(_on_resized)
-	show_title()
+	if _current == null:
+		show_title()
 
 func _on_resized() -> void:
 	UITheme.fill_parent(self)
