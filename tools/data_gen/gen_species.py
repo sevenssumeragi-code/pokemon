@@ -39,17 +39,17 @@ sp("jinpachi","ジンパチ",["fire"],70,105,70,80,70,115,"flame_domain",num=2,w
    tm=COMMON_TM+["u_turn","close_combat","earthquake","iron_head","wild_charge","thunder_punch","play_rough","crunch","knock_off","bulk_up","taunt","roar","flamethrower","fire_blast","solar_beam","psychic_fangs","low_kick","brick_break","stone_edge","rock_slide","fake_out","trailblaze","body_slam","double_edge","snore","scorching_sands","zen_headbutt","heat_crash","agility","work_up","torch_song"],
    dex="周囲の空気を自身の炎の領域に変えてしまう。仲間の炎まで激しく燃え上がらせる。")
 # 3 ヒュウ ゴースト C/S
-sp("hyu","ヒュウ",["ghost"],85,50,80,90,80,115,"dark_domain",num=3,weight=12.0,height=1.2,catch_rate=45,base_exp=175,ev_yield={"spa":2},
+sp("hyu","ヒュウ",["ghost"],90,50,85,90,80,105,"dark_domain",num=3,weight=12.0,height=1.2,catch_rate=45,base_exp=175,ev_yield={"spa":2},
    level=[(1,"astonish"),(1,"lick"),(5,"confuse_ray"),(9,"night_shade"),(13,"shadow_sneak"),(17,"hex"),(21,"will_o_wisp"),(25,"shadow_ball"),(29,"curse"),(33,"nasty_plot"),(37,"dark_pulse"),(41,"pain_split"),(45,"phantom_force"),(49,"destiny_bond"),(53,"poltergeist"),(57,"bitter_malice"),(61,"shadow_claw")],
    tm=COMMON_TM+["psychic","sludge_bomb","dazzling_gleam","taunt","trick","calm_mind","disable","haze","icy_wind","thunder_wave","hypnosis","psyshock","giga_drain","shadow_punch","knock_off","sucker_punch","memento","trick_room","nightmare","dream_eater","snore","ominous_wind","hyper_voice","shadow_bone"],
    dex="夜の闇そのものを身にまとう。その領域の中では亡霊の力が何倍にもふくれあがる。")
 # 4 ムニ フェアリー 平均低め
-sp("muni","ムニ",["fairy"],75,40,70,95,80,80,"prankster",num=4,weight=4.5,height=0.4,catch_rate=190,base_exp=90,ev_yield={"spe":1},
+sp("muni","ムニ",["fairy"],85,40,70,85,80,80,"prankster",num=4,weight=4.5,height=0.4,catch_rate=190,base_exp=90,ev_yield={"spe":1},
    level=[(1,"pound"),(1,"charm"),(4,"fairy_wind"),(7,"baby_doll_eyes"),(10,"disarming_voice"),(13,"minimize"),(16,"sweet_kiss"),(19,"draining_kiss"),(22,"encore"),(25,"wish"),(28,"dazzling_gleam"),(31,"attract"),(34,"moonlight"),(37,"moonblast"),(40,"play_rough"),(43,"misty_terrain"),(46,"light_screen"),(49,"reflect"),(52,"thunder_wave"),(55,"tearful_look")],
    tm=COMMON_TM+["taunt","will_o_wisp","psychic","thunderbolt","shadow_ball","calm_mind","yawn","heal_bell","baton_pass","safeguard","stored_power","psych_up","helping_hand","trick","knock_off","u_turn","energy_ball","mystical_fire","nasty_plot","icy_wind","charge_beam","snore","fake_tears","tickle","screech","confuse_ray","hyper_voice","work_up","body_slam","spirit_break"],
    dex="小さないたずら好き。相手が動く前にちょこまかと動き回り、姿を小さくして攻撃をかわす。")
 # 5 ゲル こおり C/S
-sp("gel","ゲル",["ice"],80,60,85,90,85,110,"snow_warning",num=5,weight=32.0,height=1.1,catch_rate=60,base_exp=170,ev_yield={"spa":2},
+sp("gel","ゲル",["ice"],80,60,85,90,85,100,"snow_warning",num=5,weight=32.0,height=1.1,catch_rate=60,base_exp=170,ev_yield={"spa":2},
    level=[(1,"powder_snow"),(1,"leer"),(5,"icy_wind"),(9,"water_gun"),(13,"aurora_beam"),(17,"haze"),(21,"ice_shard"),(25,"frost_breath"),(29,"aurora_veil"),(33,"freeze_dry"),(37,"ice_beam"),(41,"snowscape"),(45,"calm_mind"),(49,"blizzard"),(53,"mist"),(57,"moonblast"),],
    tm=COMMON_TM+["psychic","dazzling_gleam","shadow_ball","energy_ball","surf","hydro_pump","nasty_plot","light_screen","reflect","thunder_wave","icy_wind","water_pulse","weather_ball","hyper_voice","snore","taunt","encore","tri_attack","yawn","rain_dance","psyshock","flash_cannon","ice_spinner","avalanche","earth_power","chilling_water","haze"],
    dex="現れると周囲に雪を降らせる。雪の中では体表が硬く凍りつき、吹雪を自在に操る。")
@@ -84,7 +84,7 @@ sp("jinpachi_r","ジンパチ（リージョン）",["rock"],90,120,90,55,110,50
    tm=COMMON_TM+["fire_punch","fire_fang","flare_blitz","heavy_slam","iron_head","superpower","close_combat","crunch","knock_off","bulk_up","taunt","roar","brick_break","stomping_tantrum","high_horsepower","accelerock","smack_down","curse","counter","ancient_power","snore","low_kick","zen_headbutt","salt_cure","rock_blast","body_slam","double_edge","stone_axe","wide_guard"],
    dex="火山地帯で岩の体を得た姿。動きは鈍いが、その体はどんな一撃にも一度は耐える。")
 # 12 ヒュウR くさ
-sp("hyu_r","ヒュウ（リージョン）",["grass"],80,55,70,100,80,115,"contrary",num=12,weight=10.0,height=1.2,base_form="hyu",form="R",catch_rate=45,base_exp=175,ev_yield={"spa":2},
+sp("hyu_r","ヒュウ（リージョン）",["grass"],85,55,75,100,80,105,"contrary",num=12,weight=10.0,height=1.2,base_form="hyu",form="R",catch_rate=45,base_exp=175,ev_yield={"spa":2},
    level=[(1,"absorb"),(1,"leer"),(5,"leafage"),(9,"leech_seed"),(13,"mega_drain"),(17,"sleep_powder"),(21,"magical_leaf"),(25,"synthesis"),(29,"giga_drain"),(33,"energy_ball"),(37,"grassy_terrain"),(41,"leaf_storm"),(45,"strength_sap"),(49,"solar_beam"),(53,"apple_acid"),(57,"petal_dance"),(61,"spore")],
    tm=COMMON_TM+["shadow_ball","psychic","dazzling_gleam","sludge_bomb","earth_power","knock_off","taunt","trick","hyper_voice","seed_bomb","grass_knot","stun_spore","light_screen","reflect","calm_mind","nasty_plot","hex","will_o_wisp","psyshock","weather_ball","snore","sunny_day","trailblaze","icy_wind","confuse_ray","leaf_tornado","struggle_bug","snarl"],
    dex="森の霊気を宿した姿。ひねくれた性質で、力を失う技を使うほど強くなっていく。")

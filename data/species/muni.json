@@ -5,10 +5,10 @@
    "fairy"
   ],
   "base_stats": {
-   "hp": 75,
+   "hp": 85,
    "atk": 40,
    "def": 70,
-   "spa": 95,
+   "spa": 85,
    "spd": 80,
    "spe": 80
   },

@@ -5,12 +5,12 @@
    "ghost"
   ],
   "base_stats": {
-   "hp": 85,
+   "hp": 90,
    "atk": 50,
-   "def": 80,
+   "def": 85,
    "spa": 90,
    "spd": 80,
-   "spe": 115
+   "spe": 105
   },
   "abilities": {
    "0": "dark_domain"
