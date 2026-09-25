@@ -253,9 +253,9 @@ func _score_move(user, move_id: String, target, foes: Array) -> float:
 					score -= 4.0 * -v
 				elif v < 0 and user.ability == "contrary":
 					score += 6.0 * -v
-		if md.get("self_switch", false):
+		if md.get("self_switch", false) and user.side.has_alive_bench():
 			var cur := _matchup(user, foes)
-			if cur < 0 and user.side.has_alive_bench():
+			if cur < 0:
 				score += 20.0
 		if md.has("drain") and my_hp < 70:
 			score += pct * 0.3
@@ -275,6 +275,8 @@ func _score_move(user, move_id: String, target, foes: Array) -> float:
 			score += 5.0
 		return score
 	# ---------------- status moves ----------------
+	if target != null and target.boosts["evasion"] >= 4 and md.get("target", "normal") == "normal" and typeof(md.get("accuracy", true)) != TYPE_BOOL:
+		score -= 20.0
 	if target != null and target.volatiles.has("substitute") and not md.get("flags", []).has("bypasssub") and md.get("target", "normal") == "normal":
 		return -50.0
 	var eff_id: String = str(md.get("effect", ""))
@@ -299,6 +301,8 @@ func _score_move(user, move_id: String, target, foes: Array) -> float:
 					w = 0.9
 					relevant = true
 				total += int(v * w * 10)
+		if total <= 0:
+			return -50.0
 		if not relevant and total < 15:
 			return 0.0
 		score = float(total)
@@ -392,6 +396,8 @@ func _score_move(user, move_id: String, target, foes: Array) -> float:
 	if md.has("boosts") and target != null and md.get("target") != "self":
 		# stat drops on foe
 		var v := 0.0
+		if md.get("self_switch", false) and not user.side.has_alive_bench():
+			v -= 10.0
 		for k in md["boosts"]:
 			var amt := int(md["boosts"][k])
 			if amt < 0 and target.boosts[k] > -4:
@@ -458,6 +464,8 @@ func _score_move(user, move_id: String, target, foes: Array) -> float:
 		"yawn":
 			return 20.0
 	if md.get("self_switch", false):
+		if not user.side.has_alive_bench():
+			return -20.0
 		return 15.0 if _matchup(user, foes) < 0 else 0.0
 	if md.has("force_switch") and target != null:
 		return 10.0 + 8.0 * target.positive_boosts()

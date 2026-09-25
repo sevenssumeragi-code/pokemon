@@ -122,6 +122,9 @@ txt = "\n".join(lines)
 if a.out:
     os.makedirs(os.path.dirname(a.out), exist_ok=True)
     open(a.out, "w").write(txt)
-    json.dump({"species": {k: dict(v) for k, v in M["species"].items()}, "sets": {k: dict(v) for k, v in M["sets"].items()}, "battles": M["battles"]}, open(a.out.replace(".md", ".json"), "w"))
+    json.dump({"mode": mode, "species": {k: dict(v) for k, v in M["species"].items()}, "sets": {k: dict(v) for k, v in M["sets"].items()}, "battles": M["battles"],
+               "pairs": {k: dict(v) for k, v in M["pairs"].items()}, "abilities": dict(M["abilities"]), "items": dict(M["items"]),
+               "turns_hist": {str(k): v for k, v in M["turns_hist"].items()}, "avg_turns": M["turns_sum"] / max(1, M["battles"]), "ties": M["ties"],
+               "matchups": {k: {kk: vv for kk, vv in m.items()} for k, m in M["matchups"].items()}}, open(a.out.replace(".md", ".json"), "w"))
     print("wrote", a.out)
 print(txt[:3000])

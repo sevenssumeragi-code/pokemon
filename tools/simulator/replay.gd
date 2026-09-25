@@ -21,7 +21,10 @@ func _init() -> void:
 		teams[1].append(_mk(args["b2"], _find(sets[args["b2"]], args.get("sb2", ""))))
 	var bt := Battle.new({"seed": int(args.get("seed", "1")), "teams": teams, "log": true, "max_turns": 200})
 	BattleRunner.run(bt, HeuristicAI.new(1), HeuristicAI.new(2))
-	print(bt.log_text())
+	if args.get("ja", "0") == "1":
+		print(LogFormatter.format_all(bt.log))
+	else:
+		print(bt.log_text())
 	print("winner=", bt.winner, " turns=", bt.turn)
 	EffectRegistry.reset()
 	quit(0)
