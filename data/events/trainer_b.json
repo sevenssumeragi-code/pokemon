@@ -1,0 +1,39 @@
+{
+ "id": "trainer_b",
+ "commands": [
+  {
+   "cmd": "if",
+   "flag": "trainer_b_beaten",
+   "then": [
+    {
+     "cmd": "message",
+     "text": "trainer_b_after"
+    }
+   ],
+   "else": [
+    {
+     "cmd": "message",
+     "text": "trainer_b_intro"
+    },
+    {
+     "cmd": "trainer_battle",
+     "trainer": "trainer_b",
+     "win": [
+      {
+       "cmd": "set_flag",
+       "flag": "trainer_b_beaten"
+      },
+      {
+       "cmd": "message",
+       "text": "trainer_b_lose"
+      },
+      {
+       "cmd": "give_money",
+       "amount": 600
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

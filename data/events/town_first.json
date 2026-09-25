@@ -1,0 +1,13 @@
+{
+ "id": "town_first",
+ "commands": [
+  {
+   "cmd": "message",
+   "text": "town_first"
+  },
+  {
+   "cmd": "set_flag",
+   "flag": "town_intro_done"
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+{
+ "id": "kid_talk",
+ "commands": [
+  {
+   "cmd": "message",
+   "text": "kid_1"
+  }
+ ]
+}

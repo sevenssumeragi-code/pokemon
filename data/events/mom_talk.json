@@ -1,0 +1,24 @@
+{
+ "id": "mom_talk",
+ "commands": [
+  {
+   "cmd": "if",
+   "flag": "got_starter",
+   "then": [
+    {
+     "cmd": "message",
+     "text": "mom_2"
+    },
+    {
+     "cmd": "heal_party"
+    }
+   ],
+   "else": [
+    {
+     "cmd": "message",
+     "text": "mom_1"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+{
+ "id": "blocker_talk",
+ "commands": [
+  {
+   "cmd": "message",
+   "text": "blocker_1"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "id": "boss_talk",
+ "commands": [
+  {
+   "cmd": "if",
+   "flag": "boss_beaten",
+   "then": [
+    {
+     "cmd": "message",
+     "text": "boss_after"
+    }
+   ],
+   "else": [
+    {
+     "cmd": "message",
+     "text": "boss_intro"
+    },
+    {
+     "cmd": "trainer_battle",
+     "trainer": "boss",
+     "win": [
+      {
+       "cmd": "set_flag",
+       "flag": "boss_beaten"
+      },
+      {
+       "cmd": "message",
+       "text": "boss_lose"
+      },
+      {
+       "cmd": "give_money",
+       "amount": 3000
+      },
+      {
+       "cmd": "badge"
+      },
+      {
+       "cmd": "end_game",
+       "text": "ending"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

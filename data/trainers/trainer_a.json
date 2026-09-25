@@ -1,0 +1,16 @@
+{
+ "name_key": "tr_a_name",
+ "team": [
+  {
+   "species": "muni",
+   "level": 7
+  },
+  {
+   "species": "neo",
+   "level": 8
+  }
+ ],
+ "money": 400,
+ "ai": "heuristic",
+ "id": "trainer_a"
+}

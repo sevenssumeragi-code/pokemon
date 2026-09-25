@@ -1,0 +1,25 @@
+{
+ "id": "hiker_talk",
+ "commands": [
+  {
+   "cmd": "message",
+   "text": "hiker_1"
+  },
+  {
+   "cmd": "if",
+   "flag": "got_charm",
+   "then": [],
+   "else": [
+    {
+     "cmd": "give_item",
+     "item": "mind_stone",
+     "count": 1
+    },
+    {
+     "cmd": "set_flag",
+     "flag": "got_charm"
+    }
+   ]
+  }
+ ]
+}

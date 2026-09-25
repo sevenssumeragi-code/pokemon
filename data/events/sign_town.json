@@ -1,0 +1,9 @@
+{
+ "id": "sign_town",
+ "commands": [
+  {
+   "cmd": "message",
+   "text": "sign_town"
+  }
+ ]
+}

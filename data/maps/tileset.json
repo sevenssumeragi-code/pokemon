@@ -1,0 +1,99 @@
+{
+ "0": {
+  "name": "grass",
+  "walkable": true,
+  "color": "#6db36a"
+ },
+ "1": {
+  "name": "tall_grass",
+  "walkable": true,
+  "encounter": true,
+  "color": "#3f8f45"
+ },
+ "2": {
+  "name": "water",
+  "walkable": false,
+  "color": "#4d7fd6"
+ },
+ "3": {
+  "name": "wall",
+  "walkable": false,
+  "color": "#8a6d4b"
+ },
+ "4": {
+  "name": "path",
+  "walkable": true,
+  "color": "#d9c28e"
+ },
+ "5": {
+  "name": "tree",
+  "walkable": false,
+  "color": "#2f6b33"
+ },
+ "6": {
+  "name": "door",
+  "walkable": true,
+  "color": "#b0552a"
+ },
+ "7": {
+  "name": "cave_floor",
+  "walkable": true,
+  "encounter": true,
+  "color": "#7d7466"
+ },
+ "8": {
+  "name": "rock",
+  "walkable": false,
+  "color": "#4d4740"
+ },
+ "9": {
+  "name": "sand",
+  "walkable": true,
+  "color": "#e6d8a3"
+ },
+ "10": {
+  "name": "floor",
+  "walkable": true,
+  "color": "#c9b7a0"
+ },
+ "11": {
+  "name": "mat",
+  "walkable": true,
+  "color": "#a33d3d"
+ },
+ "12": {
+  "name": "table",
+  "walkable": false,
+  "color": "#6b4e2e"
+ },
+ "13": {
+  "name": "flower",
+  "walkable": true,
+  "color": "#d9a8d1"
+ },
+ "14": {
+  "name": "fence",
+  "walkable": false,
+  "color": "#a88b5c"
+ },
+ "15": {
+  "name": "sign",
+  "walkable": false,
+  "color": "#c7a35b"
+ },
+ "16": {
+  "name": "roof",
+  "walkable": false,
+  "color": "#b04a3a"
+ },
+ "17": {
+  "name": "cave_path",
+  "walkable": true,
+  "color": "#9c9385"
+ },
+ "18": {
+  "name": "stairs",
+  "walkable": true,
+  "color": "#5e5751"
+ }
+}

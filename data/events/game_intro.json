@@ -1,0 +1,17 @@
+{
+ "id": "game_intro",
+ "commands": [
+  {
+   "cmd": "message",
+   "text": "intro_1"
+  },
+  {
+   "cmd": "message",
+   "text": "intro_2"
+  },
+  {
+   "cmd": "set_flag",
+   "flag": "intro_done"
+  }
+ ]
+}

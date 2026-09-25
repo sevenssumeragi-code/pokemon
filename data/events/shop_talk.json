@@ -1,0 +1,21 @@
+{
+ "id": "shop_talk",
+ "commands": [
+  {
+   "cmd": "message",
+   "text": "shop_1"
+  },
+  {
+   "cmd": "shop",
+   "items": [
+    "potion",
+    "super_potion",
+    "antidote",
+    "awakening",
+    "monster_ball",
+    "great_ball",
+    "revive"
+   ]
+  }
+ ]
+}

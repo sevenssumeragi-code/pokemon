@@ -1,0 +1,22 @@
+{
+ "name_key": "boss_name",
+ "team": [
+  {
+   "species": "hyu_r",
+   "level": 14
+  },
+  {
+   "species": "gel_r_dark",
+   "level": 14
+  },
+  {
+   "species": "trans_r",
+   "level": 16,
+   "item": "sitrus_berry"
+  }
+ ],
+ "money": 3000,
+ "ai": "heuristic",
+ "boss": true,
+ "id": "boss"
+}

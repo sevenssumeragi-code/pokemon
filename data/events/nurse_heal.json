@@ -1,0 +1,16 @@
+{
+ "id": "nurse_heal",
+ "commands": [
+  {
+   "cmd": "message",
+   "text": "nurse_1"
+  },
+  {
+   "cmd": "heal_party"
+  },
+  {
+   "cmd": "message",
+   "text": "nurse_2"
+  }
+ ]
+}

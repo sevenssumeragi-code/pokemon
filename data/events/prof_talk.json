@@ -1,0 +1,72 @@
+{
+ "id": "prof_talk",
+ "commands": [
+  {
+   "cmd": "if",
+   "flag": "got_starter",
+   "then": [
+    {
+     "cmd": "message",
+     "text": "prof_done"
+    }
+   ],
+   "else": [
+    {
+     "cmd": "message",
+     "text": "prof_1"
+    },
+    {
+     "cmd": "message",
+     "text": "prof_2"
+    },
+    {
+     "cmd": "message",
+     "text": "prof_3"
+    },
+    {
+     "cmd": "starter_choice",
+     "text": "starter_prompt",
+     "options": [
+      {
+       "species": "renny",
+       "level": 5,
+       "text": "starter_renny"
+      },
+      {
+       "species": "jinpachi",
+       "level": 5,
+       "text": "starter_jinpachi"
+      },
+      {
+       "species": "hyu",
+       "level": 5,
+       "text": "starter_hyu"
+      }
+     ]
+    },
+    {
+     "cmd": "set_flag",
+     "flag": "got_starter"
+    },
+    {
+     "cmd": "message",
+     "text": "prof_4"
+    },
+    {
+     "cmd": "give_item",
+     "item": "monster_ball",
+     "count": 5
+    },
+    {
+     "cmd": "give_item",
+     "item": "potion",
+     "count": 3
+    },
+    {
+     "cmd": "message",
+     "text": "prof_5"
+    }
+   ]
+  }
+ ]
+}

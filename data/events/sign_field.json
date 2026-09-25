@@ -1,0 +1,9 @@
+{
+ "id": "sign_field",
+ "commands": [
+  {
+   "cmd": "message",
+   "text": "sign_field"
+  }
+ ]
+}
