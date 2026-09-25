@@ -344,7 +344,24 @@ func _next_result() -> void:
 			_learn_pending = r
 			var ps: PokemonSet = state.party[int(r["index"])]
 			if auto_play:
-				BattleFlow.apply_learn(state, int(r["index"]), str(r["move"]), 0)
+				# bot heuristic: never drop a damaging move for a status move; replace a status move first, else the weakest attack
+				var new_md := GameData.get_move(str(r["move"]))
+				var slot := -1
+				for i in range(ps.moves.size()):
+					if GameData.get_move(ps.moves[i])["category"] == "status":
+						slot = i
+						break
+				if slot < 0 and new_md["category"] != "status":
+					var worst := 999
+					for i in range(ps.moves.size()):
+						var pw := int(GameData.get_move(ps.moves[i]).get("power", 0))
+						if pw < worst:
+							worst = pw
+							slot = i
+					if int(new_md.get("power", 0)) <= worst:
+						slot = -1
+				if slot >= 0:
+					BattleFlow.apply_learn(state, int(r["index"]), str(r["move"]), slot)
 				_next_result()
 				return
 			mode = "learn"
