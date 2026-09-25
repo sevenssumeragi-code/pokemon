@@ -5,10 +5,13 @@ extends BattleAI
 
 var temperature: float = 0.15  # probability of taking the 2nd best option (diversity)
 var switch_threshold: float = 35.0
+var known_moves_only: bool = false  # when true, foe damage estimates only use moves the foe has revealed
+var _side_index: int = 0
 var _b: Battle
 
 func choose(battle, side_index: int, request: Dictionary) -> Array:
 	_b = battle
+	_side_index = side_index
 	var side = battle.sides[side_index]
 	if request.get("type") == "switch":
 		return _choose_switches(side, request)
@@ -124,8 +127,11 @@ func _expected_hits(md: Dictionary) -> float:
 func _best_damage_pct(user, target) -> Dictionary:
 	var best := 0.0
 	var best_move := ""
+	var hidden: bool = known_moves_only and user.side.index != _side_index
 	for m in user.moves:
 		if m["pp"] <= 0:
+			continue
+		if hidden and not user.revealed_moves.has(m["id"]):
 			continue
 		var md := GameData.get_move(m["id"])
 		if md["category"] == "status":
@@ -135,6 +141,22 @@ func _best_damage_pct(user, target) -> Dictionary:
 		if pct > best:
 			best = pct
 			best_move = m["id"]
+	if hidden and best_move == "" and user.revealed_moves.is_empty():
+		# prior: an 80 BP STAB move of the foe's stronger attacking stat
+		var t: String = user.get_types()[0]
+		var phys: bool = user.get_stat("atk") >= user.get_stat("spa")
+		var probe := {"id": "_probe", "type": t, "category": "physical" if phys else "special", "power": 80, "accuracy": 100, "pp": 1, "priority": 0, "target": "normal", "flags": [], "crit_ratio": 1, "effect_type": "move", "ignore_immunity": false}
+		var prev := _b.estimating
+		_b.estimating = true
+		var pr := _b.debug_fixed_roll
+		var pc := _b.debug_no_crit
+		_b.debug_fixed_roll = 92
+		_b.debug_no_crit = true
+		var d = _b.get_damage(user, target, probe) if _b.run_immunity(target, t, probe) else 0
+		_b.debug_fixed_roll = pr
+		_b.debug_no_crit = pc
+		_b.estimating = prev
+		best = float(d if typeof(d) == TYPE_INT else 0) / float(target.max_hp) * 100.0
 	return {"pct": best, "move": best_move}
 
 func _faster(a, b) -> bool:

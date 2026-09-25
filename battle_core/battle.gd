@@ -943,6 +943,8 @@ func run_move(p, move_id: String, target_loc: int = 0, options: Dictionary = {})
 	p.last_move = move_id
 	p.last_move_used_turn = turn
 	p.move_this_turn = move_id
+	if not external:
+		p.revealed_moves[move_id] = true
 	stat_inc("moves_used", move_id)
 	if move_data.get("locked_move", false) and not p.volatiles.has("locked_move"):
 		add_volatile(p, "locked_move", p, move_data)

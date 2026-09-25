@@ -40,3 +40,13 @@ func test_heuristic_heals_when_low() -> void:
 	ai.temperature = 0.0
 	var ch := ai.choose(b, 0, b.sides[0].request)
 	assert_eq(ch[0]["move"], "roost")
+
+func test_known_moves_only_mode_runs() -> void:
+	var b := BT.make([BT.s("renny", ["waterfall", "crunch", "rest", "sleep_talk"], "leftovers")], [BT.s("gel", ["blizzard", "freeze_dry", "aurora_veil", "protect"], "light_clay")])
+	var ai := HeuristicAI.new(1)
+	ai.known_moves_only = true
+	var ch := ai.choose(b, 0, b.sides[0].request)
+	assert_eq(ch.size(), 1)
+	BT.turn(b, "move:waterfall", "move:blizzard")
+	assert_true(BT.p2(b).revealed_moves.has("blizzard"))
+	assert_false(BT.p2(b).revealed_moves.has("freeze_dry"))

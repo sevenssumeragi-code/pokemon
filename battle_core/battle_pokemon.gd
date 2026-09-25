@@ -63,6 +63,7 @@ var being_called_back: bool = false
 var illusion = null
 var faint_queued: bool = false
 var can_mega = false
+var revealed_moves: Dictionary = {}  # move ids this pokemon has used (for fair AI)
 var speed: int = 0
 
 
