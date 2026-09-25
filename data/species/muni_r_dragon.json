@@ -6,9 +6,9 @@
   ],
   "base_stats": {
    "hp": 80,
-   "atk": 85,
+   "atk": 90,
    "def": 80,
-   "spa": 50,
+   "spa": 45,
    "spd": 75,
    "spe": 70
   },

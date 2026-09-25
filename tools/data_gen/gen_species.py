@@ -39,7 +39,7 @@ sp("jinpachi","ジンパチ",["fire"],70,105,70,80,70,115,"flame_domain",num=2,w
    tm=COMMON_TM+["u_turn","close_combat","earthquake","iron_head","wild_charge","thunder_punch","play_rough","crunch","knock_off","bulk_up","taunt","roar","flamethrower","fire_blast","solar_beam","psychic_fangs","low_kick","brick_break","stone_edge","rock_slide","fake_out","trailblaze","body_slam","double_edge","snore","scorching_sands","zen_headbutt","heat_crash","agility","work_up","torch_song"],
    dex="周囲の空気を自身の炎の領域に変えてしまう。仲間の炎まで激しく燃え上がらせる。")
 # 3 ヒュウ ゴースト C/S
-sp("hyu","ヒュウ",["ghost"],75,50,70,110,80,115,"dark_domain",num=3,weight=12.0,height=1.2,catch_rate=45,base_exp=175,ev_yield={"spa":2},
+sp("hyu","ヒュウ",["ghost"],80,50,75,100,80,115,"dark_domain",num=3,weight=12.0,height=1.2,catch_rate=45,base_exp=175,ev_yield={"spa":2},
    level=[(1,"astonish"),(1,"lick"),(5,"confuse_ray"),(9,"night_shade"),(13,"shadow_sneak"),(17,"hex"),(21,"will_o_wisp"),(25,"shadow_ball"),(29,"curse"),(33,"nasty_plot"),(37,"dark_pulse"),(41,"pain_split"),(45,"phantom_force"),(49,"destiny_bond"),(53,"poltergeist"),(57,"bitter_malice"),(61,"shadow_claw")],
    tm=COMMON_TM+["psychic","sludge_bomb","dazzling_gleam","taunt","trick","calm_mind","disable","haze","icy_wind","thunder_wave","hypnosis","psyshock","giga_drain","shadow_punch","knock_off","sucker_punch","memento","trick_room","nightmare","dream_eater","snore","ominous_wind","hyper_voice","shadow_bone"],
    dex="夜の闇そのものを身にまとう。その領域の中では亡霊の力が何倍にもふくれあがる。")
@@ -49,12 +49,12 @@ sp("muni","ムニ",["fairy"],75,40,70,95,80,80,"prankster",num=4,weight=4.5,heig
    tm=COMMON_TM+["taunt","will_o_wisp","psychic","thunderbolt","shadow_ball","calm_mind","yawn","heal_bell","baton_pass","safeguard","stored_power","psych_up","helping_hand","trick","knock_off","u_turn","energy_ball","mystical_fire","nasty_plot","icy_wind","charge_beam","snore","fake_tears","tickle","screech","confuse_ray","hyper_voice","work_up","body_slam","spirit_break"],
    dex="小さないたずら好き。相手が動く前にちょこまかと動き回り、姿を小さくして攻撃をかわす。")
 # 5 ゲル こおり C/S
-sp("gel","ゲル",["ice"],70,60,80,110,80,110,"snow_warning",num=5,weight=32.0,height=1.1,catch_rate=60,base_exp=170,ev_yield={"spa":2},
+sp("gel","ゲル",["ice"],75,60,80,100,85,110,"snow_warning",num=5,weight=32.0,height=1.1,catch_rate=60,base_exp=170,ev_yield={"spa":2},
    level=[(1,"powder_snow"),(1,"leer"),(5,"icy_wind"),(9,"water_gun"),(13,"aurora_beam"),(17,"haze"),(21,"ice_shard"),(25,"frost_breath"),(29,"aurora_veil"),(33,"freeze_dry"),(37,"ice_beam"),(41,"snowscape"),(45,"calm_mind"),(49,"blizzard"),(53,"mist"),(57,"moonblast"),],
    tm=COMMON_TM+["psychic","dazzling_gleam","shadow_ball","energy_ball","surf","hydro_pump","nasty_plot","light_screen","reflect","thunder_wave","icy_wind","water_pulse","weather_ball","hyper_voice","snore","taunt","encore","tri_attack","yawn","rain_dance","psyshock","flash_cannon","ice_spinner","avalanche","earth_power","chilling_water","haze"],
    dex="現れると周囲に雪を降らせる。雪の中では体表が硬く凍りつき、吹雪を自在に操る。")
 # 6 ネオ かくとう A/C (進化前)
-sp("neo","ネオ",["fighting"],60,95,50,80,50,85,"sharpness",hidden="steadfast",num=6,weight=20.0,height=0.9,nfe=True,evolution={"method":"level","level":34,"into":"trans"},catch_rate=120,base_exp=80,ev_yield={"atk":1},
+sp("neo","ネオ",["fighting"],60,100,55,70,55,80,"sharpness",hidden="steadfast",num=6,weight=20.0,height=0.9,nfe=True,evolution={"method":"level","level":34,"into":"trans"},catch_rate=120,base_exp=80,ev_yield={"atk":1},
    level=[(1,"scratch"),(1,"leer"),(4,"karate_chop"),(8,"cut"),(12,"fury_cutter"),(16,"focus_energy"),(20,"slash"),(24,"aerial_ace"),(28,"night_slash"),(32,"swords_dance"),(36,"x_scissor"),(40,"sacred_sword"),(44,"psycho_cut"),(48,"secret_sword"),(52,"close_combat")],
    tm=COMMON_TM+["brick_break","bulk_up","rock_slide","stone_edge","earthquake","knock_off","u_turn","aura_sphere","vacuum_wave","air_cutter","leaf_blade","stone_axe","ceaseless_edge","drain_punch","mach_punch","poison_jab","iron_head","taunt","work_up","body_press","low_kick","aqua_cutter","razor_shell","focus_blast","cross_poison","detect","counter","reversal","bullet_punch","snore"],
    dex="鋭い爪を研ぎ澄ますのが日課。まだ幼いが、切れ味だけは大人にも負けない。")
@@ -74,7 +74,7 @@ sp("namazuo","なまずお",["electric","steel"],70,105,85,60,70,110,"static",nu
    tm=COMMON_TM+["volt_switch","thunderbolt","thunder","steel_beam","flash_cannon","aqua_cutter","psycho_cut","sacred_sword","leaf_blade","stone_axe","ceaseless_edge","aerial_ace","air_cutter","crunch","earthquake","rock_slide","stone_edge","brick_break","body_press","bulk_up","taunt","electric_terrain","magnet_rise","gyro_ball","heavy_slam","thunder_punch","ice_punch","fire_punch","snore","agility","u_turn","razor_shell","x_scissor","electroweb","charge"],
    dex="鋼のひげに静電気をため込む。触れた者はしびれてしまう。")
 # 10 ほねばみ はがね/ひこう
-sp("honebami","ほねばみ",["steel","flying"],70,105,80,50,75,120,"unburden",num=10,weight=18.0,height=1.0,catch_rate=60,base_exp=170,ev_yield={"spe":2},
+sp("honebami","ほねばみ",["steel","flying"],75,100,80,60,75,110,"unburden",num=10,weight=18.0,height=1.0,catch_rate=60,base_exp=170,ev_yield={"spe":2},
    level=[(1,"peck"),(1,"leer"),(5,"metal_claw"),(9,"quick_attack"),(13,"wing_attack"),(17,"cut"),(21,"steel_wing"),(25,"aerial_ace"),(29,"slash"),(33,"swords_dance"),(37,"air_cutter"),(41,"iron_head"),(45,"night_slash"),(49,"acrobatics"),(53,"drill_peck"),(57,"smart_strike"),(61,"air_slash")],
    tm=COMMON_TM+["u_turn","tailwind","roost","knock_off","x_scissor","psycho_cut","sacred_sword","stone_axe","ceaseless_edge","aqua_cutter","leaf_blade","dual_wingbeat","drill_peck","fly","rock_slide","stone_edge","body_press","iron_defense","taunt","defog","brick_break","low_kick","agility","steel_beam","flash_cannon","bullet_punch","snore","hurricane","feather_dance","heavy_slam"],
    dex="骨のように軽い鋼の翼を持つ。荷物を捨てると風のような速さで飛び回る。")
@@ -94,7 +94,7 @@ sp("renny_r","レニィ（リージョン）",["fairy"],105,115,80,55,75,80,"pix
    tm=COMMON_TM+["ice_fang","ice_punch","earthquake","stone_edge","rock_slide","superpower","body_press","iron_head","bulk_up","knock_off","snore","brick_break","low_kick","zen_headbutt","heavy_slam","curse","taunt","roar","mega_kick","strength","retaliate","spirit_break","wish","charm","fire_fang","thunder_fang","drain_punch","fake_out","hyper_fang","population_bomb","slash","false_swipe"],
    dex="妖精の加護を受けた姿。放つ突進は妖精の光をまとい、竜すら退ける。")
 # 14 ムニR竜 ドラゴン
-sp("muni_r_dragon","ムニ（竜）",["dragon"],80,85,80,50,75,70,"multiscale",num=14,weight=9.0,height=0.5,base_form="muni",form="R竜",catch_rate=120,base_exp=100,ev_yield={"hp":1},
+sp("muni_r_dragon","ムニ（竜）",["dragon"],80,90,80,45,75,70,"multiscale",num=14,weight=9.0,height=0.5,base_form="muni",form="R竜",catch_rate=120,base_exp=100,ev_yield={"hp":1},
    level=[(1,"pound"),(1,"leer"),(4,"twister"),(7,"dragon_breath"),(10,"minimize"),(13,"scary_face"),(16,"dragon_tail"),(19,"dual_chop"),(22,"dragon_dance"),(25,"dragon_pulse"),(28,"roost"),(31,"dragon_claw"),(34,"breaking_swipe"),(37,"scale_shot"),(40,"draco_meteor"),(43,"outrage"),(46,"dragon_rush"),(49,"haze"),(52,"light_screen"),(55,"reflect")],
    tm=COMMON_TM+["thunderbolt","flamethrower","ice_beam","earthquake","iron_head","u_turn","taunt","encore","wish","baton_pass","calm_mind","stored_power","body_slam","play_rough","knock_off","aqua_tail","iron_tail","fire_fang","thunder_fang","ice_fang","snore","agility","work_up","hyper_voice","fire_punch","thunder_punch","psych_up","helping_hand","extreme_speed"],
    dex="小さな竜の鱗をまとった姿。傷ひとつない鱗は、どんな攻撃の勢いも半分に殺してしまう。")

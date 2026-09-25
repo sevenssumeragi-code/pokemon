@@ -335,22 +335,22 @@
    "role": "attacker"
   },
   {
-   "name": "steadfast_sash",
+   "name": "eviolite_bulk",
    "moves": [
-    "sacred_sword",
+    "bulk_up",
+    "drain_punch",
     "night_slash",
-    "swords_dance",
-    "aqua_cutter"
+    "psycho_cut"
    ],
-   "item": "focus_sash",
-   "nature": "jolly",
+   "item": "eviolite",
+   "nature": "impish",
    "evs": {
-    "atk": 252,
-    "spe": 252,
-    "hp": 4
+    "hp": 252,
+    "def": 252,
+    "atk": 4
    },
-   "ability": "steadfast",
-   "role": "sweeper"
+   "ability": "sharpness",
+   "role": "bulky_attacker"
   }
  ],
  "trans": [
@@ -427,24 +427,6 @@
    },
    "ability": "sacred_light",
    "role": "wall"
-  },
-  {
-   "name": "cosmic",
-   "moves": [
-    "cosmic_power",
-    "roost",
-    "stored_power",
-    "wish"
-   ],
-   "item": "leftovers",
-   "nature": "calm",
-   "evs": {
-    "hp": 252,
-    "spd": 252,
-    "def": 4
-   },
-   "ability": "sacred_light",
-   "role": "stall"
   },
   {
    "name": "support",
@@ -783,35 +765,35 @@
    "role": "sweeper"
   },
   {
-   "name": "bulky",
+   "name": "dd_eq",
    "moves": [
-    "dragon_tail",
-    "roost",
-    "haze",
-    "toxic"
+    "dragon_dance",
+    "dragon_claw",
+    "earthquake",
+    "extreme_speed"
    ],
-   "item": "leftovers",
-   "nature": "impish",
+   "item": "lum_berry",
+   "nature": "adamant",
    "evs": {
-    "hp": 252,
-    "def": 252,
-    "spd": 4
+    "atk": 252,
+    "spe": 252,
+    "hp": 4
    },
    "ability": "multiscale",
-   "role": "wall"
+   "role": "sweeper"
   },
   {
-   "name": "mixed",
+   "name": "band",
    "moves": [
-    "draco_meteor",
-    "flamethrower",
-    "ice_beam",
+    "outrage",
+    "extreme_speed",
+    "earthquake",
     "u_turn"
    ],
-   "item": "choice_specs",
-   "nature": "timid",
+   "item": "choice_band",
+   "nature": "adamant",
    "evs": {
-    "spa": 252,
+    "atk": 252,
     "spe": 252,
     "hp": 4
    },
@@ -839,22 +821,22 @@
    "role": "sweeper"
   },
   {
-   "name": "powder_sash",
+   "name": "specs",
    "moves": [
-    "sleep_powder",
-    "stun_spore",
-    "u_turn",
-    "sticky_web"
+    "hurricane",
+    "bug_buzz",
+    "thunder",
+    "focus_blast"
    ],
-   "item": "focus_sash",
+   "item": "choice_specs",
    "nature": "timid",
    "evs": {
-    "hp": 252,
+    "spa": 252,
     "spe": 252,
-    "spa": 4
+    "hp": 4
    },
    "ability": "compound_eyes",
-   "role": "support"
+   "role": "attacker"
   },
   {
    "name": "quiver_cov",
@@ -877,12 +859,12 @@
  ],
  "muni_r_normal": [
   {
-   "name": "minimize_bp",
+   "name": "yawn_wish",
    "moves": [
-    "minimize",
-    "baton_pass",
-    "substitute",
-    "body_slam"
+    "yawn",
+    "wish",
+    "protect",
+    "extreme_speed"
    ],
    "item": "leftovers",
    "nature": "impish",
