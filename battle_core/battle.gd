@@ -45,6 +45,13 @@ var stats: Dictionary = {"ability_activations": {}, "item_activations": {}, "mov
 var max_turns: int = 1000
 var debug_fixed_roll: int = -1  # 85..100 forces the damage random factor (tests)
 var debug_no_crit: bool = false
+# RPG-layer options
+var is_wild: bool = false          # wild encounter: running and capturing allowed
+var allow_items: bool = false      # bag items usable (RPG battles)
+var bag: Dictionary = {}           # item id -> count (shared with GameState when provided)
+var escape_attempts: int = 0
+var escaped: bool = false
+var captured = null                # BattlePokemon caught (wild battles)
 var estimating: bool = false  # true while AI runs side-effect-free damage estimates
 
 # ============================================================
@@ -61,6 +68,10 @@ func _init(config: Dictionary = {}) -> void:
 	max_turns = int(config.get("max_turns", 1000))
 	debug_fixed_roll = int(config.get("fixed_roll", -1))
 	debug_no_crit = bool(config.get("no_crit", false))
+	is_wild = bool(config.get("wild", false))
+	allow_items = bool(config.get("allow_items", is_wild))
+	if config.has("bag"):
+		bag = config["bag"]
 	var teams: Array = config.get("teams", [])
 	var names: Array = config.get("names", ["P1", "P2"])
 	for i in range(teams.size()):
@@ -404,7 +415,7 @@ func _build_request(side, kind: String) -> Dictionary:
 		active_reqs.append(_move_request_for(p))
 	if not any:
 		return {"type": "wait"}
-	return {"type": "move", "active": active_reqs, "bench": _bench_info(side)}
+	return {"type": "move", "active": active_reqs, "bench": _bench_info(side), "can_run": is_wild and side.index == 0, "can_use_items": allow_items and side.index == 0}
 
 func _bench_info(side) -> Array:
 	var out: Array = []
@@ -504,6 +515,26 @@ func _validate_choice(side, req: Dictionary, entries: Array) -> String:
 			if p.fainted or p.active or used.has(idx):
 				return "cannot switch to %d" % idx
 			used[idx] = true
+		elif e.get("type", "") == "run":
+			if not is_wild or side.index != 0:
+				return "cannot run"
+		elif e.get("type", "") == "item":
+			if not allow_items or side.index != 0:
+				return "items not allowed"
+			var iid := str(e.get("item", ""))
+			if int(bag.get(iid, 0)) <= 0:
+				return "no such item"
+			var idef := GameData.get_item(iid)
+			var pocket := str(idef.get("pocket", "held"))
+			if pocket == "ball":
+				if not is_wild:
+					return "cannot throw a ball at a trainer's monster"
+			elif pocket == "medicine":
+				var t := int(e.get("target", -1))
+				if t < 0 or t >= side.team.size():
+					return "bad item target"
+			else:
+				return "item not usable in battle"
 		elif e.get("type", "") == "move":
 			var mid := ""
 			if e.has("move"):
@@ -578,6 +609,10 @@ func commit_decisions() -> void:
 			var p = side.active[int(actives[i]["slot"])]
 			if e["type"] == "switch":
 				queue.append({"choice": "switch", "pokemon": p, "target": side.team[int(e["index"])], "order": SWITCH_ORDER, "priority": 0, "frac": 0, "speed": 0})
+			elif e["type"] == "run":
+				queue.append({"choice": "run", "pokemon": p, "order": 1, "priority": 0, "frac": 0, "speed": 0})
+			elif e["type"] == "item":
+				queue.append({"choice": "item", "pokemon": p, "item": str(e["item"]), "target": int(e.get("target", -1)), "order": 104, "priority": 0, "frac": 0, "speed": 0})
 			else:
 				var move_id: String = e["move"]
 				var md: Dictionary = GameData.get_move(move_id).duplicate(true)
@@ -607,7 +642,7 @@ func _resolve_priorities() -> void:
 			var pr = run_event("ModifyPriority", p, null, md, int(md.get("priority", 0)))
 			a["priority"] = int(pr) if typeof(pr) != TYPE_BOOL else 0
 			a["speed"] = p.speed
-		elif a["choice"] == "switch":
+		elif a["choice"] == "switch" or a["choice"] == "item" or a["choice"] == "run":
 			a["speed"] = a["pokemon"].speed
 
 func _sort_queue() -> void:
@@ -659,6 +694,7 @@ func next_turn() -> void:
 		p.newly_switched = false
 		p.attacked_by.clear()
 		p.active_turns += 1
+	_record_participants()
 	update_speeds()
 	make_requests("move")
 
@@ -739,6 +775,10 @@ func _run_action(action: Dictionary) -> void:
 			add_log(["residual"])
 			residual()
 			each_event("Update")
+		"run":
+			attempt_run(action["pokemon"])
+		"item":
+			use_bag_item(action["pokemon"].side, action["item"], action["target"])
 
 # ============================================================
 # Switching
@@ -816,7 +856,18 @@ func switch_in(p, slot: int, is_mid_turn: bool) -> bool:
 	return true
 
 ## Run entry hazards + ability/item starts for pokemon that just switched in, in speed order.
+func _record_participants() -> void:
+	if sides.size() < 2:
+		return
+	for foe in sides[1].active:
+		if foe == null or foe.fainted:
+			continue
+		for mine in sides[0].active:
+			if mine != null and not mine.fainted:
+				foe.participants[mine.team_index] = true
+
 func _run_switch_in_events() -> void:
+	_record_participants()
 	if _pending_switch_ins.is_empty():
 		return
 	var list := _pending_switch_ins.duplicate()
@@ -2188,6 +2239,129 @@ func _end_effect(e: Dictionary) -> void:
 			clear_terrain()
 		"field":
 			remove_pseudo_weather(e["id"])
+
+# ============================================================
+# RPG: running, bag items, capture
+# ============================================================
+func attempt_run(p) -> bool:
+	if not is_wild:
+		return false
+	var foe = p.foes()[0] if not p.foes().is_empty() else null
+	escape_attempts += 1
+	var a: int = p.get_stat("spe")
+	var b: int = foe.get_stat("spe") if foe != null else 1
+	var ok := false
+	if foe == null or b <= a:
+		ok = true
+	else:
+		var f := int(floor(a * 128.0 / b + 30 * escape_attempts)) % 256
+		ok = rng.next(256) < f
+	if ok:
+		add_log(["escape", pid(p)])
+		escaped = true
+		ended = true
+		winner = -1
+		queue.clear()
+		return true
+	add_log(["-escape-fail", pid(p)])
+	return false
+
+func use_bag_item(side, item_id: String, target_index: int) -> bool:
+	if int(bag.get(item_id, 0)) <= 0:
+		return false
+	var idef := GameData.get_item(item_id)
+	var pocket := str(idef.get("pocket", "held"))
+	var eff: Dictionary = idef.get("effect", {})
+	if pocket == "ball":
+		bag[item_id] = int(bag[item_id]) - 1
+		if bag[item_id] <= 0:
+			bag.erase(item_id)
+		return attempt_capture(side, item_id, float(eff.get("ball_rate", 1.0)))
+	if pocket != "medicine" or target_index < 0 or target_index >= side.team.size():
+		return false
+	var t = side.team[target_index]
+	var did := false
+	add_log(["-useitem", "p%d" % (side.index + 1), item_id, pid(t)])
+	if eff.has("heal_hp"):
+		if not t.fainted and t.hp < t.max_hp:
+			var amt := mini(int(eff["heal_hp"]), t.max_hp - t.hp)
+			if t.active:
+				heal_pokemon(t, amt, t, {"id": item_id, "effect_type": "item"})
+			else:
+				t.hp += amt
+			did = true
+	if eff.has("cure_status"):
+		var cs := str(eff["cure_status"])
+		if t.status != "" and (cs == "all" or cs == t.status):
+			if t.active:
+				cure_status(t, t, {"id": item_id, "effect_type": "item"})
+			else:
+				t.status = ""
+				t.status_state = {}
+			did = true
+		if cs == "all" and t.volatiles.has("confusion"):
+			remove_volatile(t, "confusion")
+			did = true
+	if eff.has("revive"):
+		if t.fainted and not t.active:
+			t.fainted = false
+			t.hp = maxi(1, int(floor(t.max_hp * float(eff["revive"]))))
+			t.status = ""
+			did = true
+	if eff.has("restore_pp"):
+		for m in t.moves:
+			if m["pp"] < m["max_pp"]:
+				m["pp"] = mini(m["max_pp"], m["pp"] + int(eff["restore_pp"]))
+				did = true
+	if did:
+		bag[item_id] = int(bag[item_id]) - 1
+		if bag[item_id] <= 0:
+			bag.erase(item_id)
+	else:
+		add_log(["-fail", pid(t), "item"])
+	return did
+
+## Gen 5+ capture formula with 3 shake checks.
+func attempt_capture(side, ball_id: String, ball_rate: float) -> bool:
+	var foe_side = side.foe
+	var target = null
+	for p in foe_side.active:
+		if p != null and not p.fainted:
+			target = p
+	if target == null:
+		return false
+	add_log(["-throwball", "p%d" % (side.index + 1), ball_id, pid(target)])
+	var rate := float(GameData.get_species(target.species_id).get("catch_rate", 45))
+	var status_bonus := 1.0
+	if target.status in ["slp", "frz"]:
+		status_bonus = 2.5
+	elif target.status in ["par", "psn", "tox", "brn"]:
+		status_bonus = 1.5
+	var a: float = floor((3.0 * target.max_hp - 2.0 * target.hp) * rate * ball_rate * status_bonus / (3.0 * target.max_hp))
+	var shakes := 0
+	var caught := false
+	if a >= 255.0:
+		caught = true
+		shakes = 3
+	else:
+		var b := int(floor(65536.0 / pow(255.0 / maxf(1.0, a), 0.1875)))
+		caught = true
+		for i in range(3):
+			if rng.next(65536) < b:
+				shakes += 1
+			else:
+				caught = false
+				break
+	add_log(["-shake", pid(target), shakes])
+	if caught:
+		add_log(["catch", pid(target)])
+		captured = target
+		ended = true
+		winner = 0
+		queue.clear()
+		return true
+	add_log(["-catchfail", pid(target), shakes])
+	return false
 
 ## Break reference cycles (Battle <-> Side <-> Pokemon) so RefCounted memory is released.
 ## Call after reading results; the battle object is unusable afterwards.

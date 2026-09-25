@@ -558,7 +558,22 @@
   "loaded_dice": "いかさまダイス",
   "metronome": "メトロノーム",
   "grip_claw": "ねばりのかぎづめ",
-  "binding_band": "しめつけバンド"
+  "binding_band": "しめつけバンド",
+  "potion": "キズぐすり",
+  "super_potion": "いいキズぐすり",
+  "hyper_potion": "すごいキズぐすり",
+  "max_potion": "まんたんのくすり",
+  "full_heal": "なんでもなおし",
+  "antidote": "どくけし",
+  "awakening": "ねむけざまし",
+  "revive": "げんきのかけら",
+  "ether": "ピーピーエイド",
+  "monster_ball": "モンスターボール",
+  "great_ball": "スーパーボール",
+  "ultra_ball": "ハイパーボール",
+  "mind_stone": "しんぴのいし",
+  "region_charm": "リージョンのおまもり",
+  "town_map": "タウンマップ"
  },
  "ability_desc": {
   "awakened_lion": "ねむり状態から回復したターンに限り、こうげきが2倍になる。",

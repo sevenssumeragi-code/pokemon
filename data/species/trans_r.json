@@ -20,7 +20,7 @@
   "base_form": "trans",
   "form": "R",
   "region_form": true,
-  "evolves_from": null,
+  "evolves_from": "neo",
   "evolution": null,
   "nfe": false,
   "learnset": {

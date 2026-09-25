@@ -22,11 +22,18 @@
   "form": "",
   "region_form": false,
   "evolves_from": null,
-  "evolution": {
-   "method": "level",
-   "level": 34,
-   "into": "trans"
-  },
+  "evolution": [
+   {
+    "method": "level",
+    "level": 34,
+    "into": "trans"
+   },
+   {
+    "method": "item",
+    "item": "mind_stone",
+    "into": "trans_r"
+   }
+  ],
   "nfe": true,
   "learnset": {
    "level": [

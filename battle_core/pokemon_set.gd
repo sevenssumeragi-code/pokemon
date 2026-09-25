@@ -99,6 +99,32 @@ func validate() -> Array[String]:
 		errs.append("unknown nature " + nature)
 	return errs
 
+## Random wild/trainer monster at a level: random IVs, nature, ability slot; last 4 level-up moves.
+static func generate(species_id: String, level: int, rng: RandomNumberGenerator, item: String = "") -> PokemonSet:
+	var sp := GameData.get_species(species_id)
+	var s := PokemonSet.new()
+	s.species = species_id
+	s.level = level
+	var natures: Array = GameData.natures.keys()
+	natures.sort()
+	s.nature = natures[rng.randi_range(0, natures.size() - 1)]
+	for k in s.ivs:
+		s.ivs[k] = rng.randi_range(0, 31)
+	var slots: Array = sp.get("abilities", {}).keys()
+	s.ability = str(sp["abilities"][slots[rng.randi_range(0, slots.size() - 1)]])
+	s.item = item
+	var moves: Array = []
+	for e in sp.get("learnset", {}).get("level", []):
+		if int(e["level"]) <= level and not moves.has(e["move"]):
+			moves.append(e["move"])
+	while moves.size() > 4:
+		moves.pop_front()
+	if moves.is_empty():
+		moves = [sp["learnset"]["level"][0]["move"]] if not sp["learnset"]["level"].is_empty() else ["tackle"]
+	s.moves = moves
+	s.gender = "M" if rng.randf() < float(sp.get("gender_ratio", 0.5)) else "F"
+	return s
+
 static func learnable_moves(species_id: String) -> Array:
 	var sp = GameData.get_species(species_id)
 	var out := []

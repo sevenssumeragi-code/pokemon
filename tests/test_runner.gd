@@ -34,7 +34,10 @@ func _init() -> void:
 				methods.append(m.name)
 		methods.sort()
 		var file_fail := 0
+		var verbose := OS.get_environment("TEST_VERBOSE") == "1"
 		for m in methods:
+			if verbose:
+				printerr("  running ", m)
 			inst._current = "%s::%s" % [path.get_file(), m]
 			var before: int = inst._failures.size()
 			inst.before_each()

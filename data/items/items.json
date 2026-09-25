@@ -7,7 +7,8 @@
   "is_choice": true,
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "choice_specs": {
   "handler": "choice",
@@ -17,7 +18,8 @@
   "is_choice": true,
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "choice_scarf": {
   "handler": "choice",
@@ -27,32 +29,37 @@
   "is_choice": true,
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "life_orb": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "focus_sash": {
   "consumable": true,
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "leftovers": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "black_sludge": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "sitrus_berry": {
   "is_berry": true,
@@ -68,7 +75,8 @@
    ]
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "oran_berry": {
   "is_berry": true,
@@ -81,13 +89,15 @@
    "heal_flat": 10
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "lum_berry": {
   "is_berry": true,
   "flags": {},
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "chesto_berry": {
   "is_berry": true,
@@ -98,7 +108,8 @@
    ]
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "cheri_berry": {
   "is_berry": true,
@@ -109,7 +120,8 @@
    ]
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "pecha_berry": {
   "is_berry": true,
@@ -121,7 +133,8 @@
    ]
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "rawst_berry": {
   "is_berry": true,
@@ -132,7 +145,8 @@
    ]
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "aspear_berry": {
   "is_berry": true,
@@ -143,7 +157,8 @@
    ]
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "persim_berry": {
   "is_berry": true,
@@ -154,7 +169,8 @@
    ]
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "occa_berry": {
   "is_berry": true,
@@ -163,7 +179,8 @@
    "type": "fire"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "passho_berry": {
   "is_berry": true,
@@ -172,7 +189,8 @@
    "type": "water"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "wacan_berry": {
   "is_berry": true,
@@ -181,7 +199,8 @@
    "type": "electric"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "rindo_berry": {
   "is_berry": true,
@@ -190,7 +209,8 @@
    "type": "grass"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "yache_berry": {
   "is_berry": true,
@@ -199,7 +219,8 @@
    "type": "ice"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "chople_berry": {
   "is_berry": true,
@@ -208,7 +229,8 @@
    "type": "fighting"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "kebia_berry": {
   "is_berry": true,
@@ -217,7 +239,8 @@
    "type": "poison"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "shuca_berry": {
   "is_berry": true,
@@ -226,7 +249,8 @@
    "type": "ground"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "coba_berry": {
   "is_berry": true,
@@ -235,7 +259,8 @@
    "type": "flying"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "payapa_berry": {
   "is_berry": true,
@@ -244,7 +269,8 @@
    "type": "psychic"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "tanga_berry": {
   "is_berry": true,
@@ -253,7 +279,8 @@
    "type": "bug"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "charti_berry": {
   "is_berry": true,
@@ -262,7 +289,8 @@
    "type": "rock"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "kasib_berry": {
   "is_berry": true,
@@ -271,7 +299,8 @@
    "type": "ghost"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "haban_berry": {
   "is_berry": true,
@@ -280,7 +309,8 @@
    "type": "dragon"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "colbur_berry": {
   "is_berry": true,
@@ -289,7 +319,8 @@
    "type": "dark"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "babiri_berry": {
   "is_berry": true,
@@ -298,7 +329,8 @@
    "type": "steel"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "roseli_berry": {
   "is_berry": true,
@@ -307,7 +339,8 @@
    "type": "fairy"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "chilan_berry": {
   "is_berry": true,
@@ -316,7 +349,8 @@
    "type": "normal"
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "salac_berry": {
   "is_berry": true,
@@ -327,7 +361,8 @@
    }
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "liechi_berry": {
   "is_berry": true,
@@ -338,7 +373,8 @@
    }
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "petaya_berry": {
   "is_berry": true,
@@ -349,32 +385,37 @@
    }
   },
   "flags": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "assault_vest": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "rocky_helmet": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "eviolite": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "weakness_policy": {
   "consumable": true,
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "light_clay": {
   "handler": "passive",
@@ -383,7 +424,8 @@
   },
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "heat_rock": {
   "handler": "passive",
@@ -391,7 +433,8 @@
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "damp_rock": {
   "handler": "passive",
@@ -399,7 +442,8 @@
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "smooth_rock": {
   "handler": "passive",
@@ -407,7 +451,8 @@
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "icy_rock": {
   "handler": "passive",
@@ -415,7 +460,8 @@
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "terrain_extender": {
   "handler": "passive",
@@ -423,7 +469,8 @@
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "silk_scarf": {
   "handler": "type_boost",
@@ -432,7 +479,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "charcoal": {
   "handler": "type_boost",
@@ -441,7 +489,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "mystic_water": {
   "handler": "type_boost",
@@ -450,7 +499,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "magnet": {
   "handler": "type_boost",
@@ -459,7 +509,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "miracle_seed": {
   "handler": "type_boost",
@@ -468,7 +519,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "never_melt_ice": {
   "handler": "type_boost",
@@ -477,7 +529,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "black_belt": {
   "handler": "type_boost",
@@ -486,7 +539,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "poison_barb": {
   "handler": "type_boost",
@@ -495,7 +549,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "soft_sand": {
   "handler": "type_boost",
@@ -504,7 +559,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "sharp_beak": {
   "handler": "type_boost",
@@ -513,7 +569,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "twisted_spoon": {
   "handler": "type_boost",
@@ -522,7 +579,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "silver_powder": {
   "handler": "type_boost",
@@ -531,7 +589,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "hard_stone": {
   "handler": "type_boost",
@@ -540,7 +599,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "spell_tag": {
   "handler": "type_boost",
@@ -549,7 +609,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "dragon_fang": {
   "handler": "type_boost",
@@ -558,7 +619,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "black_glasses": {
   "handler": "type_boost",
@@ -567,7 +629,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "metal_coat": {
   "handler": "type_boost",
@@ -576,7 +639,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "fairy_feather": {
   "handler": "type_boost",
@@ -585,7 +649,8 @@
   },
   "flags": {},
   "is_berry": false,
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "air_balloon": {
   "flags": {
@@ -593,63 +658,73 @@
   },
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "eject_button": {
   "consumable": true,
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "red_card": {
   "consumable": true,
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "quick_claw": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "bright_powder": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "wide_lens": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "expert_belt": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "muscle_band": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "wise_glasses": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "scope_lens": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "shed_shell": {
   "handler": "passive",
@@ -658,7 +733,8 @@
   },
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "heavy_duty_boots": {
   "handler": "passive",
@@ -667,7 +743,8 @@
   },
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "safety_goggles": {
   "handler": "passive",
@@ -677,7 +754,8 @@
   },
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "protective_pads": {
   "handler": "passive",
@@ -686,21 +764,24 @@
   },
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "mental_herb": {
   "consumable": true,
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "white_herb": {
   "consumable": true,
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "power_herb": {
   "handler": "passive",
@@ -710,55 +791,64 @@
   },
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "flame_orb": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "toxic_orb": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "covert_cloak": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "clear_amulet": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "shell_bell": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "big_root": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "loaded_dice": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "metronome": {
   "flags": {},
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "grip_claw": {
   "handler": "passive",
@@ -767,7 +857,8 @@
   },
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
  },
  "binding_band": {
   "handler": "passive",
@@ -776,6 +867,172 @@
   },
   "is_berry": false,
   "params": {},
-  "pocket": "held"
+  "pocket": "held",
+  "price": 1000
+ },
+ "potion": {
+  "pocket": "medicine",
+  "price": 200,
+  "effect": {
+   "heal_hp": 20
+  },
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "handler": "passive"
+ },
+ "super_potion": {
+  "pocket": "medicine",
+  "price": 700,
+  "effect": {
+   "heal_hp": 60
+  },
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "handler": "passive"
+ },
+ "hyper_potion": {
+  "pocket": "medicine",
+  "price": 1500,
+  "effect": {
+   "heal_hp": 120
+  },
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "handler": "passive"
+ },
+ "max_potion": {
+  "pocket": "medicine",
+  "price": 2500,
+  "effect": {
+   "heal_hp": 9999
+  },
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "handler": "passive"
+ },
+ "full_heal": {
+  "pocket": "medicine",
+  "price": 400,
+  "effect": {
+   "cure_status": "all"
+  },
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "handler": "passive"
+ },
+ "antidote": {
+  "pocket": "medicine",
+  "price": 200,
+  "effect": {
+   "cure_status": "psn"
+  },
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "handler": "passive"
+ },
+ "awakening": {
+  "pocket": "medicine",
+  "price": 200,
+  "effect": {
+   "cure_status": "slp"
+  },
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "handler": "passive"
+ },
+ "revive": {
+  "pocket": "medicine",
+  "price": 2000,
+  "effect": {
+   "revive": 0.5
+  },
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "handler": "passive"
+ },
+ "ether": {
+  "pocket": "medicine",
+  "price": 1200,
+  "effect": {
+   "restore_pp": 10
+  },
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "handler": "passive"
+ },
+ "monster_ball": {
+  "pocket": "ball",
+  "price": 200,
+  "effect": {
+   "ball_rate": 1.0
+  },
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "handler": "passive"
+ },
+ "great_ball": {
+  "pocket": "ball",
+  "price": 600,
+  "effect": {
+   "ball_rate": 1.5
+  },
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "handler": "passive"
+ },
+ "ultra_ball": {
+  "pocket": "ball",
+  "price": 1200,
+  "effect": {
+   "ball_rate": 2.0
+  },
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "handler": "passive"
+ },
+ "mind_stone": {
+  "pocket": "evolution",
+  "price": 3000,
+  "effect": {
+   "evolve": true
+  },
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "handler": "passive"
+ },
+ "region_charm": {
+  "pocket": "key",
+  "price": 0,
+  "effect": {
+   "key": true
+  },
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "handler": "passive"
+ },
+ "town_map": {
+  "pocket": "key",
+  "price": 0,
+  "effect": {
+   "key": true
+  },
+  "flags": {},
+  "is_berry": false,
+  "params": {},
+  "handler": "passive"
  }
 }

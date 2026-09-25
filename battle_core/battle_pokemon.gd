@@ -64,6 +64,7 @@ var illusion = null
 var faint_queued: bool = false
 var can_mega = false
 var revealed_moves: Dictionary = {}  # move ids this pokemon has used (for fair AI)
+var participants: Dictionary = {}  # foe side only: player team indices that fought this pokemon (exp share)
 var speed: int = 0
 
 
