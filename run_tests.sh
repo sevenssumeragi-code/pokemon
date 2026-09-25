@@ -11,4 +11,9 @@ STATUS=0
 echo "$OUT" | grep -q "failed, " || STATUS=1
 echo "$OUT" | grep -v "resources still in use" | grep -qE "SCRIPT ERROR|^ERROR|USER ERROR" && STATUS=1
 echo "$OUT" | grep -qE "=== .* 0 failed" || STATUS=1
+# UI smoke (headless auto-play through the battle screen)
+UI=$("$GODOT" --headless --path . -s tests/ui_smoke.gd 2>&1 | grep -v "^Godot Engine")
+echo "$UI" | grep -E "UI_SMOKE|SCRIPT ERROR"
+echo "$UI" | grep -q "UI_SMOKE_OK" || STATUS=1
+echo "$UI" | grep -qE "SCRIPT ERROR" && STATUS=1
 exit $STATUS
