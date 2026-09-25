@@ -2,6 +2,15 @@ class_name UITheme
 extends RefCounted
 ## Shared styling helpers for the 2D UI (code-built).
 
+## Make a Control fill its parent (works for code-created roots under the Window too).
+static func fill_parent(c: Control) -> void:
+	c.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var parent := c.get_parent()
+	if parent is Window:
+		c.size = (parent as Window).size
+	elif parent is Control:
+		c.size = (parent as Control).size
+
 static func panel_style(bg: Color = Color(0.08, 0.09, 0.14, 0.92), border: Color = Color(0.85, 0.85, 0.9)) -> StyleBoxFlat:
 	var sb := StyleBoxFlat.new()
 	sb.bg_color = bg

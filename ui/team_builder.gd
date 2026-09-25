@@ -23,7 +23,7 @@ var _set_opt: OptionButton
 var _updating := false
 
 func _ready() -> void:
-	set_anchors_preset(Control.PRESET_FULL_RECT)
+	UITheme.fill_parent(self)
 	GameData.ensure_loaded()
 	_species_ids = GameData.species.keys()
 	_species_ids.sort()

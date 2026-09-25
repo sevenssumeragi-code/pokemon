@@ -47,7 +47,7 @@ var _enemy_team_icons: HBoxContainer
 var _bag_note: Label
 
 func _ready() -> void:
-	set_anchors_preset(Control.PRESET_FULL_RECT)
+	UITheme.fill_parent(self)
 	GameData.ensure_loaded()
 	_build_ui()
 	if not player_team.is_empty():
@@ -122,6 +122,7 @@ func _build_ui() -> void:
 	_enemy_bar = HPBar.new()
 	_enemy_bar.show_numbers = false
 	_enemy_bar.custom_minimum_size = Vector2(240, 14)
+	_enemy_bar.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	ev.add_child(_enemy_bar)
 	_enemy_status = UITheme.make_label("", 13, Color(1, 0.85, 0.5))
 	ev.add_child(_enemy_status)
@@ -141,7 +142,8 @@ func _build_ui() -> void:
 	_player_name = UITheme.make_label("", 17)
 	pv.add_child(_player_name)
 	_player_bar = HPBar.new()
-	_player_bar.custom_minimum_size = Vector2(220, 14)
+	_player_bar.custom_minimum_size = Vector2(200, 14)
+	_player_bar.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	pv.add_child(_player_bar)
 	_player_status = UITheme.make_label("", 13, Color(1, 0.85, 0.5))
 	pv.add_child(_player_status)

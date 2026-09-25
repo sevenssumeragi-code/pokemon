@@ -7,7 +7,7 @@ signal quick_battle
 signal quit_game
 
 func _ready() -> void:
-	set_anchors_preset(Control.PRESET_FULL_RECT)
+	UITheme.fill_parent(self)
 	var bg := ColorRect.new()
 	bg.color = Color(0.05, 0.06, 0.1)
 	bg.set_anchors_preset(Control.PRESET_FULL_RECT)

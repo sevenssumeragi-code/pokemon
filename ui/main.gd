@@ -5,15 +5,22 @@ extends Control
 var _current: Control = null
 
 func _ready() -> void:
-	set_anchors_preset(Control.PRESET_FULL_RECT)
+	UITheme.fill_parent(self)
 	GameData.ensure_loaded()
+	get_tree().root.size_changed.connect(_on_resized)
 	show_title()
+
+func _on_resized() -> void:
+	UITheme.fill_parent(self)
+	if _current != null:
+		UITheme.fill_parent(_current)
 
 func _swap(node: Control) -> void:
 	if _current != null:
 		_current.queue_free()
 	_current = node
 	add_child(node)
+	UITheme.fill_parent(node)
 
 func show_title() -> void:
 	var t := TitleScreen.new()
