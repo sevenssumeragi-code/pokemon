@@ -46,7 +46,7 @@ sp("hyu","ヒュウ",["ghost"],90,50,85,90,80,105,"dark_domain",num=3,weight=12.
 # 4 ムニ フェアリー 平均低め
 sp("muni","ムニ",["fairy"],85,40,70,85,80,80,"prankster",num=4,weight=4.5,height=0.4,catch_rate=190,base_exp=90,ev_yield={"spe":1},
    level=[(1,"pound"),(1,"charm"),(4,"fairy_wind"),(7,"baby_doll_eyes"),(10,"disarming_voice"),(13,"minimize"),(16,"sweet_kiss"),(19,"draining_kiss"),(22,"encore"),(25,"wish"),(28,"dazzling_gleam"),(31,"attract"),(34,"moonlight"),(37,"moonblast"),(40,"play_rough"),(43,"misty_terrain"),(46,"light_screen"),(49,"reflect"),(52,"thunder_wave"),(55,"tearful_look")],
-   tm=COMMON_TM+["taunt","will_o_wisp","psychic","thunderbolt","shadow_ball","calm_mind","yawn","heal_bell","baton_pass","safeguard","stored_power","psych_up","helping_hand","trick","knock_off","u_turn","energy_ball","mystical_fire","nasty_plot","icy_wind","charge_beam","snore","fake_tears","tickle","screech","confuse_ray","hyper_voice","work_up","body_slam","spirit_break"],
+   tm=COMMON_TM+["taunt","will_o_wisp","psychic","thunderbolt","shadow_ball","calm_mind","yawn","heal_bell","baton_pass","safeguard","stored_power","psych_up","helping_hand","trick","knock_off","u_turn","energy_ball","mystical_fire","nasty_plot","leech_seed","icy_wind","charge_beam","snore","fake_tears","tickle","screech","confuse_ray","hyper_voice","work_up","body_slam","spirit_break"],
    dex="小さないたずら好き。相手が動く前にちょこまかと動き回り、姿を小さくして攻撃をかわす。")
 # 5 ゲル こおり C/S
 sp("gel","ゲル",["ice"],80,60,85,90,85,100,"snow_warning",num=5,weight=32.0,height=1.1,catch_rate=60,base_exp=170,ev_yield={"spa":2},
@@ -54,7 +54,7 @@ sp("gel","ゲル",["ice"],80,60,85,90,85,100,"snow_warning",num=5,weight=32.0,he
    tm=COMMON_TM+["psychic","dazzling_gleam","shadow_ball","energy_ball","surf","hydro_pump","nasty_plot","light_screen","reflect","thunder_wave","icy_wind","water_pulse","weather_ball","hyper_voice","snore","taunt","encore","tri_attack","yawn","rain_dance","psyshock","flash_cannon","ice_spinner","avalanche","earth_power","chilling_water","haze"],
    dex="現れると周囲に雪を降らせる。雪の中では体表が硬く凍りつき、吹雪を自在に操る。")
 # 6 ネオ かくとう A/C (進化前)
-sp("neo","ネオ",["fighting"],60,100,55,70,55,80,"sharpness",hidden="steadfast",num=6,weight=20.0,height=0.9,nfe=True,evolution={"method":"level","level":34,"into":"trans"},catch_rate=120,base_exp=80,ev_yield={"atk":1},
+sp("neo","ネオ",["fighting"],60,100,55,60,55,90,"sharpness",hidden="steadfast",num=6,weight=20.0,height=0.9,nfe=True,evolution={"method":"level","level":34,"into":"trans"},catch_rate=120,base_exp=80,ev_yield={"atk":1},
    level=[(1,"scratch"),(1,"leer"),(4,"karate_chop"),(8,"cut"),(12,"fury_cutter"),(16,"focus_energy"),(20,"slash"),(24,"aerial_ace"),(28,"night_slash"),(32,"swords_dance"),(36,"x_scissor"),(40,"sacred_sword"),(44,"psycho_cut"),(48,"secret_sword"),(52,"close_combat")],
    tm=COMMON_TM+["brick_break","bulk_up","rock_slide","stone_edge","earthquake","knock_off","u_turn","aura_sphere","vacuum_wave","air_cutter","leaf_blade","stone_axe","ceaseless_edge","drain_punch","mach_punch","poison_jab","iron_head","taunt","work_up","body_press","low_kick","aqua_cutter","razor_shell","focus_blast","cross_poison","detect","counter","reversal","bullet_punch","snore"],
    dex="鋭い爪を研ぎ澄ますのが日課。まだ幼いが、切れ味だけは大人にも負けない。")

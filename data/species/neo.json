@@ -8,9 +8,9 @@
    "hp": 60,
    "atk": 100,
    "def": 55,
-   "spa": 70,
+   "spa": 60,
    "spd": 55,
-   "spe": 80
+   "spe": 90
   },
   "abilities": {
    "0": "sharpness",

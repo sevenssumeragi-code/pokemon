@@ -169,12 +169,12 @@
  ],
  "muni": [
   {
-   "name": "minimize",
+   "name": "sub_seed",
    "moves": [
-    "minimize",
-    "moonblast",
-    "wish",
-    "protect"
+    "substitute",
+    "leech_seed",
+    "protect",
+    "moonblast"
    ],
    "item": "leftovers",
    "nature": "bold",
@@ -239,6 +239,24 @@
    },
    "ability": "prankster",
    "role": "support"
+  },
+  {
+   "name": "minimize",
+   "moves": [
+    "minimize",
+    "moonblast",
+    "moonlight",
+    "substitute"
+   ],
+   "item": "leftovers",
+   "nature": "bold",
+   "evs": {
+    "hp": 252,
+    "def": 252,
+    "spd": 4
+   },
+   "ability": "prankster",
+   "role": "stall"
   }
  ],
  "gel": [
