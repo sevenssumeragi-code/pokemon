@@ -84,7 +84,7 @@
     },
     {
      "level": 53,
-     "move": "brave_bird"
+     "move": "drill_peck"
     },
     {
      "level": 57,
@@ -92,12 +92,11 @@
     },
     {
      "level": 61,
-     "move": "kowtow_cleave"
+     "move": "air_slash"
     }
    ],
    "tm": [
     "agility",
-    "air_slash",
     "aqua_cutter",
     "attract",
     "body_press",

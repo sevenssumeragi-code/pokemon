@@ -75,7 +75,7 @@ func test_roster_fixed_spec() -> void:
 		"trans": {"types": ["fighting", "ground"], "ability": "sharpness", "hidden": "steadfast", "moves": ["swords_dance", "sacred_sword", "psycho_cut"]},
 		"marutan": {"types": ["flying"], "ability": "sacred_light", "moves": ["roost"]},
 		"namazuo": {"types": ["electric", "steel"], "ability": "static", "moves": ["swords_dance", "iron_head", "wild_charge", "night_slash"]},
-		"honebami": {"types": ["steel", "flying"], "ability": "unburden", "moves": ["swords_dance", "iron_head", "brave_bird", "air_cutter"]},
+		"honebami": {"types": ["steel", "flying"], "ability": "unburden", "moves": ["swords_dance", "iron_head", "drill_peck", "air_cutter"]},
 		"jinpachi_r": {"types": ["rock"], "ability": "sturdy", "moves": ["stone_edge", "rock_slide"]},
 		"hyu_r": {"types": ["grass"], "ability": "contrary", "moves": ["leaf_storm", "giga_drain"]},
 		"renny_r": {"types": ["fairy"], "ability": "pixilate", "moves": ["body_slam", "double_edge"]},

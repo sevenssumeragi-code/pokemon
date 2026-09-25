@@ -83,14 +83,10 @@
     },
     {
      "level": 52,
-     "move": "extreme_speed"
-    },
-    {
-     "level": 56,
      "move": "sleep_talk"
     },
     {
-     "level": 60,
+     "level": 56,
      "move": "boomburst"
     }
    ],
@@ -109,7 +105,6 @@
     "fake_out",
     "false_swipe",
     "fire_fang",
-    "giga_impact",
     "heavy_slam",
     "hyper_fang",
     "ice_fang",

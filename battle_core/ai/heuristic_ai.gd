@@ -308,6 +308,8 @@ func _score_move(user, move_id: String, target, foes: Array) -> float:
 		score = float(total)
 		if in_danger and not user.volatiles.has("substitute"):
 			score -= 40.0
+		elif their * 2.0 >= my_hp and not user.volatiles.has("substitute"):
+			score -= 20.0  # 2HKO'd: setting up is usually a loss unless we already threaten
 		if their < 20.0:
 			score += 10.0
 		if user.positive_boosts() >= 6:

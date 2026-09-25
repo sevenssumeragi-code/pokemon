@@ -9,7 +9,7 @@ a = ap.parse_args()
 loc = json.load(open("data/localization/ja.json"))
 JA = loc["species"]; JAB = loc["abilities"]; JIT = loc["items"]
 def merge(files):
-    M = {"battles": 0, "species": {}, "sets": {}, "abilities": collections.Counter(), "items": collections.Counter(), "turns_hist": collections.Counter(), "ties": 0, "matchups": {}, "pairs": {}, "turns_sum": 0.0, "mode": None}
+    M = {"battles": 0, "species": {}, "sets": {}, "stalls": collections.Counter(), "abilities": collections.Counter(), "items": collections.Counter(), "turns_hist": collections.Counter(), "ties": 0, "matchups": {}, "pairs": {}, "turns_sum": 0.0, "mode": None}
     for f in files:
         d = json.load(open(f))
         M["mode"] = d["mode"]
@@ -22,7 +22,7 @@ def merge(files):
             s = M["sets"].setdefault(k, collections.Counter()); s.update(v)
         for k, v in d.get("pairs", {}).items():
             s = M["pairs"].setdefault(k, collections.Counter()); s.update(v)
-        M["abilities"].update(d.get("abilities", {})); M["items"].update(d.get("items", {}))
+        M["abilities"].update(d.get("abilities", {})); M["items"].update(d.get("items", {})); M["stalls"].update(d.get("stalls", {}))
         M["turns_hist"].update({int(k): v for k, v in d.get("turns_hist", {}).items()})
         for k, v in d.get("matchups", {}).items():
             m = M["matchups"].setdefault(k, dict(v, wins_a=0, wins_b=0, ties=0, turns=0.0, n=0))
@@ -79,13 +79,13 @@ else:
     P(f"AI: heuristic vs heuristic, team size {3 if mode=='3v3' else 6}, avg turns {avg_turns:.1f}, ties {M['ties']}")
     P("")
     P("## Per-species (team-inclusion win rate)")
-    P("| species | 種族 | games | team win% | avg dmg/game | KOs/game | faint% | first-move% | status |")
-    P("|---|---|---|---|---|---|---|---|---|")
+    P("| species | 種族 | games | team win% | avg dmg/game | KOs/game | faint% | first-move% | avg turns | 60+ turn% | status |")
+    P("|---|---|---|---|---|---|---|---|---|---|---|")
     for sp, s in sorted(M["species"].items(), key=lambda kv: -kv[1]["wins"]/max(1,kv[1]["games"])):
         g = max(1, s["games"]); wr = 100*s["wins"]/g
         st = "OK" if 42 <= wr <= 58 else ("HIGH" if wr > 58 else "LOW")
         if st != "OK": fails.append(f"{sp} team win rate {wr:.1f}%")
-        P(f"| {sp} | {JA.get(sp,sp)} | {s['games']} | {wr:.1f} | {s['damage']/g:.0f} | {s['kos']/g:.2f} | {100*s['fainted']/g:.0f} | {100*s['first_move']/max(1,s['turns_present']):.0f} | {st} |")
+        P(f"| {sp} | {JA.get(sp,sp)} | {s['games']} | {wr:.1f} | {s['damage']/g:.0f} | {s['kos']/g:.2f} | {100*s['fainted']/g:.0f} | {100*s['first_move']/max(1,s['turns_present']):.0f} | {s.get('turns',0)/g:.1f} | {100*s.get('long_games',0)/g:.1f} | {st} |")
     P(""); P("## Per-set")
     P("| set | games | win% |"); P("|---|---|---|")
     for k, s in sorted(M["sets"].items(), key=lambda kv: -kv[1]["wins"]/max(1,kv[1]["games"])):
@@ -103,6 +103,8 @@ else:
     if avg_turns > 40: fails.append(f"average turns too long: {avg_turns:.1f}")
     long = sum(v for t, v in M["turns_hist"].items() if t >= 60)
     if long / max(1, M["battles"]) > 0.03: fails.append(f"{100*long/M['battles']:.1f}% of battles reach 60+ turns")
+    P(""); P("## Most frequent 60+ turn set combinations")
+    for k, v in M["stalls"].most_common(15): P(f"- {v}x {k}")
     P(""); P("## Species-vs-species team win% (row species' team vs column species' team)")
     ids = sorted(M["species"].keys())
     P("| | " + " | ".join(JA.get(i,i)[:4] for i in ids) + " |"); P("|---|" + "---|" * len(ids))

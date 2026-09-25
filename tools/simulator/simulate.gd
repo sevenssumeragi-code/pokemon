@@ -98,6 +98,7 @@ func run_team(mode: String, battles: int, seed: int, ai_kind: String) -> Diction
 	var ties := 0
 	var total_turns := 0
 	var pair_stats := {}  # species vs species when both present (team win)
+	var stalls := {}
 	for k in range(battles):
 		var pool: Array = ids.duplicate()
 		rng.shuffle(pool)
@@ -117,6 +118,13 @@ func run_team(mode: String, battles: int, seed: int, ai_kind: String) -> Diction
 		turns_hist[str(mini(bt.turn, 60))] = int(turns_hist.get(str(mini(bt.turn, 60)), 0)) + 1
 		if bt.winner < 0:
 			ties += 1
+		if bt.turn >= 60:
+			var key := ""
+			var names: Array = set_names[0].duplicate()
+			names.append_array(set_names[1])
+			names.sort()
+			key = " + ".join(PackedStringArray(names))
+			stalls[key] = int(stalls.get(key, 0)) + 1
 		for side in range(2):
 			var won := 1 if bt.winner == side else 0
 			for i in range(team_size):
@@ -132,6 +140,9 @@ func run_team(mode: String, battles: int, seed: int, ai_kind: String) -> Diction
 					if p.species_id == sp and p.fainted:
 						fainted = 1
 				_acc(species, sp, "fainted", fainted)
+				_acc(species, sp, "turns", bt.turn)
+				if bt.turn >= 60:
+					_acc(species, sp, "long_games", 1)
 				_acc(set_stats, set_names[side][i], "games", 1)
 				_acc(set_stats, set_names[side][i], "wins", won)
 				for osp in used_species[1 - side]:
@@ -142,4 +153,4 @@ func run_team(mode: String, battles: int, seed: int, ai_kind: String) -> Diction
 			abilities[ab] = int(abilities.get(ab, 0)) + int(bt.stats["ability_activations"][ab])
 		for it in bt.stats["item_activations"]:
 			items[it] = int(items.get(it, 0)) + int(bt.stats["item_activations"][it])
-	return {"battles": battles, "team_size": team_size, "species": species, "sets": set_stats, "abilities": abilities, "items": items, "turns_hist": turns_hist, "ties": ties, "avg_turns": float(total_turns) / maxf(1, battles), "pairs": pair_stats}
+	return {"battles": battles, "team_size": team_size, "species": species, "sets": set_stats, "abilities": abilities, "items": items, "turns_hist": turns_hist, "ties": ties, "avg_turns": float(total_turns) / maxf(1, battles), "pairs": pair_stats, "stalls": stalls}

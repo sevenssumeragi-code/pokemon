@@ -62,7 +62,7 @@
     "flare_blitz",
     "close_combat",
     "swords_dance",
-    "extreme_speed"
+    "fake_out"
    ],
    "item": "life_orb",
    "nature": "jolly",
@@ -117,8 +117,8 @@
    "moves": [
     "shadow_ball",
     "dark_pulse",
-    "thunderbolt",
-    "energy_ball"
+    "psychic",
+    "sludge_bomb"
    ],
    "item": "choice_specs",
    "nature": "timid",
@@ -134,7 +134,7 @@
    "name": "nasty_plot",
    "moves": [
     "shadow_ball",
-    "focus_blast",
+    "dark_pulse",
     "nasty_plot",
     "substitute"
    ],
@@ -248,7 +248,7 @@
     "blizzard",
     "freeze_dry",
     "moonblast",
-    "thunderbolt"
+    "shadow_ball"
    ],
    "item": "choice_specs",
    "nature": "timid",
@@ -472,7 +472,7 @@
     "wild_charge",
     "iron_head",
     "volt_switch",
-    "knock_off"
+    "crunch"
    ],
    "item": "choice_scarf",
    "nature": "jolly",
@@ -489,7 +489,7 @@
    "moves": [
     "wild_charge",
     "iron_head",
-    "knock_off",
+    "crunch",
     "x_scissor"
    ],
    "item": "choice_band",
@@ -525,10 +525,10 @@
   {
    "name": "sash_sd",
    "moves": [
-    "brave_bird",
+    "drill_peck",
     "iron_head",
     "swords_dance",
-    "kowtow_cleave"
+    "night_slash"
    ],
    "item": "focus_sash",
    "nature": "jolly",
@@ -543,9 +543,9 @@
   {
    "name": "band",
    "moves": [
-    "brave_bird",
+    "drill_peck",
     "iron_head",
-    "kowtow_cleave",
+    "night_slash",
     "u_turn"
    ],
    "item": "choice_band",
@@ -676,7 +676,7 @@
    "name": "band",
    "moves": [
     "double_edge",
-    "extreme_speed",
+    "quick_attack",
     "play_rough",
     "earthquake"
    ],
@@ -695,7 +695,7 @@
    "moves": [
     "bulk_up",
     "body_slam",
-    "extreme_speed",
+    "quick_attack",
     "earthquake"
    ],
    "item": "leftovers",
@@ -714,7 +714,7 @@
     "body_slam",
     "wish",
     "protect",
-    "extreme_speed"
+    "quick_attack"
    ],
    "item": "leftovers",
    "nature": "impish",
