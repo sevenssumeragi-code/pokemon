@@ -384,6 +384,8 @@ func _advance_log() -> void:
 		_log_index += 1
 		var handled_visual := _apply_visual(e)
 		var text := LogFormatter.format(e)
+		if battle.is_wild and str(e[0]) == "switch" and str(e[1]).begins_with("p2"):
+			text = "あ！ やせいの %s が とびだしてきた！" % GameData.name_of("species", str(e[2]))
 		if text != "":
 			_message.append_text(text + "\n")
 			_timer = message_delay if not auto_play else 0.0

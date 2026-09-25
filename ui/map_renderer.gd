@@ -23,9 +23,11 @@ func _process(_d: float) -> void:
 	if camera != null and map != null:
 		var half := get_viewport_rect().size / 2.0
 		var target := player_pos + Vector2(TILE / 2.0, TILE / 2.0)
-		var maxx := maxf(half.x, map.width * TILE - half.x)
-		var maxy := maxf(half.y, map.height * TILE - half.y)
-		camera.position = Vector2(clampf(target.x, half.x, maxx), clampf(target.y, half.y, maxy))
+		var mw := map.width * TILE
+		var mh := map.height * TILE
+		var cx := clampf(target.x, half.x, maxf(half.x, mw - half.x)) if mw > half.x * 2 else mw / 2.0
+		var cy := clampf(target.y, half.y, maxf(half.y, mh - half.y)) if mh > half.y * 2 else mh / 2.0
+		camera.position = Vector2(cx, cy)
 	queue_redraw()
 
 func _draw() -> void:

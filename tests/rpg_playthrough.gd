@@ -5,6 +5,7 @@ extends SceneTree
 
 var main: MainUI
 var ctrl: RPGController
+var gstate: GameState
 var frames := 0
 var plan: Array = []
 var step_i := 0
@@ -20,6 +21,7 @@ func _initialize() -> void:
 	root.add_child(main)
 	main.start_new_game()
 	ctrl = main._current
+	gstate = ctrl.state
 	ctrl.auto_play = true
 	ctrl.move_duration = 0.0
 	ctrl.state.rng_seed = 4242
@@ -71,8 +73,8 @@ func _process(_d: float) -> bool:
 	if frames > 400000:
 		return _fail("frame limit")
 	if not (main._current is RPGController):
-		if ctrl.state.flag("game_cleared", false):
-			print("PLAYTHROUGH_OK frames=%d steps=%d party=%s" % [frames, ctrl.steps_taken, _party_desc()])
+		if gstate.flag("game_cleared", false):
+			print("PLAYTHROUGH_OK frames=%d party=%s money=%d dex_caught=%d" % [frames, _party_desc(), gstate.money, gstate.dex_caught.size()])
 			_cleanup()
 			quit(0)
 			return true
@@ -138,7 +140,7 @@ func _process(_d: float) -> bool:
 
 func _party_desc() -> String:
 	var parts: PackedStringArray = []
-	for p in ctrl.state.party:
+	for p in gstate.party:
 		parts.append("%s Lv%d" % [p.species, p.level])
 	return ", ".join(parts)
 
