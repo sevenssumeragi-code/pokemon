@@ -2,3 +2,4 @@
 *.import
 reports/*.tmp
 /tmp/
+reports/raw/
