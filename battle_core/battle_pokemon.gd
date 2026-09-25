@@ -2,6 +2,8 @@ class_name BattlePokemon
 extends RefCounted
 ## Runtime state of one monster inside a battle.
 
+const STAT_EVENT := {"atk": "ModifyAtk", "def": "ModifyDef", "spa": "ModifySpA", "spd": "ModifySpD", "spe": "ModifySpe"}
+
 var battle  # Battle (untyped to avoid cyclic typing)
 var side  # BattleSide
 var set: PokemonSet
@@ -138,8 +140,7 @@ func get_stat(stat: String, unboosted: bool = false, unmodified: bool = false) -
 		var b: int = boosts[stat]
 		v = StatCalc.apply_boost(v, b)
 	if not unmodified:
-		var ev_name := "Modify" + stat.capitalize()
-		v = battle.run_event(ev_name, self, null, null, v)
+		v = battle.run_event(STAT_EVENT[stat], self, null, null, v)
 		v = maxi(1, int(v))
 	return v
 
