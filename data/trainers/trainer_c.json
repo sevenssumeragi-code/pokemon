@@ -1,0 +1,16 @@
+{
+ "name_key": "tr_c_name",
+ "team": [
+  {
+   "species": "jinpachi_r",
+   "level": 19
+  },
+  {
+   "species": "neo",
+   "level": 18
+  }
+ ],
+ "money": 1200,
+ "ai": "heuristic",
+ "id": "trainer_c"
+}

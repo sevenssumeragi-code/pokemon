@@ -1,0 +1,9 @@
+{
+ "id": "gate_talk",
+ "commands": [
+  {
+   "cmd": "message",
+   "text": "gate_1"
+  }
+ ]
+}

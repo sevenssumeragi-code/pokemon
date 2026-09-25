@@ -1,0 +1,21 @@
+{
+ "name_key": "rival_name",
+ "team": [
+  {
+   "species": "hyu",
+   "level": 22
+  },
+  {
+   "species": "namazuo",
+   "level": 22
+  },
+  {
+   "species": "trans",
+   "level": 24,
+   "item": "leftovers"
+  }
+ ],
+ "money": 2500,
+ "ai": "heuristic",
+ "id": "rival"
+}

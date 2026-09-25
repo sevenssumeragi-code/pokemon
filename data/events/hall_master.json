@@ -1,0 +1,52 @@
+{
+ "id": "hall_master",
+ "commands": [
+  {
+   "cmd": "if",
+   "flag": "hall_beaten",
+   "then": [
+    {
+     "cmd": "message",
+     "text": "hall_master_after"
+    },
+    {
+     "cmd": "trainer_battle",
+     "trainer": "hall_master",
+     "win": [
+      {
+       "cmd": "give_money",
+       "amount": 2000
+      }
+     ]
+    }
+   ],
+   "else": [
+    {
+     "cmd": "message",
+     "text": "hall_master_intro"
+    },
+    {
+     "cmd": "trainer_battle",
+     "trainer": "hall_master",
+     "win": [
+      {
+       "cmd": "set_flag",
+       "flag": "hall_beaten"
+      },
+      {
+       "cmd": "message",
+       "text": "hall_master_lose"
+      },
+      {
+       "cmd": "give_money",
+       "amount": 5000
+      },
+      {
+       "cmd": "badge"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

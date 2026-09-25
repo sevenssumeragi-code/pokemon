@@ -1,0 +1,9 @@
+{
+ "id": "hall_guide",
+ "commands": [
+  {
+   "cmd": "message",
+   "text": "hall_guide_1"
+  }
+ ]
+}

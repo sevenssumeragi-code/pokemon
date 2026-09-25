@@ -170,6 +170,74 @@ mp("cave","リージョンのほら穴", cave,
                                   {"species":"gel_r_poison","min":9,"max":12,"weight":10},{"species":"jinpachi_r","min":9,"max":12,"weight":10},{"species":"renny_r","min":10,"max":12,"weight":8}]},
    npcs=[{"id":"boss","x":11,"y":16,"sprite":"npc_boss","dir":"left","event":"boss_talk"}],
    events=[])
+# ---- route 2 (east of town, unlocked after the boss) 24x14 ----
+route2 = [
+"tttttttttttttttttttttttt",
+"t......................t",
+"t.ggggg......ggggg.....t",
+"t.ggggg......ggggg.....t",
+"pppppppppp...ggggg.....t",
+"t........p.............t",
+"t..S.....pppppppppp....t",
+"t.................p....t",
+"t..ggggggg........p....t",
+"t..ggggggg........pppppp",
+"t..ggggggg...ww........t",
+"t............ww........t",
+"t......................t",
+"tttttttttttttttttttttttt",
+]
+mp("route2","うみべのみち", route2,
+   warps=[{"x":0,"y":4,"map":"town","tx":18,"ty":6,"dir":"left"},{"x":23,"y":9,"map":"port","tx":1,"ty":7,"dir":"right"}],
+   encounters={"rate":14,"table":[{"species":"honebami","min":16,"max":19,"weight":15},{"species":"namazuo","min":16,"max":19,"weight":15},
+                                  {"species":"gel","min":15,"max":18,"weight":15},{"species":"hyu","min":15,"max":18,"weight":15},
+                                  {"species":"trans_r","min":18,"max":20,"weight":5},{"species":"gel_r_dark","min":16,"max":19,"weight":15},
+                                  {"species":"muni_r_bug","min":15,"max":18,"weight":20}]},
+   npcs=[{"id":"trainer_c","x":9,"y":5,"sprite":"npc_trainer","dir":"down","event":"trainer_c"},
+         {"id":"trainer_d","x":18,"y":8,"sprite":"npc_trainer","dir":"down","event":"trainer_d"}],
+   events=[{"id":"sign_route2","x":3,"y":6,"trigger":"interact","event":"sign_route2"}])
+# ---- port town 16x12 ----
+port = [
+"tttttttttttttttt",
+"t....RRRRR.....t",
+"t....#####.....t",
+"t....##d##..F..t",
+"t....ppppp.....t",
+"t....p.........t",
+"t....p...S.....t",
+"pppppp.........t",
+"t..............t",
+"twwwwwwwwwwwwwwt",
+"twwwwwwwwwwwwwwt",
+"tttttttttttttttt",
+]
+mp("port","みなとまち", port,
+   warps=[{"x":0,"y":7,"map":"route2","tx":22,"ty":9,"dir":"left"},{"x":7,"y":3,"map":"hall","tx":5,"ty":8,"dir":"up"}],
+   npcs=[{"id":"rival","x":11,"y":7,"sprite":"npc_kid","dir":"left","event":"rival_talk"},
+         {"id":"port_nurse","x":3,"y":5,"sprite":"npc_nurse","dir":"down","event":"nurse_heal"},
+         {"id":"sailor","x":12,"y":5,"sprite":"npc_old","dir":"down","event":"sailor_talk"}],
+   events=[{"id":"sign_port","x":9,"y":6,"trigger":"interact","event":"sign_port"}])
+# ---- battle hall 12x10 (doubles) ----
+hall = [
+"############",
+"#ffffffffff#",
+"#ffTffffTff#",
+"#ffffffffff#",
+"#ffffffffff#",
+"#ffffffffff#",
+"#ffffffffff#",
+"#ffffffffff#",
+"#ffffmfffff#",
+"############",
+]
+mp("hall","バトルホール", hall, warps=[{"x":5,"y":8,"map":"port","tx":7,"ty":4,"dir":"down"}],
+   npcs=[{"id":"hall_master","x":5,"y":2,"sprite":"npc_boss","dir":"down","event":"hall_master"},
+         {"id":"hall_guide","x":2,"y":6,"sprite":"npc_clerk","dir":"right","event":"hall_guide"}])
+# town: gate east to route2, blocked until boss beaten (row 6 col 19 is a tree; make it path)
+town_tiles = maps["town"]["tiles"]
+town_tiles[6][18] = 4; town_tiles[6][19] = 4
+maps["town"]["warps"].append({"x":19,"y":6,"map":"route2","tx":1,"ty":4,"dir":"right"})
+maps["town"]["npcs"].append({"id":"gatekeeper","x":18,"y":6,"sprite":"npc_old","dir":"left","event":"gate_talk","hidden_flag":"boss_beaten"})
 for id, d in maps.items():
     json.dump(d, open(f"data/maps/{id}.json","w"), ensure_ascii=False, indent=None)
 
@@ -193,8 +261,31 @@ T.update({
  "starter_renny":"レニィ（みず）","starter_jinpachi":"ジンパチ（ほのお）","starter_hyu":"ヒュウ（ゴースト）",
  "yes":"はい","no":"いいえ","shop_buy":"かう","shop_sell":"うる","shop_exit":"やめる",
 })
+T.update({
+ "sign_route2":"うみべのみち　東：みなとまち","sign_port":"みなとまち　バトルホールで ダブルバトルに ちょうせん！",
+ "gate_1":"この先は うみべのみち。 リージョンの守り手に みとめられた ひとしか とおせないよ。",
+ "trainer_c_intro":"守り手を たおしたんだって？ ぼくも ためさせてもらう！","trainer_c_lose":"さすがだ…","trainer_c_after":"みなとまちの バトルホールは ダブルバトルだよ。",
+ "trainer_d_intro":"うみかぜと ともに いくぞ！","trainer_d_lose":"かぜが やんだ…","trainer_d_after":"2たい同時の たたかいは あじかたを かんがえるのが コツさ。",
+ "rival_intro":"やあ {player}！ 守り手に かったって ほんとう？ なら ぼくとも しょうぶだ！","rival_lose":"つよくなったね… また しょうぶしよう！","rival_after":"バトルホールの マスターは ダブルバトルの たつじんだよ。",
+ "sailor_1":"ふねは まだ 出ないよ。 バトルホールで あそんでいきな。",
+ "hall_guide_1":"ここは バトルホール。 マスターとの しょうぶは 2たい ずつ 出す ダブルバトルだ。 手持ちが 2たい いじょう ひつようだよ。",
+ "hall_master_intro":"ようこそ バトルホールへ。 わたしの ダブルバトル、 うけてみるか？","hall_master_lose":"みごとな れんけいだ！ きみは ダブルバトルの たつじんだ。","hall_master_after":"また いつでも ちょうせんしに きなさい。",
+ "hall_need_two":"ダブルバトルには 手持ちが 2たい いじょう ひつようだ。",
+ "tr_c_name":"ハイカーの ゴウ","tr_d_name":"うみおとこの リク","rival_name":"ライバルの ハル","hall_master_name":"ホールマスター ミナ",
+})
 # ---------------- events ----------------
 events = {
+ "gate_talk": [{"cmd":"message","text":"gate_1"}],
+ "sign_route2": [{"cmd":"message","text":"sign_route2"}], "sign_port": [{"cmd":"message","text":"sign_port"}], "sailor_talk": [{"cmd":"message","text":"sailor_1"}],
+ "hall_guide": [{"cmd":"message","text":"hall_guide_1"}],
+ "trainer_c": [{"cmd":"if","flag":"trainer_c_beaten","then":[{"cmd":"message","text":"trainer_c_after"}],
+                "else":[{"cmd":"message","text":"trainer_c_intro"},{"cmd":"trainer_battle","trainer":"trainer_c","win":[{"cmd":"set_flag","flag":"trainer_c_beaten"},{"cmd":"message","text":"trainer_c_lose"},{"cmd":"give_money","amount":1200}]}]}],
+ "trainer_d": [{"cmd":"if","flag":"trainer_d_beaten","then":[{"cmd":"message","text":"trainer_d_after"}],
+                "else":[{"cmd":"message","text":"trainer_d_intro"},{"cmd":"trainer_battle","trainer":"trainer_d","win":[{"cmd":"set_flag","flag":"trainer_d_beaten"},{"cmd":"message","text":"trainer_d_lose"},{"cmd":"give_money","amount":1500}]}]}],
+ "rival_talk": [{"cmd":"if","flag":"rival_beaten","then":[{"cmd":"message","text":"rival_after"}],
+                "else":[{"cmd":"message","text":"rival_intro"},{"cmd":"trainer_battle","trainer":"rival","win":[{"cmd":"set_flag","flag":"rival_beaten"},{"cmd":"message","text":"rival_lose"},{"cmd":"give_money","amount":2500}]}]}],
+ "hall_master": [{"cmd":"if","flag":"hall_beaten","then":[{"cmd":"message","text":"hall_master_after"},{"cmd":"trainer_battle","trainer":"hall_master","win":[{"cmd":"give_money","amount":2000}]}],
+                  "else":[{"cmd":"message","text":"hall_master_intro"},{"cmd":"trainer_battle","trainer":"hall_master","win":[{"cmd":"set_flag","flag":"hall_beaten"},{"cmd":"message","text":"hall_master_lose"},{"cmd":"give_money","amount":5000},{"cmd":"badge"}]}]}],
  "game_intro": [{"cmd":"message","text":"intro_1"},{"cmd":"message","text":"intro_2"},{"cmd":"set_flag","flag":"intro_done"}],
  "mom_talk": [{"cmd":"if","flag":"got_starter","then":[{"cmd":"message","text":"mom_2"},{"cmd":"heal_party"}],"else":[{"cmd":"message","text":"mom_1"}]}],
  "town_first": [{"cmd":"message","text":"town_first"},{"cmd":"set_flag","flag":"town_intro_done"}],
@@ -220,6 +311,10 @@ for id, cmds in events.items():
     json.dump({"id": id, "commands": cmds}, open(f"data/events/{id}.json","w"), ensure_ascii=False, indent=1)
 # ---------------- trainers ----------------
 trainers = {
+ "trainer_c": {"name_key":"tr_c_name","team":[{"species":"jinpachi_r","level":19},{"species":"neo","level":18}],"money":1200,"ai":"heuristic"},
+ "trainer_d": {"name_key":"tr_d_name","team":[{"species":"renny","level":20},{"species":"honebami","level":20},{"species":"marutan","level":19}],"money":1500,"ai":"heuristic","format":"doubles"},
+ "rival": {"name_key":"rival_name","team":[{"species":"hyu","level":22},{"species":"namazuo","level":22},{"species":"trans","level":24,"item":"leftovers"}],"money":2500,"ai":"heuristic"},
+ "hall_master": {"name_key":"hall_master_name","team":[{"species":"jinpachi","level":26,"item":"charcoal"},{"species":"hyu","level":26,"item":"spell_tag"},{"species":"gel_r_poison","level":25,"item":"black_sludge"},{"species":"muni","level":25,"item":"light_clay"}],"money":5000,"ai":"heuristic","format":"doubles"},
  "trainer_a": {"name_key":"tr_a_name","team":[{"species":"muni","level":7},{"species":"neo","level":8}],"money":400,"ai":"heuristic"},
  "trainer_b": {"name_key":"tr_b_name","team":[{"species":"marutan","level":10},{"species":"renny","level":11}],"money":600,"ai":"heuristic"},
  "boss": {"name_key":"boss_name","team":[{"species":"hyu_r","level":14},{"species":"gel_r_dark","level":14},{"species":"trans_r","level":16,"item":"sitrus_berry"}],"money":3000,"ai":"heuristic","boss":True},

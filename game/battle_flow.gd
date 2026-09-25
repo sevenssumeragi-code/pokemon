@@ -26,7 +26,7 @@ static func make_trainer_battle(state: GameState, trainer_id: String, rng: Rando
 			s.moves = m["moves"]
 		team.append(s)
 		state.mark_seen(s.species)
-	var b := Battle.new({"seed": rng.randi(), "teams": [party_sets(state), team], "names": [state.player_name, GameData.msg(str(t.get("name_key", trainer_id)))], "allow_items": true, "bag": state.bag, "log": true})
+	var b := Battle.new({"seed": rng.randi(), "teams": [party_sets(state), team], "names": [state.player_name, GameData.msg(str(t.get("name_key", trainer_id)))], "allow_items": true, "bag": state.bag, "log": true, "format": str(t.get("format", "singles"))})
 	return b
 
 ## Sync party HP/status back from the battle and compute exp/level/evolution/capture outcomes.

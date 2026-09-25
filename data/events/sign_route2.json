@@ -1,0 +1,9 @@
+{
+ "id": "sign_route2",
+ "commands": [
+  {
+   "cmd": "message",
+   "text": "sign_route2"
+  }
+ ]
+}

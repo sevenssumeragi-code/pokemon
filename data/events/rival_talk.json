@@ -1,0 +1,39 @@
+{
+ "id": "rival_talk",
+ "commands": [
+  {
+   "cmd": "if",
+   "flag": "rival_beaten",
+   "then": [
+    {
+     "cmd": "message",
+     "text": "rival_after"
+    }
+   ],
+   "else": [
+    {
+     "cmd": "message",
+     "text": "rival_intro"
+    },
+    {
+     "cmd": "trainer_battle",
+     "trainer": "rival",
+     "win": [
+      {
+       "cmd": "set_flag",
+       "flag": "rival_beaten"
+      },
+      {
+       "cmd": "message",
+       "text": "rival_lose"
+      },
+      {
+       "cmd": "give_money",
+       "amount": 2500
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

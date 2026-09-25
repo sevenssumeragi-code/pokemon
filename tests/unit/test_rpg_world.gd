@@ -130,3 +130,16 @@ func test_event_runner_battle_branches() -> void:
 	r2.next(); r2.resume(false)
 	assert_eq(r2.next()["type"], "done")
 	assert_false(bool(g2.flag("trainer_a_beaten")))
+
+func test_doubles_trainer_builds_doubles_battle() -> void:
+	var g := GameState.new()
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 8
+	g.party = [PokemonSet.generate("renny", 20, rng), PokemonSet.generate("gel", 20, rng)]
+	var b := BattleFlow.make_trainer_battle(g, "hall_master", rng)
+	assert_eq(b.slots_per_side, 2)
+	b.start()
+	assert_eq(b.sides[1].active_pokemon().size(), 2)
+	assert_eq(b.sides[0].active_pokemon().size(), 2)
+	var t := BattleFlow.make_trainer_battle(g, "boss", rng)
+	assert_eq(t.slots_per_side, 1)

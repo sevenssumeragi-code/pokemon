@@ -1,0 +1,21 @@
+{
+ "name_key": "tr_d_name",
+ "team": [
+  {
+   "species": "renny",
+   "level": 20
+  },
+  {
+   "species": "honebami",
+   "level": 20
+  },
+  {
+   "species": "marutan",
+   "level": 19
+  }
+ ],
+ "money": 1500,
+ "ai": "heuristic",
+ "format": "doubles",
+ "id": "trainer_d"
+}

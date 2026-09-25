@@ -1,0 +1,9 @@
+{
+ "id": "sign_port",
+ "commands": [
+  {
+   "cmd": "message",
+   "text": "sign_port"
+  }
+ ]
+}

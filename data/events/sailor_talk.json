@@ -1,0 +1,9 @@
+{
+ "id": "sailor_talk",
+ "commands": [
+  {
+   "cmd": "message",
+   "text": "sailor_1"
+  }
+ ]
+}

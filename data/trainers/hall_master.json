@@ -1,0 +1,29 @@
+{
+ "name_key": "hall_master_name",
+ "team": [
+  {
+   "species": "jinpachi",
+   "level": 26,
+   "item": "charcoal"
+  },
+  {
+   "species": "hyu",
+   "level": 26,
+   "item": "spell_tag"
+  },
+  {
+   "species": "gel_r_poison",
+   "level": 25,
+   "item": "black_sludge"
+  },
+  {
+   "species": "muni",
+   "level": 25,
+   "item": "light_clay"
+  }
+ ],
+ "money": 5000,
+ "ai": "heuristic",
+ "format": "doubles",
+ "id": "hall_master"
+}
