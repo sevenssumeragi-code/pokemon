@@ -100,6 +100,8 @@ func run_team(mode: String, battles: int, seed: int, ai_kind: String) -> Diction
 	var pair_stats := {}  # species vs species when both present (team win)
 	var stalls := {}
 	for k in range(battles):
+		if k > 0 and k % 250 == 0:
+			printerr("progress %d/%d" % [k, battles])
 		var pool: Array = ids.duplicate()
 		rng.shuffle(pool)
 		var teams: Array = [[], []]
